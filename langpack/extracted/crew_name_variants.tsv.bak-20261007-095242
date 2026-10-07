@@ -1,0 +1,162 @@
+# CN_Refined 人名占位符对照表（精修工作表）
+# 行 = 待赋值的 [] 键（与模板里的占位符一一对应；全名行与 Short 行成对相邻）
+# 列 = 候选值:
+#   en : 英文原值（**不改动**，逐字照抄，仅作对照）
+#   v1 : 版本1 = 和当前版类似
+#        （全名行 = 当前中文全名；Short 行 = 当前 Short 槽位的值，通常与全名相同）
+#   v2 : 版本2 = 和当前版类似但做 Short
+#        （只对 Short 行有意义；全名行此列留空）
+#        当前提案规则: 取「姓」—— 西式名取最后一个「·」之后，中文名取首字，
+#        英文本身就没缩写的（如 Maba|Maba）整名照搬。规则不对就整列重出。
+#   v3 : 版本3 = 英文名字版（全名行 = 英文全名；Short 行 = 英文 Short）
+#   v4 : 版本4 = 精修中文名（待填；只对全名行有意义）
+#   v5 : 版本5 = 精修中文名+Short（待填；只对 Short 行有意义）
+# 说明: 中文版的 Short 槽位目前与全名相同（未像英文那样缩写成「R. Witterel」）。
+# 已排除: [China] [Formosa] [DifficultyZH]
+#
+# []键	en	v1	v2	v3	v4	v5
+[CrewNameCaptain]	Robert Witterel | R. Witterel	罗伯特·威特瑞	罗伯特·威特瑞	Robert Witterel	罗伯特·威特里尔	罗伯特·威特里尔
+[CrewNameCaptainShort]	Robert Witterel | R. Witterel	罗伯特·威特瑞	R. 威特瑞	R. Witterel	罗伯特·威特里尔	R. 威特里尔
+[CrewNameMate1]	William Hoscut | W. Hoscut	威廉·霍斯卡特	威廉·霍斯卡特	William Hoscut	威廉·霍斯卡特	威廉·霍斯卡特
+[CrewNameMate1Short]	William Hoscut | W. Hoscut	威廉·霍斯卡特	W. 霍斯卡特	W. Hoscut	威廉·霍斯卡特	W. 霍斯卡特
+[CrewNameMate2]	Edward Nichols | E. Nichols	爱德华·尼柯斯	爱德华·尼柯斯	Edward Nichols	爱德华·尼科尔斯	爱德华·尼科尔斯
+[CrewNameMate2Short]	Edward Nichols | E. Nichols	爱德华·尼柯斯	E. 尼柯斯	E. Nichols	爱德华·尼科尔斯	E. 尼科尔斯
+[CrewNameMate3]	Martin Perrott | M. Perrott	马丁·佩罗特	马丁·佩罗特	Martin Perrott	马丁·佩罗特	马丁·佩罗特
+[CrewNameMate3Short]	Martin Perrott | M. Perrott	马丁·佩罗特	M. 佩罗特	M. Perrott	马丁·佩罗特	M. 佩罗特
+[CrewNameMate4]	John Davies | J. Davies	约翰·戴维斯	约翰·戴维斯	John Davies	约翰·戴维斯	约翰·戴维斯
+[CrewNameMate4Short]	John Davies | J. Davies	约翰·戴维斯	J. 戴维斯	J. Davies	约翰·戴维斯	J. 戴维斯
+[CrewNameBosun]	Alfred Klestil | A. Klestil	阿佛雷·克莱斯蒂	阿佛雷·克莱斯蒂	Alfred Klestil	阿尔弗雷德·克勒斯蒂尔	阿尔弗雷德·克勒斯蒂尔
+[CrewNameBosunShort]	Alfred Klestil | A. Klestil	阿佛雷·克莱斯蒂	A. 克莱斯蒂	A. Klestil	阿尔弗雷德·克勒斯蒂尔	A. 克莱斯蒂尔
+[CrewNameBosunMate]	Charles Miner | C. Miner	查尔斯·迈纳	查尔斯·迈纳	Charles Miner	查尔斯·迈纳	查尔斯·迈纳
+[CrewNameBosunMateShort]	Charles Miner | C. Miner	查尔斯·迈纳	C. 迈纳	C. Miner	查尔斯·迈纳	C. 迈纳
+[CrewNameSurgeon]	Henry Evans | H. Evans	亨利·埃文斯	亨利·埃文斯	Henry Evans	亨利·埃文斯	亨利·埃文斯
+[CrewNameSurgeonShort]	Henry Evans | H. Evans	亨利·埃文斯	H. 埃文斯	H. Evans	亨利·埃文斯	H. 埃文斯
+[CrewNameSurgeonMate]	James Wallace | J. Wallace	詹姆斯·华莱士	詹姆斯·华莱士	James Wallace	詹姆斯·华莱士	詹姆斯·华莱士
+[CrewNameSurgeonMateShort]	James Wallace | J. Wallace	詹姆斯·华莱士	J. 华莱士	J. Wallace	詹姆斯·华莱士	J. 华莱士
+[CrewNameCarp]	Winston Smith | W. Smith	温斯顿·史密斯	温斯顿·史密斯	Winston Smith	温斯顿·史密斯	温斯顿·史密斯
+[CrewNameCarpShort]	Winston Smith | W. Smith	温斯顿·史密斯	W. 史密斯	W. Smith	温斯顿·史密斯	W. 史密斯
+[CrewNameCarpMate]	Marcus Gibbs | M. Gibbs	马库斯·吉布斯	马库斯·吉布斯	Marcus Gibbs	马库斯·吉布斯	马库斯·吉布斯
+[CrewNameCarpMateShort]	Marcus Gibbs | M. Gibbs	马库斯·吉布斯	M. 吉布斯	M. Gibbs	马库斯·吉布斯	M. 吉布斯
+[CrewNameCook]	Thomas Sefton | T. Sefton	托马斯·塞夫顿	托马斯·塞夫顿	Thomas Sefton	托马斯·塞夫顿	托马斯·塞夫顿
+[CrewNameCookShort]	Thomas Sefton | T. Sefton	托马斯·塞夫顿	T. 塞夫顿	T. Sefton	托马斯·塞夫顿	T. 塞夫顿
+[CrewNameButcher]	Emil O’Farrell | E. O’Farrel	埃米尔·奥法雷	埃米尔·奥法雷	Emil O’Farrell	埃米尔·奥法雷	埃米尔·奥法雷
+[CrewNameButcherShort]	Emil O’Farrell | E. O’Farrel	埃米尔·奥法雷	E. 奥法雷	E. O’Farrel	埃米尔·奥法雷	E. 奥法雷尔
+[CrewNameGunner]	Christian Wolff | C. Wolff	克里斯汀·沃尔夫	克里斯汀·沃尔夫	Christian Wolff	克里斯蒂安·沃尔夫	克里斯蒂安·沃尔夫
+[CrewNameGunnerShort]	Christian Wolff | C. Wolff	克里斯汀·沃尔夫	C. 沃尔夫	C. Wolff	克里斯蒂安·沃尔夫	C. 沃尔夫
+[CrewNameGunnerMate]	Olus Wiater | O. Wiater	奥卢斯·维尔特	奥卢斯·维尔特	Olus Wiater	奥卢斯·怀亚特	奥卢斯·怀亚特
+[CrewNameGunnerMateShort]	Olus Wiater | O. Wiater	奥卢斯·维尔特	O. 维尔特	O. Wiater	奥卢斯·怀亚特	O. 怀亚特
+[CrewNamePurser]	Duncan McKay | D. McKay	邓肯·麦凯	邓肯·麦凯	Duncan McKay	邓肯·麦凯	邓肯·麦凯
+[CrewNamePurserShort]	Duncan McKay | D. McKay	邓肯·麦凯	D. 麦凯	D. McKay	邓肯·麦凯	D. 麦凯
+[CrewNameSea9]	Finley Dalton | F. Dalton	芬利·道尔顿	芬利·道尔顿	Finley Dalton	芬利·道尔顿	芬利·道尔顿
+[CrewNameSea9Short]	Finley Dalton | F. Dalton	芬利·道尔顿	F. 道尔顿	F. Dalton	芬利·道尔顿	F. 道尔顿
+[CrewNamePass5]	Edward Spratt | E. Spratt	爱德华·斯普拉特	爱德华·斯普拉特	Edward Spratt	爱德华·斯普拉特	爱德华·斯普拉特
+[CrewNamePass5Short]	Edward Spratt | E. Spratt	爱德华·斯普拉特	E. 斯普拉特	E. Spratt	爱德华·斯普拉特	E. 斯普拉特
+[CrewNamePass1]	Abigail Hoscut Witterel | A.H. Witterel	阿比盖尔·霍斯卡特·威特瑞	阿比盖尔·霍斯卡特·威特瑞	Abigail Hoscut Witterel	阿比盖尔·霍斯卡特·威特里尔	阿比盖尔·霍斯卡特·威特里尔
+[CrewNamePass1Short]	Abigail Hoscut Witterel | A.H. Witterel	阿比盖尔·霍斯卡特·威特瑞	A.H. 威特瑞	A.H. Witterel	阿比盖尔·霍斯卡特·威特里尔	A.H. 威特里尔
+[CrewNamePass2]	Nunzio Pasqua | N. Pasqua	努兹奥·帕斯夸	努兹奥·帕斯夸	Nunzio Pasqua	农西奥·帕斯夸	农西奥·帕斯夸
+[CrewNamePass2Short]	Nunzio Pasqua | N. Pasqua	努兹奥·帕斯夸	N. 帕斯夸	N. Pasqua	农西奥·帕斯夸	N. 帕斯夸
+[CrewNamePass3]	Emily Jackson | E. Jackson	艾米莉·杰克逊	艾米莉·杰克逊	Emily Jackson	艾米莉·杰克逊	艾米莉·杰克逊
+[CrewNamePass3Short]	Emily Jackson | E. Jackson	艾米莉·杰克逊	E. 杰克逊	E. Jackson	艾米莉·杰克逊	E. 杰克逊
+[CrewNamePass4]	Miss Jane Bird | J. Bird	简·伯德小姐	简·伯德小姐	Miss Jane Bird	简·伯德小姐	简·伯德小姐
+[CrewNamePass4Short]	Miss Jane Bird | J. Bird	简·伯德	J. 伯德	J. Bird	简·伯德小姐	J. 伯德
+[CrewNamePass6]	Bun-Lan Lim | B. Lim	林文兰	林文兰	Bun-Lan Lim	林文澜	林文澜
+[CrewNamePass6Short]	Bun-Lan Lim | B. Lim	林文兰	B. 林	B. Lim	林文澜	B. 林
+[CrewNamePass7]	It-Beng Sia | I. Sia	谢一明	谢一明	It-Beng Sia	谢一明	谢一明
+[CrewNamePass7Short]	It-Beng Sia | I. Sia	谢一明	I. 谢	I. Sia	谢一明	I. 谢
+[CrewNamePass8]	Chioh Tan | C. Tan	陈石	陈石	Chioh Tan	陈石	陈石
+[CrewNamePass8Short]	Chioh Tan | C. Tan	陈石	C. 陈	C. Tan	陈石	C. 陈
+[CrewNamePass9]	Hok-Seng Lau | H. Lau	刘福生	刘福生	Hok-Seng Lau	刘鹤星	刘鹤星
+[CrewNamePass9Short]	Hok-Seng Lau | H. Lau	刘福生	H. 刘	H. Lau	刘鹤星	H. 刘
+[CrewNameStewship]	Zungi Sathi | Z. Sathi	尊吉·萨提	尊吉·萨提	Zungi Sathi	尊吉·萨提	尊吉·萨提
+[CrewNameStewshipShort]	Zungi Sathi | Z. Sathi	尊吉·萨提	Z. 萨提	Z. Sathi	尊吉·萨提	Z. 萨提
+[CrewNameStewcap]	Fillip Dahl | F. Dahl	菲利普·达尔	菲利普·达尔	Fillip Dahl	菲利普·达尔	菲利普·达尔
+[CrewNameStewcapShort]	Fillip Dahl | F. Dahl	菲利普·达尔	F. 达尔	F. Dahl	菲利普·达尔	F. 达尔
+[CrewNameStewm1]	Paul Moss | P. Moss	保罗·莫斯	保罗·莫斯	Paul Moss	保罗·莫斯	保罗·莫斯
+[CrewNameStewm1Short]	Paul Moss | P. Moss	保罗·莫斯	P. 莫斯	P. Moss	保罗·莫斯	P. 莫斯
+[CrewNameStewm2]	Samuel Galligan | S. Galligan	塞缪尔·加利根	塞缪尔·加利根	Samuel Galligan	塞缪尔·加利根	塞缪尔·加利根
+[CrewNameStewm2Short]	Samuel Galligan | S. Galligan	塞缪尔·加利根	S. 加利根	S. Galligan	塞缪尔·加利根	S. 加利根
+[CrewNameStewm3]	Roderick Andersen | R. Andersen	罗德里克·安德森	罗德里克·安德森	Roderick Andersen	罗德里克·安德森	罗德里克·安德森
+[CrewNameStewm3Short]	Roderick Andersen | R. Andersen	罗德里克·安德森	R. 安德森	R. Andersen	罗德里克·安德森	R. 安德森
+[CrewNameStewm4]	Davey James | D. James	大卫·詹姆斯	大卫·詹姆斯	Davey James	戴维·詹姆斯	戴维·詹姆斯
+[CrewNameStewm4Short]	Davey James | D. James	大卫·詹姆斯	D. 詹姆斯	D. James	戴维·詹姆斯	D. 詹姆斯
+[CrewNameMid1]	Peter Milroy | P. Milroy	彼得·米罗	彼得·米罗	Peter Milroy	彼得·米尔罗伊	彼得·米尔罗伊
+[CrewNameMid1Short]	Peter Milroy | P. Milroy	彼得·米罗	P. 米罗	P. Milroy	彼得·米尔罗伊	P. 米尔罗伊
+[CrewNameMid2]	Thomas Lanke | T. Lanke	托马斯·兰克	托马斯·兰克	Thomas Lanke	托马斯·兰克	托马斯·兰克
+[CrewNameMid2Short]	Thomas Lanke | T. Lanke	托马斯·兰克	T. 兰克	T. Lanke	托马斯·兰克	T. 兰克
+[CrewNameMid3]	Charles Hershtik | C. Hershtik	查尔斯·赫什蒂	查尔斯·赫什蒂	Charles Hershtik	查尔斯·赫什蒂克	查尔斯·赫什蒂克
+[CrewNameMid3Short]	Charles Hershtik | C. Hershtik	查尔斯·赫什蒂	C. 赫什蒂	C. Hershtik	查尔斯·赫什蒂克	C. 赫什蒂克
+[CrewNameTop5]	Omid Gul | O. Gul	奥米·古尔	奥米·古尔	Omid Gul	奥米德·古尔	奥米德·古尔
+[CrewNameTop5Short]	Omid Gul | O. Gul	奥米·古尔	O. 古尔	O. Gul	奥米德·古尔	O. 古尔
+[CrewNameTop6]	Timothy Butement | T. Butement	蒂莫西·比门	蒂莫西·比门	Timothy Butement	蒂莫西·布特门特	蒂莫西·布特门特
+[CrewNameTop6Short]	Timothy Butement | T. Butement	蒂莫西·比门	T. 比门	T. Butement	蒂莫西·布特门特	T. 比特门特
+[CrewNameTop1]	Huang Li | H. Li	李煌	李煌	Huang Li	李煌	李煌
+[CrewNameTop1Short]	Huang Li | H. Li	李煌	H. 李	H. Li	李煌	H. 李
+[CrewNameTop4]	Jie Zhang | J. Zhang	张捷	张捷	Jie Zhang	张捷	张捷
+[CrewNameTop4Short]	Jie Zhang | J. Zhang	张捷	J. 张	J. Zhang	张捷	J. 张
+[CrewNameTop7]	Li Hong | L. Hong	洪力	洪力	Li Hong	洪力	洪力
+[CrewNameTop7Short]	Li Hong | L. Hong	洪力	L. 洪	L. Hong	洪力	L. 洪
+[CrewNameTop8]	Wei Lee | W. Lee	李伟	李伟	Wei Lee	李伟	李伟
+[CrewNameTop8Short]	Wei Lee | W. Lee	李伟	W. 李	W. Lee	李伟	W. 李
+[CrewNameTop9]	Nicholas Botterill | N. Botterill	尼克勒斯·博特里	尼克勒斯·博特里	Nicholas Botterill	尼古拉斯·博特里尔	尼古拉斯·博特里尔
+[CrewNameTop9Short]	Nicholas Botterill | N. Botterill	尼克勒斯·博特里	N. 博特里	N. Botterill	尼古拉斯·博特里尔	N. 博特里尔
+[CrewNameTop3]	Maba | Maba	马巴	马巴	Maba	马巴	马巴
+[CrewNameTop3Short]	Maba | Maba	马巴	马巴	Maba	马巴	马巴
+[CrewNameTopA]	Lewis Walker | L. Walker	路易斯·沃克	路易斯·沃克	Lewis Walker	刘易斯·沃克	刘易斯·沃克
+[CrewNameTopAShort]	Lewis Walker | L. Walker	路易斯·沃克	L. 沃克	L. Walker	刘易斯·沃克	L. 沃克
+[CrewNameTop2]	Leonid Volkov | L. Volkov	洛尼·沃科	洛尼·沃科	Leonid Volkov	列昂尼德·沃尔科夫	列昂尼德·沃尔科夫
+[CrewNameTop2Short]	Leonid Volkov | L. Volkov	洛尼·沃科	L. 沃科	L. Volkov	列昂尼德·沃尔科夫	L. 沃尔科夫
+[CrewNameSea1]	Alarcus Nikishin | A. Nikishin	阿拉科·尼基新	阿拉科·尼基新	Alarcus Nikishin	阿拉克斯·尼基申	阿拉克斯·尼基申
+[CrewNameSea1Short]	Alarcus Nikishin | A. Nikishin	阿拉科·尼基新	A. 尼基新	A. Nikishin	阿拉克斯·尼基申	A. 尼基申
+[CrewNameSea5]	Aleksei Toporov | A. Toporov	阿列谢·托波洛	阿列谢·托波洛	Aleksei Toporov	阿列克谢·托波罗夫	阿列克谢·托波罗夫
+[CrewNameSea5Short]	Aleksei Toporov | A. Toporov	阿列谢·托波洛	A. 托波洛	A. Toporov	阿列克谢·托波罗夫	A. 托波罗夫
+[CrewNameSea2]	Nathan Peters | N. Peters	南森·彼得斯	南森·彼得斯	Nathan Peters	内森·彼得斯	内森·彼得斯
+[CrewNameSea2Short]	Nathan Peters | N. Peters	南森·彼得斯	N. 彼得斯	N. Peters	内森·彼得斯	N. 彼得斯
+[CrewNameSea3]	Lars Linde | L. Linde	拉斯·林德	拉斯·林德	Lars Linde	拉斯·林德	拉斯·林德
+[CrewNameSea3Short]	Lars Linde | L. Linde	拉斯·林德	L. 林德	L. Linde	拉斯·林德	L. 林德
+[CrewNameSea6]	John Naples | J. Naples	约翰·拿坡	约翰·拿坡	John Naples	约翰·内普尔斯	约翰·内普尔斯
+[CrewNameSea6Short]	John Naples | J. Naples	约翰·拿坡	J. 拿坡	J. Naples	约翰·内普尔斯	J. 内普尔斯
+[CrewNameSea4]	Renfred Rajub | R. Rajub	雷弗莱·拉杰波	雷弗莱·拉杰波	Renfred Rajub	伦弗雷德·拉朱布	伦弗雷德·拉朱布
+[CrewNameSea4Short]	Renfred Rajub | R. Rajub	雷弗莱·拉杰波	R. 拉杰波	R. Rajub	伦弗雷德·拉朱布	R. 拉朱布
+[CrewNameSea7]	Abraham Akbar | A. Akbar	亚伯拉罕·阿克巴	亚伯拉罕·阿克巴	Abraham Akbar	亚伯拉罕·阿克巴	亚伯拉罕·阿克巴
+[CrewNameSea7Short]	Abraham Akbar | A. Akbar	亚伯拉罕·阿克巴	A. 阿克巴	A. Akbar	亚伯拉罕·阿克巴	A. 阿克巴
+[CrewNameSea8]	William Wasim | W. Wasim	威廉·瓦西姆	威廉·瓦西姆	William Wasim	威廉·瓦西姆	威廉·瓦西姆
+[CrewNameSea8Short]	William Wasim | W. Wasim	威廉·瓦西姆	W. 瓦西姆	W. Wasim	威廉·瓦西姆	W. 瓦西姆
+[CrewNameSeaC]	Soloman Syed | S. Syed	所罗门·赛义德	所罗门·赛义德	Soloman Syed	所罗门·赛义德	所罗门·赛义德
+[CrewNameSeaCShort]	Soloman Syed | S. Syed	所罗门·赛义德	S. 赛义德	S. Syed	所罗门·赛义德	S. 赛义德
+[CrewNameSeaA]	Hamadou Diom | H. Diom	哈马窦·迪姆	哈马窦·迪姆	Hamadou Diom	哈马杜·迪翁	哈马杜·迪翁
+[CrewNameSeaAShort]	Hamadou Diom | H. Diom	哈马窦·迪姆	H. 迪姆	H. Diom	哈马杜·迪翁	H. 迪奥姆
+[CrewNameSeaB]	Henry Brennan | H. Brennan	亨利·布伦南	亨利·布伦南	Henry Brennan	亨利·布伦南	亨利·布伦南
+[CrewNameSeaBShort]	Henry Brennan | H. Brennan	亨利·布伦南	H. 布伦南	H. Brennan	亨利·布伦南	H. 布伦南
+[CrewNameSeaD]	Alexander Booth | A. Booth	亚历山大·布斯	亚历山大·布斯	Alexander Booth	亚历山大·布斯	亚历山大·布斯
+[CrewNameSeaDShort]	Alexander Booth | A. Booth	亚历山大·布斯	A. 布斯	A. Booth	亚历山大·布斯	A. 布斯
+[CrewNameSeaE]	Patrick O’Hagan | P. O’Hagan	帕特里克·奥黑根	帕特里克·奥黑根	Patrick O’Hagan	帕特里克·奥黑根	帕特里克·奥黑根
+[CrewNameSeaEShort]	Patrick O’Hagan | P. O’Hagan	帕特里克·奥黑根	P. 奥黑根	P. O’Hagan	帕特里克·奥黑根	P. 奥黑根
+[CrewNameSeaF]	George Shirley | G. Shirley	乔治·谢利	乔治·谢利	George Shirley	乔治·谢利	乔治·谢利
+[CrewNameSeaFShort]	George Shirley | G. Shirley	乔治·谢利	G. 谢利	G. Shirley	乔治·谢利	G. 谢利
+[CrewNameSeaG]	Samuel Peters | S. Peters	塞缪尔·彼得斯	塞缪尔·彼得斯	Samuel Peters	塞缪尔·彼得斯	塞缪尔·彼得斯
+[CrewNameSeaGShort]	Samuel Peters | S. Peters	塞缪尔·彼得斯	S. 彼得斯	S. Peters	塞缪尔·彼得斯	S. 彼得斯
+
+# ---- 以下是对话/信件里的称呼占位符（**已按占位符去重**，一个键只赋一次值）----
+# 列与上面一致；末尾额外多一列「出现处」（列在最后的辅助列，不属于那五个版本）
+#   v1 = 当前 Dia 值（从「模板行 ↔ dev 行」按字符对齐反推）
+#   v2 = 当前版做 Short（= 该人名的姓，规则同上）
+#   v3 = 英文台词里实际怎么称呼他 —— 从英文原文里逐候选找出来的
+# []键	en	v1	v2	v3	v4	v5	出现处
+[CrewNameSurgeonDia]	Henry Evans | H. Evans	埃文斯	埃文斯	Evans	埃文斯	埃文斯	office_letter_win, office_letter_mid, office_letter_fail
+[CrewNamePass4Dia]	Miss Jane Bird | J. Bird	简·伯德	简·伯德	Jane Bird	简·伯德	简·伯德	office_letter_win, office_letter_mid, office_letter_fail
+[CrewNameSeaCDia]	Soloman Syed | S. Syed	赛义德	赛义德	Syed	赛义德	赛义德	dialog_d1_m0_aa, dialog_d1_m0_ba
+[CrewNameMid3Dia]	Charles Hershtik | C. Hershtik	查理	查理	Charlie	查理	查理	dialog_d1_m2_ka
+[CrewNameMate2Dia]	Edward Nichols | E. Nichols	尼柯斯	尼柯斯	Nichols	尼科尔斯	尼科尔斯	dialog_d2_m0_fa, dialog_d3_m2_ba
+[CrewNamePass9Dia]	Hok-Seng Lau | H. Lau	刘福生	刘福生	Hok-Seng Lau	刘鹤星	刘鹤星	dialog_d2_m1_aa
+[CrewNamePass2Dia]	Nunzio Pasqua | N. Pasqua	努兹奥·帕斯夸	努兹奥·帕斯夸	Nunzio Pasqua	农西奥·帕斯夸	农西奥·帕斯夸	dialog_d2_m1_ba
+[CrewNamePass6Dia]	Bun-Lan Lim | B. Lim	林	林	Lim	林	林	dialog_d2_m1_ea, dialog_d3_m0_ga, dialog_d3_m1_ia
+[CrewNameGunnerDia]	Christian Wolff | C. Wolff	沃尔夫	沃尔夫	Wolff	沃尔夫	沃尔夫	dialog_d2_m1_ka
+[CrewNamePass7Dia]	It-Beng Sia | I. Sia	明	明	Beng	明	明	dialog_d3_m1_da
+[CrewNameSeaEDia]	Patrick O’Hagan | P. O’Hagan	奥黑根	奥黑根	O’Hagan	奥黑根	奥黑根	dialog_d3_m2_aa
+[CrewNameSea6Dia]	John Naples | J. Naples	约翰	约翰	John	约翰	约翰	dialog_d4_m3_la
+[CrewNameTop9Dia]	Nicholas Botterill | N. Botterill	尼克	尼克	Nick	尼克	尼克	dialog_d5_m2_ea
+[CrewNameMate3Dia]	Martin Perrott | M. Perrott	马丁	马丁	Martin	马丁	马丁	dialog_d6_m7_aa
+[CrewNameStewm1Dia]	Paul Moss | P. Moss	保罗	保罗	Paul	保罗	保罗	dialog_d8_m1_ca
+[CrewNameMid1Dia]	Peter Milroy | P. Milroy	皮特	皮特	Pete	皮特	皮特	dialog_d8_m5_da
+[CrewNameSeaBDia]	Henry Brennan | H. Brennan	布伦南	布伦南	Brennan	布伦南	布伦南	dialog_d8_m5_fa
+[CrewNamePass1Dia]	Abigail Hoscut Witterel | A.H. Witterel	阿比盖尔	阿比盖尔	Abigail	阿比盖尔	阿比盖尔	dialog_d9_m3_aa

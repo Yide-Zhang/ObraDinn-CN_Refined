@@ -1,0 +1,179 @@
+dev      = CN_Refined\langpack\extracted\dev-zh-s.tsv
+official = CN_Refined\langpack\extracted\original-zh-s.tsv
+en       = CN_Refined\langpack\extracted\original-en.tsv
+
+keys: dev=985 official=985 en=985  key_set_equal=True
+identical=513 changed=472 empty(dev)=1 value_equal_to_en(dev)=14
+
+## 续行首字符是空白（
+ 后面跟空格）—— dev
+  title_credit                 = '由Lucas Pope\n 创作'
+  book_preface_left            = '\t\t此时此刻，想必你已经登上了奥伯拉丁号。我早知这一天终会来临，本来想要通过这本书记录这艘船的怪异遭遇。\n\n \t\t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t\t登上奥伯拉丁号的你是一切的关键。我把查证它的命运、完成这本记录的任务留给了你。'
+  book_preface_right           = '\t\t接下来的几页乍一看可能会令人感到费解。一切早晚都会有意义的。\n\n \t\t使用怀表确定船上每个人的身份和下落。准确地完成每一章节，并通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t\t“交易”一章的内容不会为你所知。我知晓细节，但选择暂时保密。'
+  office_letter_win            = '首席调查官，\n\n\t\t这封信是为了告知您埃文斯医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t他对您的来信感到非常高兴，并要求将这本书连同完成全部内容的方法交还给您，以此表达他的感激之情。\n\t\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中不堪回首的可怕篇章。\n\t\t请勿回信。\n\n此致，\n\t\t简·伯德'
+  office_letter_mid            = '首席调查官，\n\n\t\t这封信是为了告知您埃文斯医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t虽然这本书并未全部解开，但他仍然对你付出的努力表示感谢。他理解这个任务有多么艰难，也明白完成本书的愿望是多么难以实现。\n\t\t从奥伯拉丁号的浩劫中幸存的我们四人，现在只剩三个。\n\t\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t\t简·伯德'
+  office_letter_fail           = '首席调查官，\n\n\t\t这封信是为了告知你埃文斯医生去世的不幸消息。收到你的包裹后不久，他就因病去世了。\n\t\t他的健康状况本就不佳，收到如此残缺的奥伯拉丁之书使他心如死灰，再也无法康复。\n\t\t临终之时，他深深悔恨竟将这一重任托付于你。\n\t\t我们认为你应该知道。\n\n此致，\n\t\t简·伯德'
+
+## 同上 —— official（作为对照）
+  book_preface_left            = '\t此时此刻，想必你已经登上了奥伯拉丁号。我预料到了这一天的到来，一心想要通过这本书记录这艘船的怪异遭遇。\n\n \t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t登上奥伯拉丁号的你是一切的关键。拜托你查证它的命运，完成这本记录。'
+  book_preface_right           = '\t接下来的几页内容可能会令你感到费解。但你早晚会领略其中的含义。\n\n \t使用怀表查证船上每个人的身份和下落。在精确完成每一章节之后，请通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t你无法获知书中“交易”一章的内容。我知晓其中细节，但请恕我暂时保密。'
+  office_letter_win            = '首席调查官，\n\n\t这封信是为了告知您埃文斯博士去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t他对您的来信感到很非常高兴，并要求将这本书连同完成全部内容的方法交还给您，以此表达他的感激之情。\n\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中不堪回首的篇章。\n\t请勿回信。\n\n此致，\n\t简·伯德'
+  office_letter_mid            = '首席调查官，\n\n\t这封信是为了告知您埃文斯博士去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t虽然这本书并未完成，但他仍然对你付出的努力表示感激，他理解这个任务有多么艰难，也明白完成本书的愿望是多么难以实现。\n\t只有四人从奥伯拉丁号的浩劫中幸存，而如今仅存三人。\n\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t简·伯德'
+  office_letter_fail           = '首席调查官，\n\n\t这封信是为了告知您埃文斯博士去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t虽然他的健康状况一直不佳，彻底摧毁他的求生意志的终究是目睹本书以如此敷衍的方式潦草交还。\n\t临终之时，他仍在后悔将这一重任托付于你。\n\t特此告知。\n\n此致，\n\t简·伯德'
+
+## 占位符与官方不一致 —— dev
+
+## 无换行且特别长（会被 wrap 切开）—— dev
+   692  fate_sort                    = 'unknown, alive-eastindies, alive-middleeast, alive-azores, alive-verde, alive-canary, alive-island, alive-europe, alive-uk, alive-westindies, alive-africa, expired-sick, expired-age, suicide-knife, su'
+   219  store_description_long       = '1802年，商船奥伯拉丁号满载200多吨贸易货物，从伦敦出发驶往东方。六个月后，奥伯拉丁号没有抵达位于好望角的汇合点，宣布在海上失踪。\n\n1807年10月14日早上，奥伯拉丁号拖着残破的船帆漂流至法尔茅斯港口，船员不见踪影。一名保险调查员立即被东印度公司伦敦办事处派往法尔茅斯，设法登船并评估损失。\n\nReturn of the Obra Dinn（奥伯拉丁的归来）是一款充满神秘色彩的第一人称解谜游'
+   174  office_letter_mid            = '首席调查官，\n\n\t\t这封信是为了告知您埃文斯医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t虽然这本书并未全部解开，但他仍然对你付出的努力表示感谢。他理解这个任务有多么艰难，也明白完成本书的愿望是多么难以实现。\n\t\t从奥伯拉丁号的浩劫中幸存的我们四人，现在只剩三个。\n\t\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t\t简·伯德'
+   166  office_letter_win            = '首席调查官，\n\n\t\t这封信是为了告知您埃文斯医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t他对您的来信感到非常高兴，并要求将这本书连同完成全部内容的方法交还给您，以此表达他的感激之情。\n\t\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中不堪回首的可怕篇章。\n\t\t请勿回信。\n\n此致，\n\t\t简·伯德'
+   140  office_letter_fail           = '首席调查官，\n\n\t\t这封信是为了告知你埃文斯医生去世的不幸消息。收到你的包裹后不久，他就因病去世了。\n\t\t他的健康状况本就不佳，收到如此残缺的奥伯拉丁之书使他心如死灰，再也无法康复。\n\t\t临终之时，他深深悔恨竟将这一重任托付于你。\n\t\t我们认为你应该知道。\n\n此致，\n\t\t简·伯德'
+   128  book_preface_left            = '\t\t此时此刻，想必你已经登上了奥伯拉丁号。我早知这一天终会来临，本来想要通过这本书记录这艘船的怪异遭遇。\n\n \t\t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t\t登上奥伯拉丁号的你是一切的关键。我把查证它的命运、完成这本记录的任务留给了你。'
+   122  book_preface_right           = '\t\t接下来的几页乍一看可能会令人感到费解。一切早晚都会有意义的。\n\n \t\t使用怀表确定船上每个人的身份和下落。准确地完成每一章节，并通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t\t“交易”一章的内容不会为你所知。我知晓细节，但选择暂时保密。'
+   103  dialog_chapter               = '<size=20>第$chapter_num章</size>\n<size=40>$chapter_name</size>\n<size=20>第 $part_num / $part_max 部分</size>'
+    85  dialog_d4_m3_da              = 'Twenty years my steward and never a doubt on your sanity. | 你当我服务员的二十年来，我一次也没怀疑过你的理智。'
+    85  dialog_d3_m0_fa              = "If the wind picks up we've no chance against the Obra Dinn. | 如果风变大的话，我们就没希望摆脱奥伯拉丁号了。"
+    82  dialog_d4_m3_ha              = 'Tie him up and put him in the lazarette with those.. things. | 把他绑上，和那些…东西一起放到船尾室。'
+    80  dialog_office_delivery_envelope_da = 'Tea’s all gone so you might think about going to bed as well. | 茶已经喝光了，你也该上床睡觉了。'
+
+## 与英文完全相同（疑似未译）—— dev
+  book_numeral_1               = 'I'
+  book_numeral_2               = 'II'
+  book_numeral_3               = 'III'
+  book_numeral_4               = 'IV'
+  book_numeral_5               = 'V'
+  book_numeral_6               = 'VI'
+  book_numeral_7               = 'VII'
+  book_numeral_8               = 'VIII'
+  book_numeral_9               = 'IX'
+  book_numeral_10              = 'X'
+  quote_open                   = '“'
+  tally_amount                 = '£$number'
+  tally_amount_separator       = ','
+  dialog_pickup_watch_aa       = '- Memento Mortem -'
+
+## 空值 —— dev
+  fate_glue_sentence
+
+## 改动过的条目样本（dev vs official，前 40）
+  title_credit
+    dev      = '由Lucas Pope\n 创作'
+    official = '创作者：\nLucas Pope'
+  profile_fates_zero
+    dev      = '未解出任何下落'
+    official = '尚未查证任何人的下落'
+  profile_fates_morethanone
+    dev      = '已解出$0个下落'
+    official = '已查证$0个人的下落'
+  intro_goodship
+    dev      = '商船'
+    official = '真善之舟'
+  intro_built
+    dev      = '1796年于伦敦建造~重800吨，吃水深度18英尺\n船长R·威特瑞~船员51人\n最终航向东方~未抵达会合点'
+    official = '1796年伦敦建造~重量800吨，吃水深度18英尺\n船长R·威特瑞~船员51人\n最终航向东方~未抵达会和点'
+  welldone_3_first
+    dev      = '做得好。\n有三个下落正确。'
+    official = '做得好。\n已查证三人的下落。'
+  welldone_3_more
+    dev      = '做得好。\n又有三个下落正确。'
+    official = '做得好。\n又查证了三人的下落。'
+  welldone_2_first
+    dev      = '做得好。\n有两个下落正确。'
+    official = '做得好。\n已查证两人的下落。'
+  welldone_2_more
+    dev      = '做得好。\n又有两个下落正确。'
+    official = '做得好。\n又查证了两人的下落。'
+  welldone_solvable
+    dev      = '做得好。\n当前可解的所有下落均正确。'
+    official = '做得好。\n所有可查的下落都已查证。'
+  welldone_last
+    dev      = '做得好。\n所有人的下落均正确。'
+    official = '做得好。\n所有人的下落都已查证。'
+  welldone_shipdone
+    dev      = '奥伯拉丁号上已无事可做。'
+    official = '奥伯拉丁号上的要务皆已完成。'
+  book_title
+    dev      = '奥伯拉丁的\n<size=24></size>\n回归'
+    official = '奥伯拉丁号\n<size=24></size>\n归来'
+  book_preface_left
+    dev      = '\t\t此时此刻，想必你已经登上了奥伯拉丁号。我早知这一天终会来临，本来想要通过这本书记录这艘船的怪异遭遇。\n\n \t\t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t\t登上奥伯拉丁号的你是一切的关键。我把查证它的命运、完成这本记录的任务留给了你。'
+    official = '\t此时此刻，想必你已经登上了奥伯拉丁号。我预料到了这一天的到来，一心想要通过这本书记录这艘船的怪异遭遇。\n\n \t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t登上奥伯拉丁号的你是一切的关键。拜托你查证它的命运，完成这本记录。'
+  book_preface_right
+    dev      = '\t\t接下来的几页乍一看可能会令人感到费解。一切早晚都会有意义的。\n\n \t\t使用怀表确定船上每个人的身份和下落。准确地完成每一章节，并通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t\t“交易”一章的内容不会为你所知。我知晓细节，但选择暂时保密。'
+    official = '\t接下来的几页内容可能会令你感到费解。但你早晚会领略其中的含义。\n\n \t使用怀表查证船上每个人的身份和下落。在精确完成每一章节之后，请通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t你无法获知书中“交易”一章的内容。我知晓其中细节，但请恕我暂时保密。'
+  book_chapter_withheld
+    dev      = '在离开船并将本书归还给我之前，本章内容不会为你所知。-H.E.'
+    official = '在离开船并将本书归还给我之前，你无法获知本章内容。-H.E.'
+  book_chapter_1_toc
+    dev      = '风寒'
+    official = '苦寒'
+  book_chapter_1_head
+    dev      = 'II.风寒'
+    official = 'II.苦寒'
+  book_chapter_1_name
+    dev      = '风寒'
+    official = '苦寒'
+  book_chapter_6_toc
+    dev      = '毁灭'
+    official = '劫数'
+  book_chapter_6_head
+    dev      = 'VII.毁灭'
+    official = 'VII.劫数'
+  book_chapter_6_name
+    dev      = '毁灭'
+    official = '劫数'
+  book_toc_glossary
+    dev      = '词汇表'
+    official = '术语'
+  dialog_chapter
+    dev      = '<size=20>第$chapter_num章</size>\n<size=40>$chapter_name</size>\n<size=20>第 $part_num / $part_max 部分</size>'
+    official = '<size=20>第$chapter_num章</size>\n<size=40>$chapter_name</size>\n<size=20>第$part_num部分（共$part_max部分）</size>'
+  dialog_next
+    dev      = '跳过'
+    official = '下一页'
+  book_caption_corpsemoved
+    dev      = '尸体死后被移动过'
+    official = '尸体被移动过'
+  book_caption_others_one
+    dev      = '另有一个人在场'
+    official = '还有一个人在场'
+  book_caption_others_many
+    dev      = '另有$0个人在场'
+    official = '还有$0个人在场'
+  book_hint_arrows
+    dev      = '* 箭头表示时间流动'
+    official = '* 箭头指示时间流程'
+  book_dontleave
+    dev      = '先浏览整本书。'
+    official = '浏览整本书。'
+  disappeared_text_d030
+    dev      = '两个不幸的人在本章事件中失踪。他们的下落记于此处。'
+    official = '两个不幸的人在本章事件过程中失踪。他们的下落已记入此处。'
+  disappeared_text_d060
+    dev      = '七个不幸的人在本章事件中失踪。他们的下落记于此处。'
+    official = '七个不幸的人在本章事件过程中失踪。他们的下落已记入此处。'
+  disappeared_text_d080
+    dev      = '四个不幸的人在本章事件中失踪。他们的下落记于此处。'
+    official = '四个不幸的人在本章事件过程中失踪。他们的下落已记入此处。'
+  location_deck_gun_aft
+    dev      = '火炮甲板尾部'
+    official = '船尾火炮甲板上'
+  location_room_midshipmen
+    dev      = '见习官员舱室内'
+    official = '见习船员舱室内'
+  sketch_formosans
+    dev      = '中国台湾贵族'
+    official = '福尔摩莎贵族'
+  deck_midshipmen
+    dev      = '见习官员'
+    official = '见习船员'
+  deck_bosunstore
+    dev      = '水手长仓库'
+    official = '水手长舱'
+  noclues_title0
+    dev      = '你没有足够的信息以确定此人的身份。'
+    official = '你没有足够的信息可确认此人的身份。'
+  noclues_title1
+    dev      = '这是谁？你还没把握进行推理。'
+    official = '这是谁？你没把握推断其身份。'

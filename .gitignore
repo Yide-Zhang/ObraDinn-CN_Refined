@@ -1,0 +1,54 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- 打包 / 中间产物（build_release.py 生成，不进库）----
+build/
+dist/
+*.spec
+out/
+
+# ---- .NET 构建产物（langtool 探针工程、bin/obj 里的东西）----
+**/bin/
+**/obj/
+/tests/out/
+
+# ---- 平台预编译产物：各自 dotnet publish / 打包时现生成，不进库 ----
+installer/assets/langtool/langtool
+installer/assets/langtool/langtool.exe
+installer/assets/langtool/langtool-macos-arm64
+installer/assets/langtool/langtool-macos-x64
+
+# ---- 游戏素材 / 原始素材（体积大，版权属游戏；构建时从玩家自己的游戏目录取）----
+#     注：下面这些前面加 "/" 是**只匹配根** —— 不加的话 `assets/` 会把
+#     installer/assets/（我们自己的译文表、贴图）也一起排掉（踩过）
+/originalassets/
+/font_src/
+/olddevassets/
+/weirdFonts/
+/"weirdFonts/
+/assets/
+!/assets/*.py
+!/assets/**/*.py
+/langpack/dev/
+/langpack/original/
+/tests/*.dll
+installer/assets/lang-zh-s-official
+installer/assets/sharedassets6.assets
+installer/assets/fonts/A-*.otf
+
+# ---- 运行期生成的东西 ----
+*.log
+*.bak
+installer/out/
+installer/assets/*.tmp
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
