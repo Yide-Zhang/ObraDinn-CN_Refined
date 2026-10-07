@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "dPEmrwr+/2A=",
+  "success": true,
+  "projectFilePath": "E:\\360MoveData\\Users\\OMEN\\Desktop\\ObraDinnSave\\CN_Refined\\tests\\probe\\WrapProbe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.26\\microsoft.windowsdesktop.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.26\\microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\OMEN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.26\\microsoft.netcore.app.host.win-x64.8.0.26.nupkg.sha512"
+  ],
+  "logs": []
+}

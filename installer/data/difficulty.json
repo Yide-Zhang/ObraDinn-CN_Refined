@@ -1,0 +1,62 @@
+{
+ "note": "难度档位表。patch=true 的档位要跑 langtool patchdll；3 是原版行为，不动 DLL。",
+ "keys": [
+  "welldone_3_first",
+  "welldone_3_more",
+  "help_faceclear_fates0",
+  "help_faceclear_fates1"
+ ],
+ "num_chars": "〇一二三四五六七八九十百两",
+ "batch_keys_note": "这 4 个键里的中文数字随档位变（TSV 里写死的是原版「三」）",
+ "levels": [
+  {
+   "level": 3,
+   "zh": "三",
+   "label": "原版（不改）",
+   "desc": "按原版节奏：每次验证 3 人",
+   "patch": false
+  },
+  {
+   "level": 4,
+   "zh": "四",
+   "label": "容易",
+   "desc": "每批验证 4 个下落",
+   "patch": true
+  },
+  {
+   "level": 6,
+   "zh": "六",
+   "label": "中等",
+   "desc": "每批验证 6 个下落",
+   "patch": true
+  },
+  {
+   "level": 9,
+   "zh": "九",
+   "label": "较难",
+   "desc": "每批验证 9 个下落",
+   "patch": true
+  },
+  {
+   "level": 14,
+   "zh": "十四",
+   "label": "困难",
+   "desc": "每批验证 14 个下落",
+   "patch": true
+  },
+  {
+   "level": 29,
+   "zh": "二十九",
+   "label": "极难",
+   "desc": "每批验证 29 个下落",
+   "patch": true
+  },
+  {
+   "level": 58,
+   "zh": "五十八",
+   "label": "硬核",
+   "desc": "一次结清全部 58 人的下落（没有中间检查点）",
+   "patch": true
+  }
+ ]
+}

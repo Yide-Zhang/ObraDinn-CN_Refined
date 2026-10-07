@@ -1,0 +1,21 @@
+# 通用规则放最前 —— .gitattributes 是「后面的规则覆盖前面的」，所以例外必须排在它后面才生效。
+
+# 文本文件统一按 LF 存库、检出也保持 LF
+* text=auto eol=lf
+
+# 译文表：逐字节重要（制表符分隔、含 # 注释行），别做任何转换
+langpack/**/*.tsv text eol=lf
+installer/assets/packs/*.tsv text eol=lf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.psd binary
+*.ico binary
+*.icns binary
+*.otf binary
+*.ttf binary
+*.dll binary
+*.assets binary
+gui/fonts/* binary
+installer/assets/textures/* binary

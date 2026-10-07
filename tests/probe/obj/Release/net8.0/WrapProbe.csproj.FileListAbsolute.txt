@@ -1,0 +1,17 @@
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.exe
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.deps.json
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.runtimeconfig.json
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.dll
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.pdb
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\bin\Release\net8.0\Mono.Cecil.dll
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.csproj.AssemblyReference.cache
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.GeneratedMSBuildEditorConfig.editorconfig
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.AssemblyInfoInputs.cache
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.AssemblyInfo.cs
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.csproj.CoreCompileInputs.cache
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.csproj.Up2Date
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.dll
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\refint\WrapProbe.dll
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.pdb
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\WrapProbe.genruntimeconfig.cache
+E:\360MoveData\Users\OMEN\Desktop\ObraDinnSave\CN_Refined\tests\probe\obj\Release\net8.0\ref\WrapProbe.dll

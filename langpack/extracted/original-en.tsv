@@ -1,0 +1,986 @@
+# code=en  buildDate=2022-06-20T22:29:52  strings=985
+language_code	en
+language_name	English
+title_begin	BEGIN
+title_continue	RESUME
+title_credit	Created by\nLucas Pope
+menu_settings	SETTINGS
+menu_paused	PAUSED
+menu_cancel	Cancel
+settings_volume	Audio Volume
+settings_volume_0	Muted
+settings_volume_1	Barely Audible
+settings_volume_2	Quite Quiet
+settings_volume_3	Just Below Middle
+settings_volume_4	In the Middle
+settings_volume_5	Just Above Middle
+settings_volume_6	Comfortably Loud
+settings_volume_7	Nearly Maximum
+settings_volume_8	Maximum
+settings_sens	Look Sensitivity
+settings_sens_0	Nearly Motionless
+settings_sens_1	Strugglish
+settings_sens_2	Just Slow
+settings_sens_3	Slow Side of Perfect
+settings_sens_4	Perfect
+settings_sens_5	Fast Side of Perfect
+settings_sens_6	Reasonably Fast
+settings_sens_7	Unreasonably Fast
+settings_sens_8	A Parody of Control
+settings_inverty	Invert Vertical Look
+settings_inverty_yes	Yes
+settings_inverty_no	No
+settings_monitor	Monitor
+settings_monitor_lcd	Modern LCD
+settings_output	Output
+settings_output_analog	Smooth
+settings_output_digital_0	Sharp
+settings_output_digital_1	Sharp (Shrink 1)
+settings_output_digital_2	Sharp (Shrink 2)
+settings_output_digital_3	Sharp (Shrink 3)
+settings_output_digital_4	Sharp (Shrink 4)
+settings_output_digital_5	Sharp (Shrink 5)
+settings_controls	Controls
+settings_controls_view	View
+settings_language	Language
+settings_quit	Quit To Title
+settings_autosaved	AUTOSAVED
+controls_exploring	EXPLORING
+controls_reading	READING
+control_action	Action
+control_zoom	Zoom
+control_pause	Pause
+control_book_open	Open Book
+control_book_close	Close Book
+control_book_next	Page Right
+control_book_prev	Page Left
+control_book_toc	Table of Contents
+control_back	Back
+profile_new	NEW
+profile_begin	BEGIN
+profile_continue	CONTINUE
+profile_rewind	REWIND
+profile_rewind_warning_a	Rewind back onto the ship?\nNo progress will be lost.
+profile_rewind_warning_b	Rewind back onto the ship?\nThe book's “Bargain" chapter will be reset but no other progress will be lost.
+profile_fates_zero	No fates solved
+profile_fates_morethanone	$0 fates solved
+profile_description_full	#$num ($fates fates)
+profile_description_empty	#$num (empty)
+profile_copy	COPY
+profile_delete	DELETE
+profile_option_cancel	Cancel
+profile_option_copy	Copy
+profile_option_delete	Delete
+profile_option_rewind	Rewind
+profile_confirm	The contents of #$num will be gone forever.
+profile_playtime_m2	Playtime $m minutes
+profile_playtime_h1	Playtime one hour
+profile_playtime_h2	Playtime $h hours
+profile_playtime_h1m2	Playtime one hour $m minutes
+profile_playtime_h2m2	Playtime $h hours $m minutes
+profile_lastplayed_justnow	Last played just now
+profile_lastplayed_m2	Last played $m minutes ago
+profile_lastplayed_h1	Last played one hour ago
+profile_lastplayed_h2	Last played $h hours ago
+profile_lastplayed_h1m2	Last played one hour $m minutes ago
+profile_lastplayed_h2m2	Last played $h hours $m minutes ago
+profile_lastplayed_date	Last played on $month/$day/$year
+intro_lost	Lost at Sea, 1803
+intro_goodship	THE GOOD SHIP
+intro_obradinn	“OBRA DINN"
+intro_built	Built 1796, London ~ 800 tons, 18 ft draught\nCaptain R. WITTEREL ~ Crew 51 men\nLast voyage to Orient ~ Cape rendezvous unmet
+intro_contact	Contact East India Cy. London Office\nfor enquiries or testimony.
+intro_company	THE HONOURABLE\nEAST INDIA\nCOMPANY
+intro_attention	Attention:\nChief Inspector\nInsurance and Claims\nLondon Office
+intro_dispatch	The Obra Dinn has returned.\nDispatch to Falmouth immediately and prepare a full assessment.
+welldone	Well done.\n
+welldone_3_first	Well done.\nThree fates correct.
+welldone_3_more	Well done.\nThree more fates correct.
+welldone_2_first	Well done.\nTwo fates correct.
+welldone_2_more	Well done.\nTwo more fates correct.
+welldone_solvable	Well done.\nAll currently solvable fates correct.
+welldone_last	Well done.\nAll fates correct.
+welldone_shipdone	There is nothing left to do on the Obra Dinn.
+book_title	Return\n<size=24>of the</size>\nObra Dinn
+book_subtitle	A Catalogue of\nAdventure & Tragedy
+book_preface	PREFACE
+book_preface_left	\tI trust that you now find yourself aboard the Obra Dinn. I expected this day to come and my every intention was to tell the ship’s strange tale within the pages of this book. \n\tRegrettably, failing health has allowed me to produce only the basic outline that follows.\n\tYour presence on the Obra Dinn is critical. I leave the discovery of its fate and the completion of this book in your hands.
+book_preface_right	\tThe next few pages will seem bewildering at first.  All will make sense in time.\n \n\tUse the pocketwatch to determine the identity and fate of everyone aboard. Complete each chapter accurately and return the book by guaranteed post to the French Office of Affairs in Morocco.\n\n\tThe “Bargain" chapter will remain unknown to you.  I possess the details within but have elected to keep them private for now.
+book_chapter_withheld	This chapter will remain unknown until you leave the ship and return the book to me. -H.E.
+book_congrats	This tale belongs to you now. Please finish it. -H.E.
+book_numeral_1	I
+book_numeral_2	II
+book_numeral_3	III
+book_numeral_4	IV
+book_numeral_5	V
+book_numeral_6	VI
+book_numeral_7	VII
+book_numeral_8	VIII
+book_numeral_9	IX
+book_numeral_10	X
+book_chapter_0_toc	Loose Cargo
+book_chapter_0_head	I. LOOSE CARGO
+book_chapter_0_name	LOOSE CARGO
+book_chapter_1_toc	A Bitter Cold
+book_chapter_1_head	II. A BITTER COLD
+book_chapter_1_name	A BITTER COLD
+book_chapter_2_toc	Murder
+book_chapter_2_head	III. MURDER
+book_chapter_2_name	MURDER
+book_chapter_3_toc	The Calling
+book_chapter_3_head	IV. THE CALLING
+book_chapter_3_name	THE CALLING
+book_chapter_4_toc	Unholy Captives
+book_chapter_4_head	V. UNHOLY CAPTIVES
+book_chapter_4_name	UNHOLY CAPTIVES
+book_chapter_5_toc	Soldiers of the Sea
+book_chapter_5_head	VI. SOLDIERS OF THE SEA
+book_chapter_5_name	SOLDIERS OF THE SEA
+book_chapter_6_toc	The Doom
+book_chapter_6_head	VII. THE DOOM
+book_chapter_6_name	THE DOOM
+book_chapter_7_toc	Bargain
+book_chapter_7_head	VIII. BARGAIN
+book_chapter_7_name	BARGAIN
+book_chapter_8_toc	Escape
+book_chapter_8_head	IX. ESCAPE
+book_chapter_8_name	ESCAPE
+book_chapter_9_toc	The End
+book_chapter_9_head	X. THE END
+book_chapter_9_name	THE END
+book_toc_contents	CONTENTS
+book_toc_chapters	CHAPTERS
+book_toc_chart	The Journey
+book_toc_deck	The Ship
+book_toc_crew	The Crew
+book_toc_sketch	Life at Sea (Sketch)
+book_toc_glossary	Glossary
+book_toc_last	Back Cover
+dialog_chapter	<size=20>CHAPTER $chapter_num</size>\n<size=40>$chapter_name</size>\n<size=20>PART $part_num OF $part_max</size>
+dialog_next	NEXT
+dialog_ellipses	...
+quote_open	“
+quote_close	"
+book_part_num	PART $0
+book_conclusion	CONCLUSION
+book_head_chart	THE JOURNEY
+book_head_deck	THE SHIP
+book_head_crew	THE CREW
+book_head_sketch	LIFE AT SEA
+book_legend_openclose	OPEN/CLOSE BOOK
+book_legend_toc	TABLE OF CONTENTS
+book_caption_chart	Atlantic leg of the Far East route
+book_caption_deck	Deck plans for the Obra Dinn
+book_caption_manifest	Complete crew and passenger manifest
+book_caption_sketch	Sketches of life aboard the Obra Dinn
+book_caption_corpse	Location of the corpse
+book_caption_corpses	Location of the corpses
+book_caption_corpsemoved	The corpse was moved post-mortem
+book_caption_corpsegone	Accessible only through another corpse
+book_caption_others_zero	No-one else was present
+book_caption_others_one	One other person was present
+book_caption_others_many	$0 others were present
+book_hint_arrows	* ARROWS INDICATE THE FLOW OF TIME
+book_dontleave	Skim through the entire book first.
+disappeared_title	DISAPPEARANCES
+disappeared_title2	DISAPPEARANCES (CONT'D)
+disappeared_text_d030	Two wayward souls disappeared during the events of this chapter. Their fates are catalogued here.
+disappeared_text_d060	Seven wayward souls disappeared during the events of this chapter. Their fates are catalogued here.
+disappeared_text_d080	Four wayward souls disappeared during the events of this chapter. Their fates are catalogued here.
+location_room_captain_outside	OUTSIDE THE CAPTAIN'S QUARTERS
+location_room_captain_inside	INSIDE THE CAPTAIN'S QUARTERS
+location_room_mate1_window	OUTSIDE THE FIRST MATE'S WINDOW
+location_deck_main	ON THE MAIN DECK
+location_deck_gun	ON THE GUN DECK
+location_deck_gun_aft	ON THE AFT GUN DECK
+location_deck_gun_bow	ON THE BOW
+location_room_midshipmen	IN THE MIDSHIPMEN CABIN
+location_room_officermess	IN THE OFFICER'S MESS
+location_deck_poop	ON THE STERN DECK
+location_deck_orlop	ON THE ORLOP DECK
+location_room_surgeon	IN THE SURGEON'S ROOM
+location_deck_orlop_walk	IN THE PORT WALK
+location_deck_cargo	ON THE CARGO DECK
+location_rigging	IN THE RIGGING
+location_room_lazarette	IN THE LAZARETTE
+location_sea_open	ON THE OPEN SEA
+location_sea_port	OFF THE PORT SIDE
+memories_zero	No Memories
+memories_one	1 Memory
+memories_many	$0 Memories
+bookmarked_title_one	This Soul Appears In One Memory
+bookmarked_title_many	This Soul Appears In $0 Memories
+bookmarked_unknown	Unrecognized Soul
+bookmarked_first	First Memory
+bookmarked_mark	Bookmark Memories
+bookmarked_clear	Remove All Bookmarks
+bookmarked_marked_one	Bookmarked One Memory
+bookmarked_marked_many	Bookmarked $0 Memories
+bookmarked_death	Perished in “$chapter $part"
+bookmarked_disappear	Disappeared in “$chapter"
+bookmarked_gosketch	Depicted in “$sketch" Sketch
+bookmarked_godeck	Show Memories on Deck Map
+bookmarked_next	Next Memory
+bookmarked_prev	Previous Memory
+chooseface_title	Who is $subject?
+sketch_dance	Under Way
+sketch_formosans	Formosan Royalty
+sketch_justice	Justice at Sea
+deck_maindeck	MAIN DECK
+deck_gundeck	GUN DECK
+deck_orlopdeck	ORLOP DECK
+deck_cargodeck	CARGO HOLD
+deck_captainsquarters	Captain's\nQuarters
+deck_passengerrooms	Passenger\nCabins
+deck_mate1	First\nMate
+deck_mate3	Third\nMate
+deck_stewards	Stewards
+deck_midshipmen	Midshipmen
+deck_mate2	Second\nMate
+deck_mate4	Fourth\nMate
+deck_bosun	Bosun
+deck_bosunmate	Bosunmate
+deck_surgery	Surgery
+deck_crew	Crew
+deck_starboardwalk	Starboard\nWalk
+deck_carpentershop	Carpenter's Shop
+deck_purseroffice	Pursers Office
+deck_passengers	Passengers
+deck_portwalk	Port\nWalk
+deck_gunnerstore	Gunner's Store
+deck_captainscargo	Captain's Cargo
+deck_lazarette	Lazarette
+deck_passengercargo	Passenger Cargo
+deck_bosunstore	Bosun's Store
+chart_europe	EUROPE
+chart_africa	AFRICA
+chart_madeira	MADEIRA
+chart_canaryislands	CANARY\nISLANDS
+chart_capeverde	CAPE VERDE
+chart_azores	AZORES
+manifest_name	Name
+manifest_job	Quality
+manifest_origin	Origin
+manifest_fate	Fate
+noclues_title0	You don't have sufficient information to determine this person's identity.
+noclues_title1	Who is this? You cannot deduce with confidence yet.
+noclues_cancel	Await Further Clues
+noclues_continue	Try Anyways
+noclues_explain	Please Explain
+noclues_explain_more	Please Explain...
+noclues_help	A Little Help
+help_faceblur_intro0	This person's face appears blurred throughout the book.
+help_faceblur_intro1	This blurring indicates that you don't yet have sufficient information to determine their identity.
+help_faceblur_fate	Their fate may be known and can be entered now.
+help_faceblur_name	Trying to name them while their face is blurred would be unproductive.
+help_faceblur_outro0	Carry on and pay attention.
+help_faceblur_outro1	Faces will become unblurred when the information necessary to identify them has been revealed in some way.
+help_faceclear_intro0	This person's face is no longer blurred, which means that they can now be identified.
+help_faceclear_intro1	Use the book and the pocketwatch to gather enough information to deduce their identity.
+help_faceclear_memories	Memories where this person appears can be navigated from here.
+help_faceclear_bookmark	Bookmark all memories where they appear for quicker navigation.
+help_faceclear_bookmark2	Use the buttons at the top of the page to edit bookmarks and navigate between them.
+help_faceclear_dialog	Review conversations on each page and note any names that are mentioned.
+help_faceclear_map	Refer to the ship map and pay attention to the labels of rooms where people or objects are found.
+help_faceclear_sketch	Deduce origins, roles, and relationships from depictions in the artist's sketch.
+help_faceclear_manifest	Use the manifest to see all crew and passenger information in one place.
+help_faceclear_origins	Origins can give clues to a person's appearance or accent.
+help_faceclear_jobs	Roles can give clues about where people are found on the ship, and their relationships with others.
+help_faceclear_nums	Each person's manifest number is unique and may be useful in identifying them.
+help_faceclear_pocketwatch	Revisit memories on the ship using the pocketwatch to study relationships, appearances, and activities.
+help_faceclear_book	Use the book maps, crew manifest, and artist sketches (pages $pages) along with the individual conversation logs to find clues about names, relationships, appearances, and roles.
+help_faceclear_elimination	Some identities may only be revealed through a process of elimination.
+help_faceclear_fates_may	This may or may not be correct.
+help_faceclear_fates0	Fates are validated in sets of three.
+help_faceclear_fates1	Correctly identify at least three people and their fates to have the information typeset into the book.
+help_faceclear_fates0_easy	Fates are validated in sets of two.
+help_faceclear_fates1_easy	Correctly identify at least two people and their fates to have the information typeset into the book.
+help_faceclear_outro0	There were 60 people on the ship when it left England.
+help_faceclear_outro1	Determining everyone's identity and fate will not be easy.
+help_faceclear_outro2	Decisive information is rare.
+help_faceclear_outro3	You will have to make assumptions using partial information.
+help_faceclear_goodluck	Good luck.
+help_difficulty0	This is a deduction rating.
+help_difficulty1	A higher rating means that it will be more difficult to deduce this person's identity.
+help_difficulty2	Focus on the easily-deduced identities first and leave the more difficult ones for later.
+help_title_heading	GUIDANCE
+help_title_deducing	Identifying People
+help_title_usingbook	Using the Book, Generally
+help_title_difficulty	Deduction Ratings
+help_title_fatescheck	Fate Validation
+help_title_bookmarks	Bookmarks
+help_zoom	Hold zoom to examine faces.
+help_zoombook	Open the book while examining a face to flip directly to the sketch.
+help_watchbook	Open the book while the pocketwatch is open to flip directly to the relevant page.
+book_glossary	GLOSSARY
+glossary_captain	Captain | Head officer in command of the ship. Responsible for directing the other officers and ensuring the success and safety of the ship's voyage.
+glossary_mate	Mate | Officer or tradesman that supports and assists their superior. General mates help to run the ship and serve at the Captain's request. Tradesmen mates serve their supervisor.
+glossary_bosun	Bosun | [Alt. Boatswain, Bos'n] Foreman in charge of general crew operations and the equipment required to sail the ship.
+glossary_gunner	Gunner | Military officer in charge of weapons and military procedures on the ship.
+glossary_purser	Purser | Administrative official. Accounts for all cargo value and trade transactions. Manages a small items store for crew.
+glossary_surgeon	Surgeon | The ship's doctor, in charge of crew health. Capable of general care and medical procedures as required.
+glossary_carpenter	Carpenter | Tradesman responsible for maintaining the integrity of the ship's wooden structures.
+glossary_helmsman	Helmsman | Rated seaman in control of the ship's wheel and general moment-to-moment navigation.
+glossary_steward	Steward | Servant to an officer or higher-rated crew member, performing general duties for the comfort of their employer.
+glossary_midshipman	Midshipman | Officer-in-training. Assists various officers and tradesmen in order to learn ship operations. Usually of privileged status.
+glossary_topman	Topman | Higher-rated seaman specializing in work above the deck, in the sails and rigging.
+glossary_seaman	Seaman | Low-level crew member responsible for general manual labor on and below deck.
+glossary_rigging	Rigging | The network of ropes and chains supporting the masts and used for working the sails.
+glossary_maindeck	Main Deck | The top deck of the ship, exposed to the weather.
+glossary_gundeck	Gun Deck | The deck carrying the ship's guns and lined with portals for their firing.
+glossary_orlopdeck	Orlop Deck | Mid deck, above the lowest deck. Containing storage, cabins, animal pens, and the ship's steering tiller.
+glossary_cargodeck	Cargo Deck | The lowest deck, used for storage of ship materials and trade goods.
+credits_dad	For my Dad
+credits_main	Programming, Design, Art, Sound & Music
+credits_thanks	Special Thanks
+credits_consult	Language Consulting
+credits_consult_taiwanese	Taiwanese Language Consulting, Translations & Management
+credits_consult_english	UK English
+credits_consult_swedish	Swedish
+credits_consult_danish	Danish
+credits_consult_hindi	Hindi
+credits_consult_russian	Russian
+credits_loc_manage	Localization Management
+credits_loc_spanish	Spanish Localization
+credits_loc_german	German Localization
+credits_loc_french	French Localization
+credits_loc_italian	Italian Localization
+credits_loc_polish	Polish Localization
+credits_loc_portuguese	Brazilian Portuguese Localization
+credits_loc_russian	Russian Localization
+credits_loc_chinese_t	Chinese Traditional Localization
+credits_loc_chinese_s	Chinese Simplified Localization
+credits_loc_japanese	Japanese Localization
+credits_loc_korean	Korean Localization
+credits_loc_ukrainian	Ukrainian Localization
+credits_loc_arabic	Arabic Localization
+credits_voice	Character Voicing
+credits_voice_manage	Voices.com Casting Management
+credits_voice_add	Additional Voices
+credits_voice_rower	Boat Puller
+credits_voice_house	Housekeeper
+credits_voice_player	Investigator
+credits_models	Animal Models
+credits_models_farmanimals	Farm Animals
+credits_models_monkey	Monkey
+credits_models_cowskull	Cow Skull
+credits_testing	Testing
+credits_thanks_extra	Extra Thanks
+credits_playing	Thank you for playing!
+credits_copyright	© 2014-2022, 3909 LLC.\nAll Rights Reserved.
+ach_ending_good	Obra Done
+ach_ending_good_desc	Solve the entire book.
+ach_ending_bad	Abandon Ship
+ach_ending_bad_desc	Leave the ship without solving all available chapters.
+ach_solvedchapter_desc	Solve all fates in chapter $numeral.
+ach_killercaptain	Captain Did It
+ach_killercaptain_desc	Loosely true, in the eyes of Company and Crown.
+ach_solvedany	Any $count
+ach_solvedany_desc	Solve any $count fates.
+fate_unknown_die	Who is this?\nHow did they die?
+fate_unknown_disappear	Who is this?\nWhat fate befell them?
+fate_killer_notpresent	$subject was definitely not present when this poor soul died.
+fate_noncrew_d000-stow-m01-stowaway	An unidentified stowaway, expecting free passage and eventual freedom, was instead crushed inside a falling barrel.
+fate_noncrew_d010-cold-m02-cow	A large cow was slaughtered for its meat.
+fate_noncrew_d050-ride-m07-carp	A hideous monster perished simultaneously with a brave but unfortunate soul.
+fate_noncrew_d070-save-m01-mermaid3	An unholy creature's defiant shrieks were greeted with a fatal bullet.
+fate_noncrew_d070-save-m02-mermaid2	A captured beast fought against its jailer and was speared for the trouble.
+fate_noncrew_d070-save-m04-monkey	A friendly but not entirely pleasant monkey companion was sacrificed in the pursuit of knowledge.
+tally_title	THE HONOURABLE\nEAST INDIA COMPANY
+tally_assessment	INSURANCE ASSESSMENT\nFor the Good Ship\nOBRA DINN,\nVictim of Calamitous Events at Sea.
+tally_preparer	Prepared by the Company Office of Investigation
+tally_approved	A preliminary draft of this assessment has been approved by the Royal Trade Guarantor.
+tally_total	TOTAL CLAIMED $amount
+tally_certify	On behalf of the Honourable East India Company, I certify all statements as accurate and declare this matter closed in its entirety:
+tally_investigator	HEIC Chief Inspector
+tally_amount	£$number
+tally_amount_separator	,
+tally_claim	CLAIM
+tally_ship	Ship
+tally_ship_info	Damaged in squall, Atlantic. Sunk in storm, Falmouth. Payout claimed: $amount.
+tally_cargo_company	Cargo (Company)
+tally_cargo_company_info	All cargo lost. Payout claimed: $amount.
+tally_cargo_crown	Cargo (Crown)
+tally_cargo_crown_info	All cargo lost. Payout claimed for restitution: $amount.
+tally_join_major	._
+tally_join_minor	,_
+tally_fate	Fate: $summary
+tally_crime	Criminal findings: $findings
+tally_crime_murder	Murder of crewmate ($count)
+tally_crime_mutiny	Attempted mutiny
+tally_crime_theft	Theft of cargo
+tally_merit	Findings of merit: $findings
+tally_merit_valor	Extraordinary valor
+tally_merit_duties	Exceptional performance of duties
+tally_demerit	Findings of demerit: $findings
+tally_demerit_abandon	Abandonment of crew and vessel
+tally_demerit_duties	Failure to perform duties
+tally_estate_none	No claim made.
+tally_estate_wages	Estate awarded outstanding wages: $amount
+tally_estate_wages_reward	Estate awarded outstanding wages and reward: $amount
+tally_estate_fined	Estate fined: $amount
+tally_estate_unknown_wages	Estate unknown. Outstanding wages donated to pension fund: $amount
+tally_estate_unknown_wages_reward	Estate unknown. Outstanding wages and reward donated to pension fund: $amount
+tally_estate_unknown_fined	Estate unknown. Expense claimed: $amount
+tally_estate_forfeit	Estate forfeited to the Crown.
+tally_parting_watch	The pocketwatch remains in your possession.
+tally_parting_book	The book returns to its original owner, Henry Evans in Morocco, as requested.
+office_letter_win	Chief Inspector,\n\n\tI write to you with the unfortunate news that Dr. Evans has passed away. He succumbed to his illness shortly after receiving your package.\n\tHe was very pleased with your correspondence and asked that his gratitude be expressed by returning the book to you, along with the means to complete it.\n\tAs for the three of us that remain, the Obra Dinn is a distant memory and a dreadful chapter in our lives that we wish to forget. \n\tDo not write back.\n\nRegards,\n\tJane Bird
+office_letter_mid	Chief Inspector,\n\n\tI write to you with the unfortunate news that Dr. Evans has passed away. He succumbed to his illness shortly after receiving your package.\n\tAlthough the book was not fully solved, he asked me to express his appreciation at your attempt. He understood the difficulty of the task and that his final wish to see the completed book would not come easily.\n\tOf the four of us that survived the Obra Dinn's terrible ordeal, only three remain now.\n\tWe are content with our situation here in Morocco and request no further correspondence.\n\nRegards,\n\tJane Bird
+office_letter_fail	Chief Inspector,\n\n\tI write to you with the unfortunate news that Dr. Evans has passed away. He succumbed to his illness shortly after receiving your package.\n\tAlthough his health was generally poor, receiving the Obra Dinn book in such an incomplete state further disheartened him so thoroughly that he was unable to recover.\n\tHe used his final moments to express the extreme regret he felt with entrusting such a remarkable task to you.\n\tWe thought you should know.\n\nRegards,\n\tJane Bird
+store_tagline	An Insurance Adventure with Minimal Color
+store_description_long	In 1802, the merchant ship Obra Dinn set out from London for the Orient with over 200 tons of trade goods. Six months later it hadn't met its rendezvous point at the Cape of Good Hope and was declared lost at sea. \n\nEarly this morning of October 14th, 1807, the Obra Dinn drifted into port at Falmouth with damaged sails and no visible crew. As insurance investigator for the East India Company's London Office, dispatch immediately to Falmouth, find means to board the ship, and prepare an assessment of damages.\n\nReturn of the Obra Dinn is a first-person mystery adventure based on exploration and logical deduction.
+store_description_short	Lost at sea 1803 ~ The good ship Obra Dinn.
+store_mature	This game passively depicts death and violence in freeze-frame 3D scenes.
+crew_name_captain	Robert Witterel | R. Witterel
+crew_name_mate1	William Hoscut | W. Hoscut
+crew_name_mate2	Edward Nichols | E. Nichols
+crew_name_mate3	Martin Perrott | M. Perrott
+crew_name_mate4	John Davies | J. Davies
+crew_name_bosun	Alfred Klestil | A. Klestil
+crew_name_bosunmate	Charles Miner | C. Miner
+crew_name_surgeon	Henry Evans | H. Evans
+crew_name_surgeonmate	James Wallace | J. Wallace
+crew_name_carp	Winston Smith | W. Smith
+crew_name_carpmate	Marcus Gibbs | M. Gibbs
+crew_name_cook	Thomas Sefton | T. Sefton
+crew_name_butcher	Emil O’Farrell | E. O’Farrel
+crew_name_gunner	Christian Wolff | C. Wolff
+crew_name_gunnermate	Olus Wiater | O. Wiater
+crew_name_purser	Duncan McKay | D. McKay
+crew_name_sea9	Finley Dalton | F. Dalton
+crew_name_pass5	Edward Spratt | E. Spratt
+crew_name_pass1	Abigail Hoscut Witterel | A.H. Witterel
+crew_name_pass2	Nunzio Pasqua | N. Pasqua
+crew_name_pass3	Emily Jackson | E. Jackson
+crew_name_pass4	Miss Jane Bird | J. Bird
+crew_name_pass6	Bun-Lan Lim | B. Lim
+crew_name_pass7	It-Beng Sia | I. Sia
+crew_name_pass8	Chioh Tan | C. Tan
+crew_name_pass9	Hok-Seng Lau | H. Lau
+crew_name_stewship	Zungi Sathi | Z. Sathi
+crew_name_stewcap	Fillip Dahl | F. Dahl
+crew_name_stewm1	Paul Moss | P. Moss
+crew_name_stewm2	Samuel Galligan | S. Galligan
+crew_name_stewm3	Roderick Andersen | R. Andersen
+crew_name_stewm4	Davey James | D. James
+crew_name_mid1	Peter Milroy | P. Milroy
+crew_name_mid2	Thomas Lanke | T. Lanke
+crew_name_mid3	Charles Hershtik | C. Hershtik
+crew_name_top5	Omid Gul | O. Gul
+crew_name_top6	Timothy Butement | T. Butement
+crew_name_top1	Huang Li | H. Li
+crew_name_top4	Jie Zhang | J. Zhang
+crew_name_top7	Li Hong | L. Hong
+crew_name_top8	Wei Lee | W. Lee
+crew_name_top9	Nicholas Botterill | N. Botterill
+crew_name_top3	Maba | Maba
+crew_name_topa	Lewis Walker | L. Walker
+crew_name_top2	Leonid Volkov | L. Volkov
+crew_name_sea1	Alarcus Nikishin | A. Nikishin
+crew_name_sea5	Aleksei Toporov | A. Toporov
+crew_name_sea2	Nathan Peters | N. Peters
+crew_name_sea3	Lars Linde | L. Linde
+crew_name_sea6	John Naples | J. Naples
+crew_name_sea4	Renfred Rajub | R. Rajub
+crew_name_sea7	Abraham Akbar | A. Akbar
+crew_name_sea8	William Wasim | W. Wasim
+crew_name_seac	Soloman Syed | S. Syed
+crew_name_seaa	Hamadou Diom | H. Diom
+crew_name_seab	Henry Brennan | H. Brennan
+crew_name_sead	Alexander Booth | A. Booth
+crew_name_seae	Patrick O’Hagan | P. O’Hagan
+crew_name_seaf	George Shirley | G. Shirley
+crew_name_seag	Samuel Peters | S. Peters
+crew_job_officer	Officer
+crew_job_captain	Captain
+crew_job_mate1	First Mate
+crew_job_mate2	Second Mate
+crew_job_mate3	Third Mate
+crew_job_mate4	Fourth Mate
+crew_job_bosun	Bosun
+crew_job_bosunmate	Bosun's Mate
+crew_job_surgeon	Surgeon
+crew_job_surgeonmate	Surgeon's Mate
+crew_job_carp	Carpenter
+crew_job_carpmate	Carpenter Mate
+crew_job_cook	Cook
+crew_job_butcher	Butcher
+crew_job_gunner	Gunner
+crew_job_gunnermate	Gunner's Mate
+crew_job_purser	Purser
+crew_job_helm	Helmsman
+crew_job_artist	Artist
+crew_job_pass	Passenger
+crew_job_stew	Steward
+crew_job_stewship	Ship's Steward
+crew_job_stewcap	Captain's Steward
+crew_job_stewm1	1st Mate's Steward
+crew_job_stewm2	2nd Mate's Steward
+crew_job_stewm3	3rd Mate's Steward
+crew_job_stewm4	4th Mate's Steward
+crew_job_mid	Midshipman
+crew_job_top	Topman
+crew_job_sea	Seaman
+crew_origin_sierra	Siera Leona
+crew_origin_america	America
+crew_origin_austria	Austria
+crew_origin_china	China
+crew_origin_denmark	Denmark
+crew_origin_england	England
+crew_origin_formosa	Formosa
+crew_origin_france	France
+crew_origin_india	India
+crew_origin_ireland	Ireland
+crew_origin_italy	Italy
+crew_origin_newguinea	New Guinea
+crew_origin_poland	Poland
+crew_origin_russia	Russia
+crew_origin_scotland	Scotland
+crew_origin_sweden	Sweden
+crew_origin_wales	Wales
+crew_origin_persia	Persia
+fate_glue_sentence	 
+fate_glue_summary	, 
+fate_sort	unknown, alive-africa, alive-island, alive-azores, alive-canary, alive-verde, alive-eastindies, alive-europe, alive-middleeast, alive-uk, alive-westindies, axed-killer, burned, clawed-beast, clubbed-killer, crushed-beast, crushed-cannon, crushed-cargo, crushed-rigging, crushed-stones, decapitated-killer, drowned-killer, eaten-killer, electrocuted, expired-age, exploded, fell-overboard, fell-rigging, fell-stairs, froze, expired-sick, sworded-killer, knifed-killer, poisoned, arrowed-killer, cannoned-killer, gunned-killer, speared-killer, spiked-beast, strangled-killer, hooved-beast, tailed-beast, winged-beast, suicide-gun, suicide-knife, suicide-noose, suicide-spear, dismembered-killer
+fate_parts_unknown	Unknown | $subject | met an unknown fate.
+fate_parts_gunned-killer	Shot/Gun | $subject | was shot with a gun | by $killer.
+fate_parts_cannoned-killer	Shot/Cannon | $subject | was blasted with a cannon | by $killer.
+fate_parts_knifed-killer	Knifed | $subject | was knifed | by $killer.
+fate_parts_sworded-killer	Killed (Sword) | $subject | was killed with a sword | by $killer.
+fate_parts_clubbed-killer	Clubbed | $subject | was clubbed | by $killer.
+fate_parts_axed-killer	Axed | $subject | was axed | by $killer.
+fate_parts_speared-killer	Speared | $subject | was speared | by $killer.
+fate_parts_dismembered-killer	Torn Apart | $subject | was torn apart | by $killer.
+fate_parts_decapitated-killer	Decapitated | $subject | was decapitated | by $killer.
+fate_parts_drowned-killer	Drowned | $subject | was drowned | by $killer.
+fate_parts_eaten-killer	Eaten | $subject | was <m>cannibalized<><f>cannibalized<><b>devoured<> | by $killer.
+fate_parts_strangled-killer	Strangled | $subject | was strangled | by $killer.
+fate_parts_spiked-beast	Spiked | $subject | was spiked by a terrible beast.
+fate_parts_clawed-beast	Clawed | $subject | was clawed by a terrible beast.
+fate_parts_winged-beast	Struck/Wing | $subject | was struck dead by a beast's wing.
+fate_parts_tailed-beast	Struck/Tail | $subject | was struck dead by a beast's tail.
+fate_parts_hooved-beast	Struck/Hooves | $subject | was struck dead by a beast's hooves.
+fate_parts_crushed-cargo	Crushed/Cargo | $subject | was crushed by falling cargo.
+fate_parts_crushed-beast	Crushed/Beast | $subject | was crushed by a terrible beast.
+fate_parts_crushed-cannon	Crushed/Cannon | $subject | was crushed by a loose cannon.
+fate_parts_crushed-rigging	Crushed/Rigging | $subject | was crushed by falling rigging.
+fate_parts_crushed-stones	Crushed/Stones | $subject | was crushed by falling stones.
+fate_parts_fell-stairs	Fell/Stairs | $subject | fell down the stairs to <M>his<><F>her<> death.
+fate_parts_fell-rigging	Fell/Rigging | $subject | fell from the rigging to <M>his<><F>her<> death.
+fate_parts_fell-overboard	Fell/Overboard | $subject | fell overboard to <M>his<><F>her<> death.
+fate_parts_expired-age	Expired | $subject | expired from old age.
+fate_parts_expired-sick	Illness | $subject | succumbed to a tragic illness.
+fate_parts_exploded	Exploded | $subject | was blasted by an explosion.
+fate_parts_electrocuted	Electrocuted | $subject | was electrocuted.
+fate_parts_poisoned	Poisoned | $subject | was poisoned.
+fate_parts_burned	Burned | $subject | burned to death.
+fate_parts_froze	Froze | $subject | froze to death.
+fate_parts_suicide-gun	Suicide/Gun | $subject | shot <M>himself<><F>herself<>.
+fate_parts_suicide-knife	Suicide/Knife | $subject | stabbed <M>himself<><F>herself<>.
+fate_parts_suicide-spear	Suicide/Spear | $subject | speared <M>himself<><F>herself<>.
+fate_parts_suicide-noose	Suicide/Noose | $subject | hung <M>himself<><F>herself<>.
+fate_parts_alive-uk	Alive/United Kingdom | $subject | is alive in the United Kingdom.
+fate_parts_alive-eastindies	Alive/East Indies | $subject | is alive in the East Indies.
+fate_parts_alive-westindies	Alive/West Indies | $subject | is alive in the West Indies.
+fate_parts_arrowed-killer	Shot/Arrow | $subject | was shot with a bow and arrow | by $killer.
+fate_parts_alive-middleeast	Alive/Middle East | $subject | is alive in the Middle East.
+fate_parts_alive-europe	Alive/Europe | $subject | is alive in Europe.
+fate_parts_alive-africa	Alive/Africa | $subject | is alive in Africa.
+fate_parts_alive-island	Alive/Atlantic Island | $subject | is alive on an Atlantic island.
+fate_parts_alive-canary	Alive/Canary Islands | $subject | is alive on the Canary Islands.
+fate_parts_alive-verde	Alive/Cape Verde | $subject | is alive on Cape Verde.
+fate_parts_alive-azores	Alive/Azores | $subject | is alive on the Azores.
+fate_ent_unknown	Unknown | An Unknown Soul | This unknown soul | an unknown attacker
+fate_ent_?officer	AUTO | An Unknown Officer | This unknown officer | an unknown officer
+fate_ent_?pass	AUTO | An Unknown Passenger | This unknown passenger | an unknown passenger
+fate_ent_?stew	AUTO | An Unknown Steward | This unknown steward | an unknown steward
+fate_ent_?mid	AUTO | An Unknown Midshipman | This unknown midshipman | an unknown midshipman
+fate_ent_?top	AUTO | An Unknown Topman | This unknown topman | an unknown topman
+fate_ent_?sea	AUTO | An Unknown Seaman | This unknown seaman | an unknown seaman
+fate_ent_captain	AUTO | Captain $name | = | =
+fate_ent_mate1	AUTO | $name (first mate) | = | =
+fate_ent_mate2	AUTO | $name (second mate) | = | =
+fate_ent_mate3	AUTO | $name (third mate) | = | =
+fate_ent_mate4	AUTO | $name (fourth mate) | = | =
+fate_ent_bosun	AUTO | $name (bosun) | = | =
+fate_ent_bosunmate	AUTO | $name (bosun’s mate) | = | =
+fate_ent_surgeon	AUTO | $name (surgeon) | = | =
+fate_ent_surgeonmate	AUTO | $name (surgeon’s mate) | = | =
+fate_ent_carp	AUTO | $name (carpenter) | = | =
+fate_ent_carpmate	AUTO | $name (carpenter’s mate) | = | =
+fate_ent_cook	AUTO | $name (cook) | = | =
+fate_ent_butcher	AUTO | $name (butcher) | = | =
+fate_ent_gunner	AUTO | $name (gunner) | = | =
+fate_ent_gunnermate	AUTO | $name (gunner’s mate) | = | =
+fate_ent_purser	AUTO | $name (purser) | = | =
+fate_ent_helm	AUTO | $name (helmsman) | = | =
+fate_ent_artist	AUTO | $name (artist) | = | =
+fate_ent_pass	AUTO | $name (passenger) | = | =
+fate_ent_stewship	AUTO | $name (ship’s steward) | = | =
+fate_ent_stewcap	AUTO | $name (captain’s steward) | = | =
+fate_ent_stewm1	AUTO | $name (1st mate’s steward) | = | =
+fate_ent_stewm2	AUTO | $name (2nd mate’s steward) | = | =
+fate_ent_stewm3	AUTO | $name (3rd mate’s steward) | = | =
+fate_ent_stewm4	AUTO | $name (4th mate’s steward) | = | =
+fate_ent_mid	AUTO | $name (midshipman) | = | =
+fate_ent_top	AUTO | $name (topman) | = | =
+fate_ent_sea	AUTO | $name (seaman) | = | =
+fate_ent_beast	Beast | NONE | NONE | a terrible beast
+fate_ent_enemy	Enemy | NONE | NONE | a foreign enemy
+dialog_intro_aa	Falmouth, England\n1807
+dialog_intro_ba	Company man woke me up.
+dialog_intro_ca	Said you'd need ferry to the Obra Dinn.
+dialog_intro_da	Not many eager for that job.
+dialog_intro_ea	Seems a bit late if you ask.
+dialog_intro_fa	I didn't.
+dialog_intro_ga	What's in the box?
+dialog_intro_ha	I don't know.
+dialog_intro_ia	Hoist it up in a few minutes.
+dialog_intro_ja	Eh? How?
+dialog_intro_ka	Carefully.
+dialog_demo_end_aa	- End of Demo -
+dialog_demo_end_ba	Thanks for playing!
+dialog_watch_too_heavy_1_aa	Hoy!
+dialog_watch_too_heavy_1_ba	It's too heavy!
+dialog_watch_too_heavy_2_aa	It's too heavy!
+dialog_watch_too_heavy_2_ba	Lift it yourself!
+dialog_watch_too_heavy_3_aa	It's too heavy.
+dialog_watch_too_heavy_3_ba	Take it yourself or open it here.
+dialog_pickup_watch_aa	- Memento Mortem -
+dialog_pickup_watch_ba	Remember Death
+dialog_ship_end_notify_aa	Hoy!
+dialog_ship_end_notify_ba	You in there somewhere?
+dialog_ship_end_notify_ca	Storm’s comin!
+dialog_ship_end_notify_da	Finish your business and climb down here!
+dialog_ship_end_leave_1_aa	All done?
+dialog_ship_end_leave_1_ba	We should go.
+dialog_ship_end_leave_1_ca	Storm’s nearly about so we won’t be coming back.
+dialog_ship_end_leave_1_da	If you still have business here, climb up and finish it.
+dialog_ship_end_leave_1_ea	Else I’ll make to port.
+dialog_ship_end_leave_2_aa	Ready to go?
+dialog_ship_end_leave_3_aa	We should go.
+dialog_ship_end_leave_3_ba	Storm’s nearly about so we won’t be coming back.
+dialog_ship_end_done_aa	Finally.
+dialog_ship_end_done_ca	Sit down so you don’t fall out.
+dialog_moment_unknown_aa	unknown
+dialog_d0_m0_ah	Make way, coming through.
+dialog_d0_m0_ar	Orlop stern, ‘neath the tiller.
+dialog_d0_m0_ba	Lower away!
+dialog_d0_m0_bh	Oy!
+dialog_d0_m0_bk	Wait! Wait!
+dialog_d0_m0_bo	No!
+dialog_d0_m0_bs	Down Below!
+dialog_d0_m1_aa	Hoist away!
+dialog_d0_m1_ba	Lower away!
+dialog_d1_m0_am	Эй, мухлевать то завязывай! | Stop your cheating!
+dialog_d1_m0_ar	На себя погляди, дубина. | Worry about yourself.
+dialog_d1_m0_aa	सय्यद | Syed!
+dialog_d1_m0_ba	सय्यद, उठो। | Syed, get up!
+dialog_d1_m0_ca	कुछ पी लो | Drink something!
+dialog_d1_m1_aa	Well?
+dialog_d1_m1_ba	Same as the other fellow.
+dialog_d1_m1_ca	Some lung disease.
+dialog_d1_m1_da	Not consumption.
+dialog_d1_m1_ea	Made worse by the cold.
+dialog_d1_m1_fa	Will it spread?
+dialog_d1_m1_ga	If so, we’d all have it.
+dialog_d1_m1_ha	They must’ve picked it up at the lascar house.
+dialog_d1_m1_ia	I checked all hands just now,
+dialog_d1_m1_ja	and everyone is healthy.
+dialog_d1_m1_ka	And him?
+dialog_d1_m1_la	What are his chances?
+dialog_d1_m1_ma	I gave him some laudanum.
+dialog_d1_m1_na	We’ll see.
+dialog_d1_m2_aa	Take him to the carpenter’s.
+dialog_d1_m2_ba	Get him wrapped and see to the last rites.
+dialog_d1_m2_ca	Hit 'er here.
+dialog_d1_m2_da	One swing.
+dialog_d1_m2_ea	Get through the skull and stun ‘er brain.
+dialog_d1_m2_fa	I’ll cut ‘er throat when you’ve done it.
+dialog_d1_m2_ga	Here?
+dialog_d1_m2_ha	Yah.
+dialog_d1_m2_ia	C'mon. Before she kicks up.
+dialog_d1_m2_ja	You all right there, sir?
+dialog_d1_m2_ka	Never been on a farm, Charlie?
+dialog_d1_m2_la	Mind your shoes now.
+dialog_d2_m0_aa	Hello?
+dialog_d2_m0_ba	Who is there?
+dialog_d2_m0_ca	Who is that?
+dialog_d2_m0_da	Is someone hurt?
+dialog_d2_m0_ea	Eh?
+dialog_d2_m0_fa	Signor Nichols, is that you?
+dialog_d2_m0_ga	What are you doing down here?
+dialog_d2_m0_ha	Hello, yes!
+dialog_d2_m0_ia	All fine here.
+dialog_d2_m0_ja	Just, ah, sorting some things.
+dialog_d2_m0_ka	Watch your step.
+dialog_d2_m0_la	Here, let me help you.
+dialog_d2_m1_aa	Hok Seng Lau...
+dialog_d2_m1_ba	...you have been found guilty by self confession...
+dialog_d2_m1_ca	...of the murder of Nunzio Pasqua.
+dialog_d2_m1_da	慢且！伊無做毋著代誌！ | No! He has done nothing wrong!
+dialog_d2_m1_ea	小姐，袂赴啊。 | Miss Lim. It is too late.
+dialog_d2_m1_fa	Quiet!
+dialog_d2_m1_ga	As captain of this ship...
+dialog_d2_m1_ha	...and by the authority of the East India Company...
+dialog_d2_m1_ia	...and thus the Crown of England...
+dialog_d2_m1_ja	...I sentence you to death by firing line.
+dialog_d2_m1_ka	Mr Wolff. When you are ready.
+dialog_d2_m1_la	Right sir.
+dialog_d2_m1_ma	Ready men.
+dialog_d2_m1_na	Aim.
+dialog_d2_m1_oa	Fire!
+dialog_d2_m2_ba	On your toes, boys.
+dialog_d2_m2_ca	恁哪會使按呢！ | How can you do this!
+dialog_d2_m2_cm	Load ‘er up! We best push off!
+dialog_d2_m2_da	共我放開！ | Let me go!
+dialog_d2_m2_ea	Give ‘er here will ya.
+dialog_d2_m2_fa	Captain!
+dialog_d2_m2_ga	Slack the lifts, and lower the boats!
+dialog_d2_m2_ha	The whole crew will be on us!
+dialog_d2_m2_ia	Give it up!
+dialog_d3_m0_aa	Keep course due east.
+dialog_d3_m0_ba	We’ll reach the Canaries in 3 days.
+dialog_d3_m0_ca	You packed enough stores?
+dialog_d3_m0_da	Aye, sir. Checked and loaded um me self.
+dialog_d3_m0_ea	Good. Stay quiet and alert.
+dialog_d3_m0_fa	If the wind picks up we've no chance against the Obra Dinn.
+dialog_d3_m0_ga	小姐，妳有按怎無？ | Miss Lim, are you all right?
+dialog_d3_m0_ha	嗯，我無問題。 | Yes, I am ok.
+dialog_d3_m0_ia	但是彼个箱仔，絕對袂使落入去水底！ | But the chest. It must not fall into the ocean.
+dialog_d3_m0_ja	若是遐的怪物出現，妳絕對莫起來！ | If the monsters come, you must stay down!
+dialog_d3_m0_ka	Aye, shut it up!
+dialog_d3_m0_la	They say strange things!
+dialog_d3_m0_lm	About monsters!
+dialog_d3_m1_aa	Матерь божья! | Mother of God!
+dialog_d3_m1_ba	Keep rowing!
+dialog_d3_m1_ca	他們欲過來啊！ | They are here!
+dialog_d3_m1_da	明叔，箱仔！| Beng, the chest!
+dialog_d3_m1_ea	Where is it?
+dialog_d3_m1_fa	There! Something there!
+dialog_d3_m1_ga	I see it!
+dialog_d3_m1_ha	Give us a weapon!
+dialog_d3_m1_ia	小姐，莫起來！ | Miss Lim! Stay down!
+dialog_d3_m1_ja	Pick up the oars and row, you fools!
+dialog_d3_m2_aa	O’Hagan! You still breathin’?
+dialog_d3_m2_am	Can you row?
+dialog_d3_m2_ar	救命啊！ | Help!
+dialog_d3_m2_ba	Nichols! Sir! Shoot them for God’s sake!
+dialog_d3_m3_aa	我提著啊！ | I have it!
+dialog_d3_m3_ba	閣等一下！ | Hold on!
+dialog_d3_m4_aa	小姐？...小姐？ | Are you there? Miss Lim?
+dialog_d3_m5_aa	Ahoy!
+dialog_d3_m5_ba	They’re back!
+dialog_d3_m5_ca	Get the captain!
+dialog_d3_m5_da	Ahoy!
+dialog_d3_m5_dm	Recover the boats!
+dialog_d3_m5_ea	Wait! Don’t shoot!
+dialog_d3_m5_fa	I have treasure! I yield!
+dialog_d3_m5_ga	Hold your fire!
+dialog_d4_m0_aa	Lift this out and take it below.
+dialog_d4_m0_ba	What the hell is going on?
+dialog_d4_m0_ca	What do you know about these things?
+dialog_d4_m0_da	About the chest and your dead friends?
+dialog_d4_m0_ea	這是　啥物？佗位來的？ | What are these monsters? Where are they from?
+dialog_d4_m0_fa	全部　講出來！ | You must tell us everything.
+dialog_d4_m0_ga	攏是恁害的啦！ | This is your fault!
+dialog_d4_m0_ha	彼个海螺仔殼竟然無顧給好！ | The shell must be protected!
+dialog_d4_m0_ia	這聲咱穩死的！ | We will all die!
+dialog_d4_m0_ja	He talk about a shell.
+dialog_d4_m0_ka	Very dangerous.
+dialog_d4_m0_la	Shell? What shell?
+dialog_d4_m1_aa	Clear the deck.
+dialog_d4_m1_ba	Move the boats astern and throw the bodies over.
+dialog_d4_m1_ca	Watch your footing.
+dialog_d4_m1_da	Hey there. What’s this?
+dialog_d4_m1_ea	Give em’ to me and I can fry us a solid meal, boys.
+dialog_d4_m1_fa	Careful now, take it slow!
+dialog_d4_m1_ga	One tick, gentlemen.
+dialog_d4_m1_ha	There’s a pretty shell here.
+dialog_d4_m1_ia	Let’s have a look.
+dialog_d4_m1_ja	No! Get back!
+dialog_d4_m3_aa	Keep pressure here.
+dialog_d4_m3_ba	Hold him down.
+dialog_d4_m3_ca	What madness is this?
+dialog_d4_m3_da	Twenty years my steward and never a doubt on your sanity.
+dialog_d4_m3_ea	Explain yourself!
+dialog_d4_m3_fa	Those ungodly beasts carry a curse!
+dialog_d4_m3_ga	Throw them back or doom us all!
+dialog_d4_m3_ha	Tie him up and put him in the lazarette with those.. things.
+dialog_d4_m3_ia	He may yet find his senses.
+dialog_d4_m3_ja	Come on.
+dialog_d4_m3_ka	Era dårar! | You fools!
+dialog_d4_m3_la	All’s fine John. Been in worse spots I think.
+dialog_d4_m3_ma	Where’s the rest of his leg?
+dialog_d5_m0_aa	Main sail hauled up!
+dialog_d5_m0_ba	Secure the braces and lower the topsail!
+dialog_d5_m0_ca	Work fast, the wind is alive!
+dialog_d5_m1_aa	Heave!
+dialog_d5_m1_ba	Run!
+dialog_d5_m1_bm	What is it?
+dialog_d5_m1_ca	Bloody devil!
+dialog_d5_m1_da	Another one!
+dialog_d5_m1_ea	Over there!
+dialog_d5_m2_a5	En dæmon! | A demon!
+dialog_d5_m2_aa	Out of the way!
+dialog_d5_m2_ba	Beat to quarters!
+dialog_d5_m2_ca	Enemy aboard!
+dialog_d5_m2_da	What’s going on?
+dialog_d5_m2_ea	Stay back! It’s already done for Nick!
+dialog_d5_m2_fa	Come on, boss!
+dialog_d5_m2_fm	No, get down!
+dialog_d5_m2_ga	Hey! Catch!
+dialog_d5_m3_aa	We’re no use!
+dialog_d5_m3_ba	Burn it quick!
+dialog_d5_m5_aa	I’ve got you.
+dialog_d5_m5_ba	Don't move.
+dialog_d5_m5_ca	I’ll get you down.
+dialog_d5_m5_cm	Give me that gun.
+dialog_d5_m6_aa	They make for the lazarette!
+dialog_d5_m6_ba	Secure the hold!
+dialog_d5_m6_ca	Someone shoot the damn’d thing!
+dialog_d5_m7_aa	Is that all!?
+dialog_d6_m0_aa	Let me on.
+dialog_d6_m0_ba	Over my dead body you bloody Dane.
+dialog_d6_m0_ca	Eh? How's that?
+dialog_d6_m0_cm	There’s no cause for trouble, boys.
+dialog_d6_m0_cr	Get in the boat.
+dialog_d6_m0_da	Thought I'd forget? You killed my brother.
+dialog_d6_m0_ea	What? That was an accident! The ropes!
+dialog_d6_m0_em	It wasn’t his fault. I saw the whole thing.
+dialog_d6_m0_fa	Lies!
+dialog_d6_m0_ga	I shouldn’a waited so long!
+dialog_d6_m0_gm	No! Don’t!
+dialog_d6_m2_a5	Load!
+dialog_d6_m2_aa	Move by hands!
+dialog_d6_m2_ba	Aim level!
+dialog_d6_m2_ca	Ready!
+dialog_d6_m2_cm	No!
+dialog_d6_m2_da	Belay spark!
+dialog_d6_m3_aa	The fuse!
+dialog_d6_m4_a5	What’s happened here?
+dialog_d6_m4_aa	Sir! Loose cannon!
+dialog_d6_m4_ba	She’s heeling over!
+dialog_d6_m4_ca	Find your footing!
+dialog_d6_m5_aa	Get to the main bitt, quick!
+dialog_d6_m5_ba	Hold on!
+dialog_d6_m5_ca	Hold on!
+dialog_d6_m5_da	Throw it!
+dialog_d6_m5_ea	Throw the powder!
+dialog_d6_m7_aa	Martin!
+dialog_d6_m7_ba	Where is the captain?
+dialog_d6_m7_ca	Have you lost your mind?
+dialog_d6_m7_da	Get back inside!
+dialog_d6_m7_ea	I want my husband!
+dialog_d6_m7_fa	Where is he?
+dialog_d6_m7_ga	He's below deck!
+dialog_d6_m7_ha	Come here!
+dialog_d7_m0_aa	What’s this?
+dialog_d7_m0_ba	Quicksilver!
+dialog_d7_m0_ca	Herre, min gud! | God in heaven!
+dialog_d7_m1_aa	Call it off damn you.
+dialog_d7_m1_ba	This is your kraken.
+dialog_d7_m1_ca	You brought it here.
+dialog_d7_m1_da	Send it back!
+dialog_d7_m2_aa	I’ll kill every last one of you monsters.
+dialog_d7_m2_ba	Withdraw the kraken!
+dialog_d7_m2_ca	Or I will kill you all!
+dialog_d7_m3_aa	A third shell!
+dialog_d7_m3_am	Captain didn’t toss them all!
+dialog_d7_m3_ba	Leave it. Help me lift this.
+dialog_d7_m3_ca	Stop! Wait!
+dialog_d7_m3_da	We’re to set you free!
+dialog_d7_m3_ea	Give it the shell.
+dialog_d7_m3_fa	Eh?
+dialog_d7_m3_ga	Do it!
+dialog_d7_m3_ha	Hoist it out.
+dialog_d7_m3_ia	To the main deck.
+dialog_d7_m3_ja	Throw it over.
+dialog_d7_m3_ka	Lock the door when you leave.
+dialog_d7_m3_la	Get the tail, boy.
+dialog_d7_m3_ma	In return...
+dialog_d7_m3_na	...the ship...
+dialog_d7_m3_oa	...the Obra Dinn...
+dialog_d7_m3_pa	...see it home.
+dialog_d7_m4_aa	There you are.
+dialog_d7_m4_am	Collect your things, we...
+dialog_d7_m4_ba	Where is the key?
+dialog_d7_m4_ca	To that door? Gone.
+dialog_d7_m4_da	Damn.
+dialog_d7_m4_ea	There’s no time. We need to go.
+dialog_d7_m4_fa	Right.
+dialog_d7_m4_ga	In you go.
+dialog_d7_m4_ha	What are you up to?
+dialog_d7_m4_ia	Nothing good.
+dialog_d8_m0_aa	Put me down! Let go!
+dialog_d8_m0_ba	Easy now, you’re in a bad way.
+dialog_d8_m0_ca	The squid! Where is my Frenchman?
+dialog_d8_m0_da	The squid’s gone. Your mate was torn apart.
+dialog_d8_m0_ea	Verdammt! The beast is dead?
+dialog_d8_m0_fa	How? How did you kill it?
+dialog_d8_m0_ga	We didn’t. It left with the storm.
+dialog_d8_m0_ha	Captain came up from the hold.
+dialog_d8_m0_hm	Said he chased it off.
+dialog_d8_m0_ja	You should rest.
+dialog_d8_m0_ka	A curse like that...
+dialog_d8_m0_la	...does not lift for nothing.
+dialog_d8_m1_aa	Last one. Move quick.
+dialog_d8_m1_ba	Oy! You'll not take the last boat!
+dialog_d8_m1_ca	Paul, look out!
+dialog_d8_m1_da	Stop!
+dialog_d8_m1_dm	Let them go!
+dialog_d8_m1_ea	No!
+dialog_d8_m1_em	Damn.
+dialog_d8_m2_aa	Let them go!
+dialog_d8_m3_aa	Enough! Captain cannot be trusted.
+dialog_d8_m3_ba	You have a plan?
+dialog_d8_m3_ca	Yes, we take ship and sail east.
+dialog_d8_m3_da	Trade wretched fish and shells for gold.
+dialog_d8_m3_ea	Huh? Who’s there?
+dialog_d8_m3_fa	Mutiny! Mutiny!
+dialog_d8_m3_ga	Fresh bastard!
+dialog_d8_m3_ha	No!
+dialog_d8_m4_aa	What’s all this, you damn fool?
+dialog_d8_m5_aa	Och no!
+dialog_d8_m5_am	You’re cut!
+dialog_d8_m5_ba	Don’t... leave me.
+dialog_d8_m5_ca	Bear up, son. I’ll stay with you.
+dialog_d8_m5_da	Tell Pete's mother, I...
+dialog_d8_m5_dh	I tried my best.
+dialog_d8_m5_dr	..to pull him back... to save him.
+dialog_d8_m5_ea	You tell her yourself.
+dialog_d8_m5_fa	Brennan! Bring the surgeon's kit!
+dialog_d9_m0_aa	Captain!
+dialog_d9_m0_ba	Open the door...
+dialog_d9_m0_ca	Kick it in!
+dialog_d9_m0_da	...lest we break it down...
+dialog_d9_m0_ea	...and take more than those shells.
+dialog_d9_m0_fa	You bastards may take...
+dialog_d9_m0_ga	...exactly what I give you.
+dialog_d9_m1_aa	Where are they?
+dialog_d9_m1_ba	Must be in here someplace.
+dialog_d9_m1_ca	They're at...
+dialog_d9_m1_da	...the bottom of the sea.
+dialog_d9_m1_ea	That's a lie.
+dialog_d9_m3_aa	Abigail.
+dialog_d9_m3_ba	Your brother.
+dialog_d9_m3_ca	My friend.
+dialog_d9_m3_da	I shot him...
+dialog_d9_m3_ea	...dead.
+dialog_d9_m3_fa	I'll be with you...
+dialog_d9_m3_ga	...soon, my love.
+dialog_d9_m3_ha	Please forgive me.
+dialog_d9_m3_ia	For everything.
+dialog_tally_intro_aa	One week later
+dialog_office_intro_aa	One year later
+dialog_office_delivery_package_aa	Can you believe it? A package at this hour.
+dialog_office_delivery_package_ba	The thing smells just dreadful.
+dialog_office_delivery_package_ca	Better you don't open it inside.
+dialog_office_delivery_package_da	I'll be turning in now.
+dialog_office_delivery_package_ea	Tea’s in the kitchen if you need more.
+dialog_office_delivery_envelope_aa	Can you believe? A letter at this hour.
+dialog_office_delivery_envelope_ba	Must be important.
+dialog_office_delivery_envelope_ca	I'll be turning in now.
+dialog_office_delivery_envelope_da	Tea’s all gone so you might think about going to bed as well.
+dialog_the_end_aa	The End

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>纹理碎片选取器 · CN_Refined</title>
+<style>
+:root{ --bg:#1d1d16; --panel:#26261d; --line:#3d3d30; --ink:#e5ffff; --dim:#8f9a8f; --acc:#e5ffff; --warn:#d8b45a; }
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:13px/1.5 "Segoe UI","Microsoft YaHei",system-ui,sans-serif;display:flex;flex-direction:column}
+header{padding:8px 12px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+h1{margin:0;font-size:15px;font-weight:600}
+h1 small{color:var(--dim);font-weight:400;margin-left:6px;font-size:11px}
+button{font:inherit;padding:3px 10px;border:1px solid var(--line);background:#2e2e22;color:var(--ink);border-radius:3px;cursor:pointer}
+button:hover{background:#3a3a2b}
+button.pri{background:var(--ink);color:#1d1d16;border-color:var(--ink)}
+button:disabled{opacity:.4;cursor:default}
+label{color:var(--dim);display:inline-flex;align-items:center;gap:4px}
+input[type=text]{font:inherit;padding:2px 6px;border:1px solid var(--line);background:#1a1a13;color:var(--ink);border-radius:3px}
+#status{color:var(--dim)}
+#status.ok{color:var(--ink)}
+main{flex:1;display:flex;min-height:0}
+aside{width:270px;border-right:1px solid var(--line);overflow:auto;padding:8px}
+#stage{flex:1;position:relative;overflow:hidden;background:#11110c}
+canvas{display:block;cursor:crosshair}
+#hud{position:absolute;left:8px;bottom:8px;color:var(--dim);font-family:ui-monospace,Consolas,monospace;font-size:11px;
+     background:rgba(20,20,14,.82);padding:4px 8px;border:1px solid var(--line);border-radius:3px;pointer-events:none;white-space:pre}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{padding:4px 6px;border:1px solid transparent;border-radius:3px;cursor:pointer;display:flex;justify-content:space-between;gap:6px}
+.tl li:hover{background:#2e2e22}
+.tl li.sel{background:#3a3a2b;border-color:var(--ink)}
+.tl .d{color:var(--dim);font-size:11px}
+h2{font-size:12px;margin:12px 0 4px;color:var(--dim);font-weight:600}
+.fr{padding:6px;border:1px solid var(--line);border-radius:3px;margin-bottom:4px;cursor:pointer}
+.fr:hover{background:#2e2e22}
+.fr.sel{border-color:var(--ink)}
+.fr .n{display:flex;justify-content:space-between;gap:6px}
+.fr .c{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--dim);white-space:pre-wrap}
+.fr .c b{color:var(--ink);font-weight:400}
+#thumbs{display:flex;flex-wrap:wrap;gap:6px;padding:6px;border-top:1px solid var(--line);max-height:190px;overflow:auto}
+#thumbs figure{margin:0;text-align:center}
+#thumbs img{display:block;max-width:110px;max-height:70px;border:1px solid var(--line);background:#000}
+#thumbs figcaption{font-size:10px;color:var(--dim)}
+.hint{color:var(--warn);font-size:11px}
+.wrap{display:flex;flex-direction:column;height:100%}
+</style>
+</head>
+<body>
+<header>
+  <h1>纹理碎片选取器 <small>CN_Refined · 拖出矩形，记住四顶点</small></h1>
+  <label>纹理 <select id="tex" style="font:inherit;background:#1a1a13;color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:2px 6px"></select></label>
+  <button id="btnFit">适应窗口</button>
+  <button id="btn100">1:1</button>
+  <button id="btnAdd" title="当前纹理还需要几处碎片">＋新矩形</button>
+  <button id="btnDel">删除选中</button>
+  <span id="need" class="hint"></span>
+  <span style="flex:1"></span>
+  <button id="btnSave" class="pri">保存坐标</button>
+  <button id="btnExport">导出 JSON</button>
+  <button id="btnImport">导入 JSON</button>
+  <button id="btnCrop">截出全部碎片</button>
+  <span id="status">未载入</span>
+  <input type="file" id="pick" accept=".png,.json" hidden>
+</header>
+
+<main>
+  <aside>
+    <div class="wrap">
+      <h2>碎片清单 <span id="cnt" class="d"></span></h2>
+      <div id="list"></div>
+      <h2>当前图片</h2>
+      <div id="meta" class="d"></div>
+      <div id="thumbs"></div>
+    </div>
+  </aside>
+  <div id="stage">
+    <canvas id="cv"></canvas>
+    <div id="hud"></div>
+  </div>
+</main>
+
+<script>
+'use strict';
+const API = (location.protocol === 'http:' || location.protocol === 'https:')
+            && !!location.hostname;
+const SAFE_ACC = '#ff6a6a';
+
+let img = null, texFile = '', texKey = '', needN = 0;
+let zoom = 1, panX = 0, panY = 0;              // 图片坐标 -> 屏幕: screen = pan + img*zoom
+let frags = [];                                // {id,name,x,y,w,h}
+let sel = -1, mode = null, dragStart = null, dragOrig = null, dragHandle = null;
+let store = {};                                // {文件: {size:[w,h], fragments:[...]}}
+let dirty = false;
+
+const cv = document.querySelector('#cv');
+const ctx = cv.getContext('2d');
+const $ = s => document.querySelector(s);
+
+/* ---------------- 坐标 ---------------- */
+function corners(f){
+  return { tl: [f.x, f.y], tr: [f.x + f.w, f.y], br: [f.x + f.w, f.y + f.h], bl: [f.x, f.y + f.h] };
+}
+function unityRect(f){
+  // Unity 纹理原点在左下：y' = H - y - h
+  return [f.x, (img ? img.height : 0) - f.y - f.h, f.w, f.h];
+}
+function toImg(cx, cy){ return { x: (cx - panX) / zoom, y: (cy - panY) / zoom }; }
+function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+/* ---------------- 画面 ---------------- */
+function resize(){
+  const st = $('#stage');
+  cv.width = st.clientWidth;
+  cv.height = st.clientHeight;
+  draw();
+}
+function fit(){
+  if (!img) return;
+  const s = $('#stage');
+  zoom = Math.min(s.clientWidth / img.width, s.clientHeight / img.height) * 0.98;
+  panX = (s.clientWidth - img.width * zoom) / 2;
+  panY = (s.clientHeight - img.height * zoom) / 2;
+  draw();
+}
+function draw(){
+  ctx.fillStyle = '#11110c';
+  ctx.fillRect(0, 0, cv.width, cv.height);
+  if (!img) return;
+  ctx.imageSmoothingEnabled = zoom < 1;
+  ctx.drawImage(img, panX, panY, img.width * zoom, img.height * zoom);
+
+  frags.forEach((f, i) => {
+    const x = panX + f.x * zoom, y = panY + f.y * zoom;
+    const w = f.w * zoom, h = f.h * zoom;
+    const on = i === sel;
+    ctx.lineWidth = on ? 2 : 1;
+    ctx.strokeStyle = on ? SAFE_ACC : 'rgba(229,255,255,.75)';
+    ctx.strokeRect(x + .5, y + .5, w, h);
+    ctx.fillStyle = on ? 'rgba(255,106,106,.14)' : 'rgba(229,255,255,.07)';
+    ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = on ? SAFE_ACC : '#e5ffff';
+    ctx.font = '12px Consolas,monospace';
+    ctx.fillText('#' + f.id + (f.name ? ' ' + f.name : ''), x + 4, y - 4);
+    if (on){
+      ctx.fillStyle = '#e5ffff';
+      [[x, y], [x + w, y], [x, y + h], [x + w, y + h]].forEach(([hx, hy]) => {
+        ctx.fillRect(hx - 4, hy - 4, 8, 8);
+      });
+    }
+  });
+}
+function hud(mouse){
+  if (!img){ $('#hud').textContent = '未载入纹理'; return; }
+  const f = frags[sel];
+  let t = '图片 ' + img.width + '×' + img.height + '   缩放 ' + (zoom * 100).toFixed(0) + '%';
+  if (mouse) t += '   光标 (' + mouse.x.toFixed(0) + ', ' + mouse.y.toFixed(0) + ')';
+  if (f){
+    const c = corners(f);
+    t += '\n#' + f.id + (f.name ? ' ' + f.name : '') +
+         '   x,y,w,h = ' + [f.x, f.y, f.w, f.h].join(', ') +
+         '\n左上(' + c.tl + ')  右上(' + c.tr + ')' +
+         '\n右下(' + c.br + ')  左下(' + c.bl + ')' +
+         '\nUnity(左下原点) x,y,w,h = ' + unityRect(f).join(', ');
+  }
+  $('#hud').textContent = t;
+}
+
+/* ---------------- 交互 ---------------- */
+function handleAt(p){
+  const f = frags[sel];
+  if (!f) return null;
+  const pts = [['tl', f.x, f.y], ['tr', f.x + f.w, f.y], ['bl', f.x, f.y + f.h], ['br', f.x + f.w, f.y + f.h]];
+  const tol = 7 / zoom;
+  for (const [n, hx, hy] of pts){
+    if (Math.abs(p.x - hx) <= tol && Math.abs(p.y - hy) <= tol) return n;
+  }
+  return null;
+}
+function insideAt(p, f){
+  return p.x >= f.x && p.x <= f.x + f.w && p.y >= f.y && p.y <= f.y + f.h;
+}
+function sn(v){ return Math.round(v); }
+function mkFrag(x, y, w, h){
+  return { id: frags.length ? Math.max(...frags.map(f => f.id)) + 1 : 1,
+           name: '', x: sn(x), y: sn(y), w: sn(w), h: sn(h) };
+}
+
+cv.addEventListener('mousedown', e => {
+  if (!img) return;
+  const p = toImg(e.offsetX, e.offsetY);
+  if (e.button === 1 || e.shiftKey && e.altKey){       // 中键 / Shift+Alt 平移
+    mode = 'pan'; dragStart = { x: e.offsetX, y: e.offsetY, px: panX, py: panY };
+    return;
+  }
+  const hd = handleAt(p);
+  if (hd){ mode = 'resize'; dragHandle = hd; dragOrig = Object.assign({}, frags[sel]); return; }
+  for (let i = frags.length - 1; i >= 0; i--){
+    if (insideAt(p, frags[i])){
+      sel = i; mode = 'move'; dragStart = p;
+      dragOrig = Object.assign({}, frags[i]);
+      render(); return;
+    }
+  }
+  sel = frags.length;
+  frags.push(mkFrag(p.x, p.y, 0, 0));
+  mode = 'new'; dragStart = p;
+  render();
+});
+
+window.addEventListener('mousemove', e => {
+  if (!img) return;
+  const st = $('#stage').getBoundingClientRect();
+  const cx = e.clientX - st.left, cy = e.clientY - st.top;
+  const p = toImg(cx, cy);
+  if (mode === 'pan'){
+    panX = dragStart.px + (cx - dragStart.x);
+    panY = dragStart.py + (cy - dragStart.y);
+    draw(); return;
+  }
+  const f = frags[sel];
+  if (!f){ hud(p); return; }
+  if (mode === 'new'){
+    f.x = sn(Math.min(dragStart.x, p.x)); f.y = sn(Math.min(dragStart.y, p.y));
+    f.w = sn(Math.abs(p.x - dragStart.x)); f.h = sn(Math.abs(p.y - dragStart.y));
+    dirty = true;
+  } else if (mode === 'move'){
+    f.x = sn(clamp(dragOrig.x + (p.x - dragStart.x), 0, img.width - f.w));
+    f.y = sn(clamp(dragOrig.y + (p.y - dragStart.y), 0, img.height - f.h));
+    dirty = true;
+  } else if (mode === 'resize'){
+    const o = dragOrig;
+    let x0 = o.x, y0 = o.y, x1 = o.x + o.w, y1 = o.y + o.h;
+    if (dragHandle === 'tl'){ x0 = sn(p.x); y0 = sn(p.y); }
+    if (dragHandle === 'tr'){ x1 = sn(p.x); y0 = sn(p.y); }
+    if (dragHandle === 'bl'){ x0 = sn(p.x); y1 = sn(p.y); }
+    if (dragHandle === 'br'){ x1 = sn(p.x); y1 = sn(p.y); }
+    f.x = sn(clamp(Math.min(x0, x1), 0, img.width));
+    f.y = sn(clamp(Math.min(y0, y1), 0, img.height));
+    f.w = sn(clamp(Math.abs(x1 - x0), 0, img.width - f.x));
+    f.h = sn(clamp(Math.abs(y1 - y0), 0, img.height - f.y));
+    dirty = true;
+  }
+  draw(); render(); hud(p);
+});
+window.addEventListener('mouseup', () => {
+  if (mode === 'new'){
+    const f = frags[sel];
+    if (!f || f.w < 2 || f.h < 2){ frags.splice(sel, 1); sel = -1; }
+    else markDirty();
+    thumbs();
+  } else if (mode) { markDirty(); thumbs(); }
+  mode = null; dragHandle = null; render(); draw();
+});
+cv.addEventListener('wheel', e => {
+  if (!img) return;
+  e.preventDefault();
+  const cx = e.offsetX, cy = e.offsetY;
+  const before = toImg(cx, cy);
+  const k = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+  zoom = clamp(zoom * k, 0.08, 16);
+  panX = cx - before.x * zoom;
+  panY = cy - before.y * zoom;
+  draw(); hud(null);
+}, { passive: false });
+
+/* ---------------- 列表 / 缩略图 ---------------- */
+function render(){
+  const box = $('#list');
+  box.textContent = '';
+  frags.forEach((f, i) => {
+    const d = document.createElement('div');
+    d.className = 'fr' + (i === sel ? ' sel' : '');
+    const c = corners(f);
+    d.innerHTML = '<div class="n"><span>#' + f.id + '</span><span class="d">' +
+      f.w + '×' + f.h + '</span></div>';
+    const nm = document.createElement('input');
+    nm.type = 'text'; nm.value = f.name; nm.placeholder = '叫什么（可选）';
+    nm.style.width = '100%'; nm.style.marginTop = '2px';
+    nm.addEventListener('input', () => { f.name = nm.value; dirty = true; draw(); });
+    const co = document.createElement('div');
+    co.className = 'c';
+    co.innerHTML = 'x,y,w,h = <b>' + [f.x, f.y, f.w, f.h].join(', ') + '</b>\n' +
+      'TL(' + c.tl + ') TR(' + c.tr + ')\nBL(' + c.bl + ') BR(' + c.br + ')\n' +
+      'Unity → ' + unityRect(f).join(', ');
+    d.appendChild(nm); d.appendChild(co);
+    d.addEventListener('click', ev => { if (ev.target !== nm){ sel = i; render(); draw(); hud(null); } });
+    box.appendChild(d);
+  });
+  const f = frags[sel];
+  $('#cnt').textContent = frags.length + ' 块' + (needN ? '（提示需要 ' + needN + ' 处）' : '');
+  $('#need').textContent = needN
+    ? (frags.length === needN ? '本图需要 ' + needN + ' 处：已画够 ✓' : '本图需要 ' + needN + ' 处，还差 ' + (needN - frags.length))
+    : '';
+  $('#btnDel').disabled = sel < 0;
+  $('#hud').textContent = '';
+  hud(null);
+}
+
+function thumbs(){
+  const box = $('#thumbs');
+  box.textContent = '';
+  frags.forEach(f => {
+    const fig = document.createElement('figure');
+    const c = document.createElement('canvas');
+    c.width = Math.max(1, f.w); c.height = Math.max(1, f.h);
+    c.getContext('2d').drawImage(img, f.x, f.y, f.w, f.h, 0, 0, f.w, f.h);
+    fig.appendChild(c);
+    const cap = document.createElement('figcaption');
+    cap.textContent = '#' + f.id + (f.name ? ' ' + f.name : '');
+    fig.appendChild(cap);
+    box.appendChild(fig);
+  });
+}
+
+/* ---------------- 存取 ---------------- */
+function snap(){
+  if (!texFile) return;
+  store[texFile] = { size: [img.width, img.height], fragments: frags.map(f => ({
+    id: f.id, name: f.name, x: f.x, y: f.y, w: f.w, h: f.h,
+    corners: corners(f), unity: unityRect(f) })) };
+  try{ localStorage.setItem('fragstore', JSON.stringify(store)); }catch (e){}
+}
+function restore(){
+  try{ store = JSON.parse(localStorage.getItem('fragstore') || '{}'); }catch (e){ store = {}; }
+}
+function markDirty(){ dirty = true; snap(); setStatus('有未保存的改动', true); }
+function setStatus(t, warn){
+  const el = $('#status');
+  el.textContent = t;
+  el.style.color = warn ? 'var(--warn)' : 'var(--dim)';
+}
+function saveRects(){
+  snap();
+  if (!API){ download(JSON.stringify(store, null, 2), 'fragments.json'); setStatus('已下载 JSON（本地服务模式下可直接存盘）'); return; }
+  fetch('/api/rects', { method: 'POST', body: JSON.stringify(store, null, 2) })
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(j => { dirty = false; setStatus('已保存 ' + j.bytes + ' 字节到 fragments.json ✓'); })
+    .catch(e => setStatus('保存失败: ' + e, true));
+}
+function download(data, name){
+  const blob = (data instanceof Blob) ? data : new Blob([data], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+}
+async function cropAll(){
+  if (!img){ setStatus('先载入纹理', true); return; }
+  let n = 0;
+  for (const f of frags){
+    const c = document.createElement('canvas');
+    c.width = f.w; c.height = f.h;
+    c.getContext('2d').drawImage(img, f.x, f.y, f.w, f.h, 0, 0, f.w, f.h);
+    const blob = await new Promise(r => c.toBlob(r, 'image/png'));
+    const base = texKey + '_f' + f.id + (f.name ? '_' + f.name.replace(/[\\/:*?"<>|]/g, '') : '') + '.png';
+    if (API){
+      const r = await fetch('/api/fragment?name=' + encodeURIComponent(base), { method: 'POST', body: blob });
+      if (r.ok) n++;
+    } else { download(blob, base); n++; }
+  }
+  setStatus('已截出 ' + n + ' 块碎片' + (API ? '（存到 out/fragments/）' : '（已下载）'));
+  thumbs();
+}
+
+/* ---------------- 载入 ---------------- */
+async function loadTexture(url, key, need){
+  texFile = key; texKey = (key || '').replace(/\.png$/i, ''); needN = need || 0;
+  await new Promise((res, rej) => {
+    const im = new Image();
+    im.onload = () => { img = im; res(); };
+    im.onerror = () => rej(new Error('图片载入失败: ' + url));
+    im.src = url;
+  });
+  const saved = store[texFile];
+  frags = saved ? saved.fragments.map(f => ({ id: f.id, name: f.name || '', x: f.x, y: f.y, w: f.w, h: f.h })) : [];
+  sel = -1;
+  $('#meta').textContent = texFile + '   ' + img.width + '×' + img.height +
+    (saved ? '\n（已载入之前存的 ' + frags.length + ' 块坐标）' : '');
+  fit(); render(); thumbs();
+  setStatus('已载入 ' + texFile);
+}
+
+async function init(){
+  restore();
+  if (API){
+    const j = await (await fetch('/api/textures')).json();
+    const sel = $('#tex');
+    j.textures.forEach(t => {
+      const o = document.createElement('option');
+      o.value = t.file;
+      o.textContent = t.file + '  ' + t.w + '×' + t.h + (t.target ? '  需' + t.target + '块' : '');
+      o.dataset.need = t.target;
+      sel.appendChild(o);
+    });
+    const first = j.textures.find(t => t.target) || j.textures[0];
+    if (first){
+      sel.value = first.file;
+      loadTexture('/api/texture/' + encodeURIComponent(first.file), first.file, first.target);
+    }
+  } else {
+    setStatus('未连本地服务：把 PNG 拖进来或用「导入 JSON」', true);
+  }
+}
+
+/* ---------------- 事件 ---------------- */
+$('#tex').addEventListener('change', e => {
+  if (dirty && !confirm('有未保存的坐标改动，确实要换纹理吗？')) return;
+  const o = e.target.selectedOptions[0];
+  const file = e.target.value;
+  loadTexture('/api/texture/' + encodeURIComponent(file), file, +o.dataset.need || 0);
+});
+$('#btnFit').addEventListener('click', fit);
+$('#btn100').addEventListener('click', () => {
+  if (!img) return;
+  zoom = 1; panX = 8; panY = 8; draw(); hud(null);
+});
+$('#btnAdd').addEventListener('click', () => {
+  if (!img) return;
+  sel = frags.length;
+  const w = Math.round(img.width * 0.35), h = 60;
+  frags.push(mkFrag(Math.round((img.width - w) / 2), Math.round(img.height * 0.1), w, h));
+  markDirty(); render(); draw();
+});
+$('#btnDel').addEventListener('click', () => {
+  if (sel < 0) return;
+  frags.splice(sel, 1); sel = -1; markDirty(); render(); thumbs(); draw();
+});
+$('#btnSave').addEventListener('click', saveRects);
+$('#btnExport').addEventListener('click', () => { snap(); download(JSON.stringify(store, null, 2), 'fragments.json'); });
+$('#btnImport').addEventListener('click', () => {
+  const i = $('#pick'); i.accept = '.json'; i.dataset.mode = 'json'; i.value = ''; i.click();
+});
+$('#btnCrop').addEventListener('click', cropAll);
+
+// 无服务时：拖入 PNG 当纹理 / 拖入 JSON 当坐标
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', async e => {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0];
+  if (!f) return;
+  if (/\.json$/i.test(f.name)){
+    try{
+      const j = JSON.parse(await f.text());
+      store = Object.assign(store, j);
+      localStorage.setItem('fragstore', JSON.stringify(store));
+      setStatus('已导入坐标（' + Object.keys(j).length + ' 张图的记录）');
+    }catch (err){ setStatus('JSON 读不了: ' + err.message, true); }
+    return;
+  }
+  const url = URL.createObjectURL(f);
+  await loadTexture(url, f.name, 0);
+});
+$('#pick').addEventListener('change', async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  if (e.target.dataset.mode === 'json'){
+    try{
+      const j = JSON.parse(await f.text());
+      store = Object.assign(store, j);
+      localStorage.setItem('fragstore', JSON.stringify(store));
+      setStatus('已导入坐标');
+    }catch (err){ setStatus('JSON 读不了: ' + err.message, true); }
+    e.target.dataset.mode = '';
+    return;
+  }
+  await loadTexture(URL.createObjectURL(f), f.name, 0);
+});
+['keydown'].forEach(t => window.addEventListener(t, e => {
+  if (!img) return;
+  if (e.key === 'Delete' && sel >= 0){ frags.splice(sel, 1); sel = -1; markDirty(); render(); thumbs(); draw(); }
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's'){ e.preventDefault(); saveRects(); }
+}));
+window.addEventListener('resize', resize);
+window.addEventListener('beforeunload', e => { if (dirty){ snap(); } });
+
+resize(); init();
+</script>
+</body>
+</html>

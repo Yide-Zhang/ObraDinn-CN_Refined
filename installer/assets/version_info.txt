@@ -1,0 +1,28 @@
+# Windows 版本信息资源（PyInstaller --version-file 用）。
+# 为什么要有：没有它的 exe 在「右键 → 属性 → 详细信息」里是空的、也没有产品名/版本，
+# 观感上就是"来路不明的 exe"——杀软的启发式与用户的直觉都会更警惕。
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo([
+      StringTable(
+        '080404B0',
+        [StringStruct('FileDescription', '《奥伯拉丁的回归》中文精修补丁 安装向导'),
+         StringStruct('FileVersion', '1.0.0.0'),
+         StringStruct('InternalName', 'ObraDinnCN-Installer'),
+         StringStruct('OriginalFilename', 'ObraDinnCN-Installer.exe'),
+         StringStruct('ProductName', '《奥伯拉丁的回归》中文精修补丁'),
+         StringStruct('ProductVersion', '1.0.0.0')])
+    ]),
+    VarFileInfo([VarStruct('Translation', [2052, 1200])])
+  ]
+)

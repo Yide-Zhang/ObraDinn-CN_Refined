@@ -1,0 +1,986 @@
+# code=zh-s  buildDate=2022-06-20T22:29:52  strings=985
+language_code	zh-s
+language_name	简体中文
+title_begin	开始
+title_continue	继续
+title_credit	由Lucas Pope\n 创作
+menu_settings	设置
+menu_paused	暂停
+menu_cancel	取消
+settings_volume	音量
+settings_volume_0	静音
+settings_volume_1	几乎听不见
+settings_volume_2	相当安静
+settings_volume_3	略低于中间值
+settings_volume_4	中间值
+settings_volume_5	略高于中间值
+settings_volume_6	比较响亮
+settings_volume_7	接近最大值
+settings_volume_8	最大值
+settings_sens	视角灵敏度
+settings_sens_0	几乎不动
+settings_sens_1	艰难移动
+settings_sens_2	非常缓慢
+settings_sens_3	稍慢
+settings_sens_4	正好
+settings_sens_5	稍快
+settings_sens_6	适度快速
+settings_sens_7	过度快速
+settings_sens_8	极度失控
+settings_inverty	反转垂直视角
+settings_inverty_yes	是
+settings_inverty_no	否
+settings_monitor	显示器
+settings_monitor_lcd	现代液晶显示器
+settings_output	输出
+settings_output_analog	平滑
+settings_output_digital_0	锐化
+settings_output_digital_1	锐化（缩小1）
+settings_output_digital_2	锐化（缩小2）
+settings_output_digital_3	锐化（缩小3）
+settings_output_digital_4	锐化（缩小4）
+settings_output_digital_5	锐化（缩小5）
+settings_controls	操作方式
+settings_controls_view	查看
+settings_language	语言
+settings_quit	退回标题画面
+settings_autosaved	已自动保存
+controls_exploring	探索中
+controls_reading	阅读中
+control_action	行动
+control_zoom	放大
+control_pause	暂停
+control_book_open	翻开书本
+control_book_close	合上书本
+control_book_next	向右翻页
+control_book_prev	向左翻页
+control_book_toc	目录
+control_back	返回
+profile_new	新游戏
+profile_begin	开始
+profile_continue	继续
+profile_rewind	倒回
+profile_rewind_warning_a	倒回到船上？\n您不会丢失任何进度。
+profile_rewind_warning_b	倒回到船上？\n书中名为“交易”的章节将被重置，但您不会丢失其他进度。
+profile_fates_zero	未解出任何下落
+profile_fates_morethanone	已解出$0个下落
+profile_description_full	#$num（$fates人的下落）
+profile_description_empty	#$num（空）
+profile_copy	复制
+profile_delete	删除
+profile_option_cancel	取消
+profile_option_copy	复制
+profile_option_delete	删除
+profile_option_rewind	倒回
+profile_confirm	#$num号存档的内容将永远消失。
+profile_playtime_m2	游戏时长：$m分钟
+profile_playtime_h1	游戏时长：1小时
+profile_playtime_h2	游戏时长：$h小时
+profile_playtime_h1m2	游戏时长：1小时$m分钟
+profile_playtime_h2m2	游戏时长：$h小时$m分钟
+profile_lastplayed_justnow	上次游戏时间：刚才
+profile_lastplayed_m2	上次游戏时间：$m分钟前
+profile_lastplayed_h1	上次游戏时间：1小时前
+profile_lastplayed_h2	上次游戏时间：$h小时前
+profile_lastplayed_h1m2	上次游戏时间：1小时$m分钟前
+profile_lastplayed_h2m2	上次游戏时间：$h小时$m分钟前
+profile_lastplayed_date	上次游戏时间：$year/$month/$day
+intro_lost	1803年于海上失踪
+intro_goodship	商船
+intro_obradinn	“奥伯拉丁号”
+intro_built	1796年于伦敦建造~重800吨，吃水深度18英尺\n船长R. Witterel~船员51人\n最终航向东方~未抵达会合点
+intro_contact	如需问询或作证\n请联系东印度公司伦敦办事处。
+intro_company	英属\n东印度\n公司
+intro_attention	联系人：\n伦敦办事处\n保险理赔部\n首席调查官
+intro_dispatch	奥伯拉丁号已返回。\n立即派往法尔茅斯，准备进行全面评估。
+welldone	做得好。\n
+welldone_3_first	做得好。\n有三个下落正确。
+welldone_3_more	做得好。\n又有三个下落正确。
+welldone_2_first	做得好。\n有两个下落正确。
+welldone_2_more	做得好。\n又有两个下落正确。
+welldone_solvable	做得好。\n当前可解的所有下落均正确。
+welldone_last	做得好。\n所有人的下落均正确。
+welldone_shipdone	奥伯拉丁号上已无事可做。
+book_title	奥伯拉丁的\n<size=24></size>\n回归
+book_subtitle	冒险悲剧\n纪实录
+book_preface	序言
+book_preface_left	\t\t此时此刻，想必你已经登上了奥伯拉丁号。我早知这一天终会来临，本来想要通过这本书记录这艘船的怪异遭遇。\n\n \t\t可惜每况愈下的健康状况让我只能简短地记录下事件的梗概。\n\n \t\t登上奥伯拉丁号的你是一切的关键。我把查证它的命运、完成这本记录的任务留给了你。
+book_preface_right	\t\t接下来的几页乍一看可能会令人感到费解。一切早晚都会有意义的。\n\n \t\t使用怀表确定船上每个人的身份和下落。准确地完成每一章节，并通过挂号信将本书归还给法国驻摩洛哥办事处。\n\n \t\t“交易”一章的内容不会为你所知。我知晓细节，但选择暂时保密。
+book_chapter_withheld	在离开船并将本书归还给我之前，本章内容不会为你所知。-H.E.
+book_congrats	这个故事现在属于你了。请完成它。-H.E.
+book_numeral_1	I
+book_numeral_2	II
+book_numeral_3	III
+book_numeral_4	IV
+book_numeral_5	V
+book_numeral_6	VI
+book_numeral_7	VII
+book_numeral_8	VIII
+book_numeral_9	IX
+book_numeral_10	X
+book_chapter_0_toc	货物松脱
+book_chapter_0_head	I.货物松脱
+book_chapter_0_name	货物松脱
+book_chapter_1_toc	风寒
+book_chapter_1_head	II.风寒
+book_chapter_1_name	风寒
+book_chapter_2_toc	凶案
+book_chapter_2_head	III.凶案
+book_chapter_2_name	凶案
+book_chapter_3_toc	召唤
+book_chapter_3_head	IV.召唤
+book_chapter_3_name	召唤
+book_chapter_4_toc	邪恶俘虏
+book_chapter_4_head	V.邪恶俘虏
+book_chapter_4_name	邪恶俘虏
+book_chapter_5_toc	海上士兵
+book_chapter_5_head	VI.海上士兵
+book_chapter_5_name	海上士兵
+book_chapter_6_toc	毁灭
+book_chapter_6_head	VII.毁灭
+book_chapter_6_name	毁灭
+book_chapter_7_toc	交易
+book_chapter_7_head	VIII.交易
+book_chapter_7_name	交易
+book_chapter_8_toc	逃亡
+book_chapter_8_head	IX.逃亡
+book_chapter_8_name	逃亡
+book_chapter_9_toc	结局
+book_chapter_9_head	X.结局
+book_chapter_9_name	结局
+book_toc_contents	目录
+book_toc_chapters	章节
+book_toc_chart	航路
+book_toc_deck	船只
+book_toc_crew	船员
+book_toc_sketch	海上生活（素描画）
+book_toc_glossary	词汇表
+book_toc_last	封底
+dialog_chapter	<size=20>第$chapter_num章</size>\n<size=40>$chapter_name</size>\n<size=20>第 $part_num / $part_max 部分</size>
+dialog_next	跳过
+dialog_ellipses	……
+quote_open	“
+quote_close	”
+book_part_num	第$0部分
+book_conclusion	结论
+book_head_chart	航路
+book_head_deck	船只
+book_head_crew	船员
+book_head_sketch	海上生活
+book_legend_openclose	翻开/合上书本
+book_legend_toc	目录
+book_caption_chart	远东航线大西洋航段
+book_caption_deck	奥伯拉丁号甲板平面图
+book_caption_manifest	船员和乘客完整名单
+book_caption_sketch	奥伯拉丁号生活状况素描画
+book_caption_corpse	尸体位置
+book_caption_corpses	尸体位置
+book_caption_corpsemoved	尸体死后被移动过
+book_caption_corpsegone	只能通过另一具尸体接触
+book_caption_others_zero	没有其他人在场
+book_caption_others_one	另有一个人在场
+book_caption_others_many	另有$0个人在场
+book_hint_arrows	* 箭头表示时间流动
+book_dontleave	先浏览整本书。
+disappeared_title	失踪
+disappeared_title2	失踪（续）
+disappeared_text_d030	两个不幸的人在本章事件中失踪。他们的下落记于此处。
+disappeared_text_d060	七个不幸的人在本章事件中失踪。他们的下落记于此处。
+disappeared_text_d080	四个不幸的人在本章事件中失踪。他们的下落记于此处。
+location_room_captain_outside	船长室外
+location_room_captain_inside	船长室内
+location_room_mate1_window	大副舱房窗外
+location_deck_main	主甲板上
+location_deck_gun	火炮甲板上
+location_deck_gun_aft	火炮甲板尾部
+location_deck_gun_bow	船头上
+location_room_midshipmen	见习官员舱室内
+location_room_officermess	高级船员餐厅内
+location_deck_poop	船尾甲板上
+location_deck_orlop	下层甲板上
+location_room_surgeon	医务室内
+location_deck_orlop_walk	左舷走道内
+location_deck_cargo	载货甲板上
+location_rigging	索具内
+location_room_lazarette	船尾室内
+location_sea_open	公海上
+location_sea_port	左舷一侧
+memories_zero	无记忆
+memories_one	1段记忆
+memories_many	$0段记忆
+bookmarked_title_one	这个人仅出现在一段记忆中
+bookmarked_title_many	这个人出现在$0段记忆中
+bookmarked_unknown	无法辨认身份的人
+bookmarked_first	首段记忆
+bookmarked_mark	用书签标记记忆
+bookmarked_clear	删除所有书签
+bookmarked_marked_one	用书签标记了一段记忆
+bookmarked_marked_many	用书签标记了$0段记忆
+bookmarked_death	在“$chapter $part"中死亡
+bookmarked_disappear	在“$chapter"中失踪
+bookmarked_gosketch	被“$sketch"素描所描绘
+bookmarked_godeck	在甲板地图上显示记忆
+bookmarked_next	下一段记忆
+bookmarked_prev	上一段记忆
+chooseface_title	$subject是谁？
+sketch_dance	航行之旅
+sketch_formosans	福尔摩莎贵族
+sketch_justice	海上审判
+deck_maindeck	主甲板
+deck_gundeck	火炮甲板
+deck_orlopdeck	下层甲板
+deck_cargodeck	货舱
+deck_captainsquarters	船长室
+deck_passengerrooms	客舱
+deck_mate1	大副
+deck_mate3	三副
+deck_stewards	乘务员
+deck_midshipmen	见习官员
+deck_mate2	二副
+deck_mate4	四副
+deck_bosun	水手长
+deck_bosunmate	副水手长
+deck_surgery	医务室
+deck_crew	船员
+deck_starboardwalk	右舷\n走道
+deck_carpentershop	木匠工作间
+deck_purseroffice	事务长办公室
+deck_passengers	乘客
+deck_portwalk	左舷\n走道
+deck_gunnerstore	弹药舱
+deck_captainscargo	船长货舱
+deck_lazarette	船尾室
+deck_passengercargo	乘客货舱
+deck_bosunstore	水手长仓库
+chart_europe	欧洲
+chart_africa	非洲
+chart_madeira	马德拉群岛
+chart_canaryislands	加那利\n群岛
+chart_capeverde	佛得角
+chart_azores	亚速尔群岛
+manifest_name	姓名
+manifest_job	身份
+manifest_origin	籍贯
+manifest_fate	下落
+noclues_title0	你没有足够的信息以确定此人的身份。
+noclues_title1	这是谁？你还没把握进行推理。
+noclues_cancel	等待更多线索
+noclues_continue	还是试一试
+noclues_explain	请解释
+noclues_explain_more	请解释……
+noclues_help	些许帮助
+help_faceblur_intro0	此人的面部在整本书中看起来模糊不清。
+help_faceblur_intro1	这种模糊意味着你尚未掌握充足的信息以确认其身份。
+help_faceblur_fate	他们的下落可能已知并可以马上被输入。
+help_faceblur_name	在他们面部模糊的时候尝试对应姓名会事倍功半。
+help_faceblur_outro0	继续探索并留意细节。
+help_faceblur_outro1	当确认他们身份所需的信息已经以某种方式被揭晓后，面部将不再模糊。
+help_faceclear_intro0	此人的面部不再模糊，意味着其现在可以被确认身份。
+help_faceclear_intro1	利用这本书和怀表收集充足的信息以推断其身份。
+help_faceclear_memories	此人出现过的记忆可由此处浏览。
+help_faceclear_bookmark	用书签标记他们出现过的所有记忆，以便更快速地导航。
+help_faceclear_bookmark2	使用页面顶部的按钮以编辑并切换书签。
+help_faceclear_dialog	回顾每页上的对话并记下所有被提到的名字。
+help_faceclear_map	参考船只设计图，留意人物或物品所处的房间名称。
+help_faceclear_sketch	通过画家素描中的细节推断人们的籍贯、身份与关系。
+help_faceclear_manifest	使用名单以集中查看所有船员和乘客的信息。
+help_faceclear_origins	籍贯能够提示某人的外表或口音。
+help_faceclear_jobs	身份能够提示某人被发现的位置及其与他人的关系。
+help_faceclear_nums	每个人的名单编号都是唯一的，可能在确认身份时很有帮助。
+help_faceclear_pocketwatch	利用怀表回顾船上的记忆，从而研究人们的关系、出现地点和相关事件。
+help_faceclear_book	利用书中的地图、全体乘员名单和画家素描（第 $pages 页）以及各人的对话记录，找出与姓名、人物关系、出现地点和身份相关的线索。
+help_faceclear_elimination	有些身份也许只能通过排除法确定。
+help_faceclear_fates_may	这可能正确，也可能不正确。
+help_faceclear_fates0	下落以三个为一组验证。
+help_faceclear_fates1	正确识别至少三人的身份及其下落以将信息录入书中。
+help_faceclear_fates0_easy	下落以两个为一组验证。
+help_faceclear_fates1_easy	正确识别至少两人的身份及其下落，并将信息印入书中。
+help_faceclear_outro0	船离开英格兰时共有60人。
+help_faceclear_outro1	确认每个人的身份及下落并非易事。
+help_faceclear_outro2	决定性的证据极为罕见。
+help_faceclear_outro3	你将不得不利用不完全的信息进行假设。
+help_faceclear_goodluck	祝你好运。
+help_difficulty0	这是推理等级。
+help_difficulty1	等级越高意味着越难推断此人的身份。
+help_difficulty2	先把精力集中在容易推理的身份上，把较难的留到以后再说。
+help_title_heading	指南
+help_title_deducing	确定人物身份
+help_title_usingbook	使用本书的大致方法
+help_title_difficulty	推理等级
+help_title_fatescheck	验证下落
+help_title_bookmarks	书签
+help_zoom	长按放大键以检视面部。
+help_zoombook	检视面部时翻开书本以直接翻到素描页面。
+help_watchbook	在怀表打开时翻开书本以直接翻到相关页面。
+book_glossary	词汇表
+glossary_captain	船长 | 指挥船只的顶级官员。负责指挥其他官员，并确保船只航行顺利和安全。
+glossary_mate	船副 | 支持、协助上级的官员或技工。常规船副按照船长的安排，协助船只的运作。技工船副为其上级服务。
+glossary_bosun	水手长 | 负责日常船员管理及航行所需设备的领班。
+glossary_gunner	枪炮长 | 负责船上武器和军事行动的军官。
+glossary_purser	事务长 | 行政官员。负责所有货物估值和贸易结算。管理面向船员的小型杂货店。
+glossary_surgeon	船医 | 船上的医生，负责船员健康。根据需要可进行常规护理和医学手术。
+glossary_carpenter	木匠 | 负责维持船只木结构完整性的技工。
+glossary_helmsman	舵手 | 负责掌舵及常规即时导航的高级水手。
+glossary_steward	服务员 | 官员或高级船员的佣人，主要职责是为雇主提供舒适和便利。
+glossary_midshipman	见习官员 | 培训中的官员。协助各种官员和技工以学习船只操作。通常享有特权。
+glossary_topman	桅楼守望员 | 专门在甲板上面负责船帆和索具相关工作的高级水手。
+glossary_seaman	水手 | 在甲板上下进行常规体力劳动的低级别船员。
+glossary_rigging	索具 | 由绳索和链条组成的网状物，用于支持桅杆以及操纵帆。
+glossary_maindeck	主甲板 | 船舶的顶部甲板，受天气影响。
+glossary_gundeck	火炮甲板 | 承载火炮的甲板，有一排便于火炮射击的开口。
+glossary_orlopdeck	下层甲板 | 中部甲板，在底层甲板之上。内有仓库、船舱、畜栏及船舵。
+glossary_cargodeck	载货甲板 | 底层甲板，用于储存船舶物资和贸易货物。
+credits_dad	献给我的父亲
+credits_main	编程、设计、美术、音效和音乐
+credits_thanks	特别鸣谢
+credits_consult	语言咨询
+credits_consult_taiwanese	台湾语言咨询、翻译和管理
+credits_consult_english	英国英语
+credits_consult_swedish	瑞典语
+credits_consult_danish	丹麦语
+credits_consult_hindi	印地语
+credits_consult_russian	俄语
+credits_loc_manage	本地化管理
+credits_loc_spanish	西班牙语本地化
+credits_loc_german	德语本地化
+credits_loc_french	法语本地化
+credits_loc_italian	意大利语本地化
+credits_loc_polish	波兰语本地化
+credits_loc_portuguese	巴西葡萄牙语本地化
+credits_loc_russian	俄语本地化
+credits_loc_chinese_t	繁体中文本地化
+credits_loc_chinese_s	简体中文本地化
+credits_loc_japanese	日语本地化
+credits_loc_korean	韩语本地化
+credits_loc_ukrainian	乌克兰本地化
+credits_loc_arabic	阿拉伯语本地化
+credits_voice	角色配音
+credits_voice_manage	Voices.com 选角管理
+credits_voice_add	其他配音
+credits_voice_rower	船工
+credits_voice_house	管家
+credits_voice_player	调查员
+credits_models	动物模型
+credits_models_farmanimals	家畜
+credits_models_monkey	猴子
+credits_models_cowskull	牛头骨
+credits_testing	测试
+credits_thanks_extra	鸣谢
+credits_playing	感谢游玩！
+credits_copyright	版权所有© 2014-2022，3909 LLC。\n保留所有权利。
+ach_ending_good	奥伯拉癸
+ach_ending_good_desc	解开整本书的谜题。
+ach_ending_bad	弃船
+ach_ending_bad_desc	在解开全部现有章节的谜题之前下船。
+ach_solvedchapter_desc	查证第 $numeral 章全部的下落。
+ach_killercaptain	船长干的
+ach_killercaptain_desc	在公司和皇室看来，勉强算是如此。
+ach_solvedany	$count 个
+ach_solvedany_desc	查证 $count 个人的下落。
+fate_unknown_die	这是谁？\n这个人是怎么死的？
+fate_unknown_disappear	这是谁？\n这个人的下落如何？
+fate_killer_notpresent	这个可怜的人死去时，$subject肯定不在场。
+fate_noncrew_d000-stow-m01-stowaway	一个身份不明的偷渡者，期望着免费通行和最终的自由，却在坠落的木桶中粉身碎骨。
+fate_noncrew_d010-cold-m02-cow	一头壮硕的母牛遭到宰杀以获取牛肉。
+fate_noncrew_d050-ride-m07-carp	一只恐怖而丑陋的怪物和一个勇敢而不幸的人同归于尽。
+fate_noncrew_d070-save-m01-mermaid3	一只邪恶生物挑衅的尖叫被一颗致命的子弹终结。
+fate_noncrew_d070-save-m02-mermaid2	一只被捕的野兽与其监禁者搏斗，并因招来的麻烦遭到矛刺。
+fate_noncrew_d070-save-m04-monkey	为追求知晓一切，一只友好但不招人喜欢的宠物猴沦为牺牲品。
+tally_title	英属\n东印度公司
+tally_assessment	海上惨剧受害者\n商船\n奥伯拉丁号\n保险评估
+tally_preparer	由公司调查部编制
+tally_approved	此评估的初步草案已获得皇家贸易担保人的批准。
+tally_total	索赔总金额：$amount
+tally_certify	本人谨代表英属东印度公司，保证所有陈述均准确无误，并宣布调查已全部结束：
+tally_investigator	英属东印度公司首席调查官
+tally_amount	£$number
+tally_amount_separator	,
+tally_claim	索赔
+tally_ship	船只
+tally_ship_info	在暴风中受损，大西洋。于暴风雨中沉没，法尔茅斯。索赔金额：$amount。
+tally_cargo_company	货物（公司）
+tally_cargo_company_info	丢失了所有货物。索赔金额：$amount。
+tally_cargo_crown	货物（皇室）
+tally_cargo_crown_info	丢失了所有货物。损失赔偿金额：$amount。
+tally_join_major	。_
+tally_join_minor	，_
+tally_fate	下落：$summary
+tally_crime	犯罪调查结果：$findings
+tally_crime_murder	杀害船员 ($count)
+tally_crime_mutiny	叛乱未遂
+tally_crime_theft	盗窃货物
+tally_merit	功绩调查结果：$findings
+tally_merit_valor	见义勇为
+tally_merit_duties	恪尽职守
+tally_demerit	过失调查结果：$findings
+tally_demerit_abandon	抛弃船员和船只
+tally_demerit_duties	未能履行职责
+tally_estate_none	无索赔。
+tally_estate_wages	继承人获得的未付工资：$amount
+tally_estate_wages_reward	继承人获得的未付工资和奖金：$amount
+tally_estate_fined	继承人罚款：$amount
+tally_estate_unknown_wages	继承人不详。未付工资捐献给养老基金：$amount
+tally_estate_unknown_wages_reward	继承人不详。未付工资和奖金捐献给养老基金：$amount
+tally_estate_unknown_fined	继承人不详。开支报销：$amount
+tally_estate_forfeit	资产被皇室没收。
+tally_parting_watch	怀表仍然归你所有。
+tally_parting_book	根据请求，这本书将物归原主：摩洛哥的Henry Evans。
+office_letter_win	首席调查官，\n\n\t\t这封信是为了告知您Evans医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t他对您的来信感到非常高兴，并要求将这本书连同完成全部内容的方法交还给您，以此表达他的感激之情。\n\t\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中不堪回首的可怕篇章。\n\t\t请勿回信。\n\n此致，\n\t\tJane Bird
+office_letter_mid	首席调查官，\n\n\t\t这封信是为了告知您Evans医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t虽然这本书并未全部解开，但他仍然对您付出的努力表示感谢。他理解这个任务有多么艰难，也明白完成本书的愿望是多么难以实现。\n\t\t从奥伯拉丁号的浩劫中幸存的我们四人，现在只剩三个。\n\t\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t\tJane Bird
+office_letter_fail	首席调查官，\n\n\t\t这封信是为了告知你Evans医生去世的不幸消息。收到你的包裹后不久，他就因病去世了。\n\t\t他的健康状况本就不佳，收到如此残缺的奥伯拉丁之书使他心如死灰，再也无法康复。\n\t\t临终之时，他深深悔恨竟将这一重任托付于你。\n\t\t我们认为你应该知道。\n\n此致，\n\t\tJane Bird
+store_tagline	极简色彩保险解谜游戏
+store_description_long	1802年，商船奥伯拉丁号满载200多吨贸易货物，从伦敦出发驶往东方。六个月后，奥伯拉丁号没有抵达位于好望角的汇合点，宣布在海上失踪。\n\n1807年10月14日早上，奥伯拉丁号拖着残破的船帆漂流至法尔茅斯港口，船员不见踪影。一名保险调查员立即被东印度公司伦敦办事处派往法尔茅斯，设法登船并评估损失。\n\nReturn of the Obra Dinn（奥伯拉丁的归来）是一款充满神秘色彩的第一人称解谜游戏，游戏的进行方式基于探索与逻辑推理。
+store_description_short	商船奥伯拉丁号 ~ 于1803年在海上失踪。
+store_mature	本游戏采用定格3D场景描绘死亡和暴力。
+crew_name_captain	Robert Witterel|R. Witterel
+crew_name_mate1	William Hoscut|W. Hoscut
+crew_name_mate2	Edward Nichols|E. Nichols
+crew_name_mate3	Martin Perrott|M. Perrott
+crew_name_mate4	John Davies|J. Davies
+crew_name_bosun	Alfred Klestil|A. Klestil
+crew_name_bosunmate	Charles Miner|C. Miner
+crew_name_surgeon	Henry Evans|H. Evans
+crew_name_surgeonmate	James Wallace|J. Wallace
+crew_name_carp	Winston Smith|W. Smith
+crew_name_carpmate	Marcus Gibbs|M. Gibbs
+crew_name_cook	Thomas Sefton|T. Sefton
+crew_name_butcher	Emil O’Farrell|E. O’Farrel
+crew_name_gunner	Christian Wolff|C. Wolff
+crew_name_gunnermate	Olus Wiater|O. Wiater
+crew_name_purser	Duncan McKay|D. McKay
+crew_name_sea9	Finley Dalton|F. Dalton
+crew_name_pass5	Edward Spratt|E. Spratt
+crew_name_pass1	Abigail Hoscut Witterel|A.H. Witterel
+crew_name_pass2	Nunzio Pasqua|N. Pasqua
+crew_name_pass3	Emily Jackson|E. Jackson
+crew_name_pass4	Miss Jane Bird|J. Bird
+crew_name_pass6	Bun-Lan Lim|B. Lim
+crew_name_pass7	It-Beng Sia|I. Sia
+crew_name_pass8	Chioh Tan|C. Tan
+crew_name_pass9	Hok-Seng Lau|H. Lau
+crew_name_stewship	Zungi Sathi|Z. Sathi
+crew_name_stewcap	Fillip Dahl|F. Dahl
+crew_name_stewm1	Paul Moss|P. Moss
+crew_name_stewm2	Samuel Galligan|S. Galligan
+crew_name_stewm3	Roderick Andersen|R. Andersen
+crew_name_stewm4	Davey James|D. James
+crew_name_mid1	Peter Milroy|P. Milroy
+crew_name_mid2	Thomas Lanke|T. Lanke
+crew_name_mid3	Charles Hershtik|C. Hershtik
+crew_name_top5	Omid Gul|O. Gul
+crew_name_top6	Timothy Butement|T. Butement
+crew_name_top1	Huang Li|H. Li
+crew_name_top4	Jie Zhang|J. Zhang
+crew_name_top7	Li Hong|L. Hong
+crew_name_top8	Wei Lee|W. Lee
+crew_name_top9	Nicholas Botterill|N. Botterill
+crew_name_top3	Maba|Maba
+crew_name_topa	Lewis Walker|L. Walker
+crew_name_top2	Leonid Volkov|L. Volkov
+crew_name_sea1	Alarcus Nikishin|A. Nikishin
+crew_name_sea5	Aleksei Toporov|A. Toporov
+crew_name_sea2	Nathan Peters|N. Peters
+crew_name_sea3	Lars Linde|L. Linde
+crew_name_sea6	John Naples|J. Naples
+crew_name_sea4	Renfred Rajub|R. Rajub
+crew_name_sea7	Abraham Akbar|A. Akbar
+crew_name_sea8	William Wasim|W. Wasim
+crew_name_seac	Soloman Syed|S. Syed
+crew_name_seaa	Hamadou Diom|H. Diom
+crew_name_seab	Henry Brennan|H. Brennan
+crew_name_sead	Alexander Booth|A. Booth
+crew_name_seae	Patrick O’Hagan|P. O’Hagan
+crew_name_seaf	George Shirley|G. Shirley
+crew_name_seag	Samuel Peters|S. Peters
+crew_job_officer	官员
+crew_job_captain	船长
+crew_job_mate1	大副
+crew_job_mate2	二副
+crew_job_mate3	三副
+crew_job_mate4	四副
+crew_job_bosun	水手长
+crew_job_bosunmate	副水手长
+crew_job_surgeon	船医
+crew_job_surgeonmate	船医助手
+crew_job_carp	木匠
+crew_job_carpmate	木匠助手
+crew_job_cook	厨师
+crew_job_butcher	屠夫
+crew_job_gunner	枪炮长
+crew_job_gunnermate	副枪炮长
+crew_job_purser	事务长
+crew_job_helm	舵手
+crew_job_artist	画家
+crew_job_pass	乘客
+crew_job_stew	服务员
+crew_job_stewship	船只服务员
+crew_job_stewcap	船长服务员
+crew_job_stewm1	大副服务员
+crew_job_stewm2	二副服务员
+crew_job_stewm3	三副服务员
+crew_job_stewm4	四副服务员
+crew_job_mid	见习官员
+crew_job_top	桅楼守望员
+crew_job_sea	水手
+crew_origin_sierra	塞拉利昂
+crew_origin_america	美国
+crew_origin_austria	奥地利
+crew_origin_china	中国
+crew_origin_denmark	丹麦
+crew_origin_england	英格兰
+crew_origin_formosa	福尔摩莎
+crew_origin_france	法国
+crew_origin_india	印度
+crew_origin_ireland	爱尔兰
+crew_origin_italy	意大利
+crew_origin_newguinea	新几内亚
+crew_origin_poland	波兰
+crew_origin_russia	俄罗斯
+crew_origin_scotland	苏格兰
+crew_origin_sweden	瑞典
+crew_origin_wales	威尔士
+crew_origin_persia	波斯
+fate_glue_sentence	
+fate_glue_summary	，
+fate_sort	unknown, alive-eastindies, alive-middleeast, alive-azores, alive-verde, alive-canary, alive-island, alive-europe, alive-uk, alive-westindies, alive-africa, expired-sick, expired-age, suicide-knife, suicide-noose, suicide-gun, suicide-spear, froze, knifed-killer, clawed-beast, sworded-killer, strangled-killer, eaten-killer, gunned-killer, cannoned-killer, arrowed-killer, spiked-beast, dismembered-killer, axed-killer, decapitated-killer, clubbed-killer, poisoned, drowned-killer, exploded, burned, electrocuted, speared-killer, crushed-cannon, crushed-stones, crushed-cargo, crushed-beast, crushed-rigging, fell-stairs, fell-rigging, fell-overboard, tailed-beast, winged-beast, hooved-beast
+fate_parts_unknown	不详 | $subject | 下落不明。
+fate_parts_gunned-killer	被射死/枪 | $subject | 被$killer | 用枪射死。
+fate_parts_cannoned-killer	被射死/炮 | $subject | 被$killer | 用炮射死。
+fate_parts_knifed-killer	被小刀杀死 | $subject | 被$killer | 用小刀杀死。
+fate_parts_sworded-killer	被剑杀死 | $subject | 被$killer | 用剑杀死。
+fate_parts_clubbed-killer	被棍棒打死 | $subject | 被$killer | 用棍棒打死。
+fate_parts_axed-killer	被斧子砍死 | $subject | 被$killer | 用斧子砍死。
+fate_parts_speared-killer	被矛刺死 | $subject | 被$killer | 用矛刺死。
+fate_parts_dismembered-killer	被撕裂致死 | $subject | 被$killer | 撕裂致死。
+fate_parts_decapitated-killer	被斩首 | $subject | 被$killer | 斩首。
+fate_parts_drowned-killer	被溺死 | $subject | 被$killer | 溺死。
+fate_parts_eaten-killer	被吃掉 | $subject | 被$killer | 吃掉。
+fate_parts_strangled-killer	被勒死 | $subject | 被$killer | 勒死。
+fate_parts_spiked-beast	被尖刺刺死 | $subject | 被一只可怕的野兽用尖刺刺死。
+fate_parts_clawed-beast	被利爪抓死 | $subject | 被一只可怕的野兽用利爪抓死。
+fate_parts_winged-beast	重击/翅膀 | $subject | 被一只野兽的翅膀重击而死。
+fate_parts_tailed-beast	重击/尾巴 | $subject | 被一只野兽的尾巴重击而死。
+fate_parts_hooved-beast	重击/蹄子 | $subject | 被一只野兽的蹄子重击而死。
+fate_parts_crushed-cargo	被压死/货物 | $subject | 被掉落的货物压死。
+fate_parts_crushed-beast	被压死/野兽 | $subject | 被一只可怕的野兽压死。
+fate_parts_crushed-cannon	被压死/火炮 | $subject | 被松脱的火炮压死。
+fate_parts_crushed-rigging	被压死/索具 | $subject | 被掉落的索具压死。
+fate_parts_crushed-stones	被压死/石头 | $subject | 被落石压死。
+fate_parts_fell-stairs	摔死/楼梯 | $subject | 从楼梯上摔落身亡。
+fate_parts_fell-rigging	摔死/索具 | $subject | 从索具上摔落身亡。
+fate_parts_fell-overboard	摔死/船上 | $subject | 从船上摔落身亡。
+fate_parts_expired-age	老死 | $subject | 寿终正寝。
+fate_parts_expired-sick	病死 | $subject | 因悲惨的疾病逝世。
+fate_parts_exploded	被炸死 | $subject | 被爆炸炸死。
+fate_parts_electrocuted	被电死 | $subject | 被电死。
+fate_parts_poisoned	被毒死 | $subject | 被毒死。
+fate_parts_burned	被烧死 | $subject | 被烧死。
+fate_parts_froze	被冻死 | $subject | 被冻死。
+fate_parts_suicide-gun	自杀/枪 | $subject | 饮弹自尽。
+fate_parts_suicide-knife	自杀/小刀 | $subject | 用小刀自杀。
+fate_parts_suicide-spear	自杀/矛 | $subject | 用矛自杀。
+fate_parts_suicide-noose	自杀/绳索 | $subject | 上吊自杀。
+fate_parts_alive-uk	幸存/英国 | $subject | 幸存于英国。
+fate_parts_alive-eastindies	幸存/东印度群岛 | $subject | 幸存于东印度群岛。
+fate_parts_alive-westindies	幸存/西印度群岛 | $subject | 幸存于西印度群岛。
+fate_parts_arrowed-killer	被射死/箭 | $subject | 被$killer | 用弓箭射死。
+fate_parts_alive-middleeast	幸存/中东 | $subject | 幸存于中东。
+fate_parts_alive-europe	幸存/欧洲 | $subject | 幸存于欧洲。
+fate_parts_alive-africa	幸存/非洲 | $subject | 幸存于非洲。
+fate_parts_alive-island	幸存/大西洋岛屿 | $subject | 幸存于大西洋岛屿。
+fate_parts_alive-canary	幸存/加那利群岛 | $subject | 幸存于加那利群岛。
+fate_parts_alive-verde	幸存/佛得角 | $subject | 幸存于佛得角。
+fate_parts_alive-azores	幸存/亚速尔群岛 | $subject | 幸存于亚速尔群岛。
+fate_ent_unknown	不详 | 一个身份不明的人 | 这个身份不明的人 | 一个身份不明的攻击者
+fate_ent_?officer	AUTO | 一个身份不明的官员 | 这个身份不明的官员 | 一个身份不明的官员
+fate_ent_?pass	AUTO | 一个身份不明的乘客 | 这个身份不明的乘客 | 一个身份不明的乘客
+fate_ent_?stew	AUTO | 一个身份不明的服务员 | 这个身份不明的服务员 | 一个身份不明的服务员
+fate_ent_?mid	AUTO | 一个身份不明的见习官员 | 这个身份不明的见习官员 | 一个身份不明的见习官员
+fate_ent_?top	AUTO | 一个身份不明的桅楼守望员 | 这个身份不明的桅楼守望员 | 一个身份不明的桅楼守望员
+fate_ent_?sea	AUTO | 一个身份不明的水手 | 这个身份不明的水手 | 一个身份不明的水手
+fate_ent_captain	AUTO | 船长$name | = | =
+fate_ent_mate1	AUTO | $name（大副） | = | =
+fate_ent_mate2	AUTO | $name（二副） | = | =
+fate_ent_mate3	AUTO | $name（三副） | = | =
+fate_ent_mate4	AUTO | $name（四副） | = | =
+fate_ent_bosun	AUTO | $name（水手长） | = | =
+fate_ent_bosunmate	AUTO | $name（副水手长） | = | =
+fate_ent_surgeon	AUTO | $name（船医） | = | =
+fate_ent_surgeonmate	AUTO | $name（船医助手） | = | =
+fate_ent_carp	AUTO | $name（木匠） | = | =
+fate_ent_carpmate	AUTO | $name（木匠助手） | = | =
+fate_ent_cook	AUTO | $name（厨师） | = | =
+fate_ent_butcher	AUTO | $name（屠夫） | = | =
+fate_ent_gunner	AUTO | $name（枪炮长） | = | =
+fate_ent_gunnermate	AUTO | $name（副枪炮长） | = | =
+fate_ent_purser	AUTO | $name（事务长） | = | =
+fate_ent_helm	AUTO | $name（舵手） | = | =
+fate_ent_artist	AUTO | $name（画家） | = | =
+fate_ent_pass	AUTO | $name（乘客） | = | =
+fate_ent_stewship	AUTO | $name（船只服务员） | = | =
+fate_ent_stewcap	AUTO | $name（船长服务员） | = | =
+fate_ent_stewm1	AUTO | $name（大副服务员） | = | =
+fate_ent_stewm2	AUTO | $name（二副服务员） | = | =
+fate_ent_stewm3	AUTO | $name（三副服务员） | = | =
+fate_ent_stewm4	AUTO | $name（四副服务员） | = | =
+fate_ent_mid	AUTO | $name（见习官员） | = | =
+fate_ent_top	AUTO | $name（桅楼守望员） | = | =
+fate_ent_sea	AUTO | $name（水手） | = | =
+fate_ent_beast	野兽 | 无 | 无 | 一只可怕的野兽
+fate_ent_enemy	敌人 | 无 | 无 | 一个外敌
+dialog_intro_aa	法尔茅斯，英格兰\n1807年
+dialog_intro_ba	公司的人把我叫了起来。
+dialog_intro_ca	说你需要坐船到奥伯拉丁号。
+dialog_intro_da	基本没人想揽这个活。
+dialog_intro_ea	你要是问我的话，我觉得你后悔也来不及了。
+dialog_intro_fa	没人问你。
+dialog_intro_ga	箱子里有什么？
+dialog_intro_ha	我不知道。
+dialog_intro_ia	过一会把它吊起来。
+dialog_intro_ja	嗯？怎么吊？
+dialog_intro_ka	小心点吊。
+dialog_demo_end_aa	- 演示结束 -
+dialog_demo_end_ba	感谢你体验本游戏！
+dialog_watch_too_heavy_1_aa	嚯！
+dialog_watch_too_heavy_1_ba	这太沉了！
+dialog_watch_too_heavy_2_aa	这太沉了！
+dialog_watch_too_heavy_2_ba	你自己来抬！
+dialog_watch_too_heavy_3_aa	这太沉了。
+dialog_watch_too_heavy_3_ba	要么你自己拿着，要么在这里打开它。
+dialog_pickup_watch_aa	- Memento Mortem -
+dialog_pickup_watch_ba	铭记死亡
+dialog_ship_end_notify_aa	嚯！
+dialog_ship_end_notify_ba	你还在船上吗？
+dialog_ship_end_notify_ca	暴风雨要来了！
+dialog_ship_end_notify_da	干完活后赶紧爬下来！
+dialog_ship_end_leave_1_aa	弄完了吗？
+dialog_ship_end_leave_1_ba	我们该走了。
+dialog_ship_end_leave_1_ca	暴风雨就快来了，所以我们不会回来了。
+dialog_ship_end_leave_1_da	要是你还有活儿没干，就爬上去做完。
+dialog_ship_end_leave_1_ea	不然我就划回港口了。
+dialog_ship_end_leave_2_aa	准备走了？
+dialog_ship_end_leave_3_aa	我们该走了。
+dialog_ship_end_leave_3_ba	暴风雨就快来了，所以我们不会回来了。
+dialog_ship_end_done_aa	终于。
+dialog_ship_end_done_ca	坐好，可别掉出去了。
+dialog_moment_unknown_aa	不详
+dialog_d0_m0_ah	让开，借过。
+dialog_d0_m0_ar	放到下层船尾，舵柄下面。
+dialog_d0_m0_ba	降下来！
+dialog_d0_m0_bh	喂！
+dialog_d0_m0_bk	等等！等等！
+dialog_d0_m0_bo	不！
+dialog_d0_m0_bs	下面小心！
+dialog_d0_m1_aa	吊起来！
+dialog_d0_m1_ba	降下来！
+dialog_d1_m0_am	Эй, мухлевать то завязывай! | 别作弊！
+dialog_d1_m0_ar	На себя погляди, дубина.| 少管闲事。
+dialog_d1_m0_aa	सय्यद | Syed！
+dialog_d1_m0_ba	सय्यद, उठो। | Syed，起来！
+dialog_d1_m0_ca	कुछ पी लो | 喝点东西！
+dialog_d1_m1_aa	怎么样？
+dialog_d1_m1_ba	和另一个人一样。
+dialog_d1_m1_ca	某种肺病。
+dialog_d1_m1_da	但不是肺痨。
+dialog_d1_m1_ea	感冒加重了病情。
+dialog_d1_m1_fa	这病会传染吗？
+dialog_d1_m1_ga	如果会传染的话，我们应该全都患病了。
+dialog_d1_m1_ha	他们肯定是在印度水手舱里染病的。
+dialog_d1_m1_ia	我刚检查过所有水手，
+dialog_d1_m1_ja	每个人都是健康的。
+dialog_d1_m1_ka	那他呢？
+dialog_d1_m1_la	他还能活下来吗？
+dialog_d1_m1_ma	我给他服了一些鸦片酊。
+dialog_d1_m1_na	听天由命吧。
+dialog_d1_m2_aa	把他带到木匠那。
+dialog_d1_m2_ba	给他裹好，然后做临终祷告。
+dialog_d1_m2_ca	敲它这儿。
+dialog_d1_m2_da	一棒下去。
+dialog_d1_m2_ea	打碎头骨，砸瘫它的脑子。
+dialog_d1_m2_fa	等你做完了我来给它割喉。
+dialog_d1_m2_ga	这里？
+dialog_d1_m2_ha	没错。
+dialog_d1_m2_ia	来吧。趁它还没挣扎。
+dialog_d1_m2_ja	你还好吗，长官？
+dialog_d1_m2_ka	从来没去过农场吗，Charlie？
+dialog_d1_m2_la	当心你们脚下。
+dialog_d2_m0_aa	嗨？
+dialog_d2_m0_ba	谁在那儿？
+dialog_d2_m0_ca	那边是谁？
+dialog_d2_m0_da	有人受伤了吗？
+dialog_d2_m0_ea	嗯？
+dialog_d2_m0_fa	Signor Nichols, is that you? | Nichols先生，是你吗？
+dialog_d2_m0_ga	你在这儿干什么？
+dialog_d2_m0_ha	你好，是我！
+dialog_d2_m0_ia	这里一切都好。
+dialog_d2_m0_ja	只是在，啊，整理一些东西。
+dialog_d2_m0_ka	走路小心。
+dialog_d2_m0_la	喏，我来扶你。
+dialog_d2_m1_aa	Hok-Seng Lau...
+dialog_d2_m1_ba	...你因自供谋杀Nunzio Pasqua...
+dialog_d2_m1_ca	...而被判有罪。
+dialog_d2_m1_da	慢且！伊無做毋著代誌！ | 慢着！他什么也没做错啊！
+dialog_d2_m1_ea	小姐，袂赴啊。 | Lim小姐。来不及了。
+dialog_d2_m1_fa	肃静！
+dialog_d2_m1_ga	作为这艘船的船长...
+dialog_d2_m1_ha	...根据东印度公司...
+dialog_d2_m1_ia	...以至英格兰皇室的授权...
+dialog_d2_m1_ja	...我判处将你枪毙。
+dialog_d2_m1_ka	Wolff先生。请你准备。
+dialog_d2_m1_la	好的，长官。
+dialog_d2_m1_ma	兄弟们，预备。
+dialog_d2_m1_na	瞄准。
+dialog_d2_m1_oa	开火！
+dialog_d2_m2_ba	保持警觉，小伙子们。
+dialog_d2_m2_ca	恁哪會使按呢！ | 你们怎么可以这样！
+dialog_d2_m2_cm	把她放上去！我们赶紧出发！
+dialog_d2_m2_da	共我放開！ | 放开我！
+dialog_d2_m2_ea	把她带到这边。
+dialog_d2_m2_fa	船长！
+dialog_d2_m2_ga	松开吊索，把小船放下去！
+dialog_d2_m2_ha	所有船员都会来追杀我们的！
+dialog_d2_m2_ia	休想！
+dialog_d3_m0_aa	保持航向往东。
+dialog_d3_m0_ba	我们 3 天后会抵达加那利群岛。
+dialog_d3_m0_ca	你带的储备够吗？
+dialog_d3_m0_da	是，长官。我亲自检查装船的。
+dialog_d3_m0_ea	很好。保持安静，提高警惕。
+dialog_d3_m0_fa	如果风变大的话，我们就没希望摆脱奥伯拉丁号了。
+dialog_d3_m0_ga	小姐，妳有按怎無？ | Lim小姐，你没事吧？
+dialog_d3_m0_ha	嗯，我無問題。 | 嗯，我没事。
+dialog_d3_m0_ia	但是彼个箱仔，絕對袂使落入去水底！ | 但那个箱子，绝对不能掉到海里！
+dialog_d3_m0_ja	若是遐的怪物出現，妳絕對莫起來！ | 如果怪物来了，你一定别起来！
+dialog_d3_m0_ka	唉，闭嘴！
+dialog_d3_m0_la	他们在说奇怪的事情！
+dialog_d3_m0_lm	与怪物有关！
+dialog_d3_m1_aa	Матерь божья! | 圣母玛利亚！
+dialog_d3_m1_ba	继续划啊！
+dialog_d3_m1_ca	他們欲過來啊！ | 它们要过来了！
+dialog_d3_m1_da	明叔，箱仔！| Beng叔，箱子！
+dialog_d3_m1_ea	它在哪里？
+dialog_d3_m1_fa	那！那里有东西！
+dialog_d3_m1_ga	我看到了！
+dialog_d3_m1_ha	给我们把武器！
+dialog_d3_m1_ia	小姐，莫起來！ | Lim小姐，别起来！
+dialog_d3_m1_ja	快拿桨划啊，你们这些蠢货！
+dialog_d3_m2_aa	O’Hagan！你还有气吗？
+dialog_d3_m2_am	还能划船吗？
+dialog_d3_m2_ar	救命啊！ | 救命啊！
+dialog_d3_m2_ba	Nichols！长官！看在上帝的份上，朝它们开枪！
+dialog_d3_m3_aa	我提著啊！ | 我拿到了！
+dialog_d3_m3_ba	閣等一下！ | 再等一下！
+dialog_d3_m4_aa	小姐？...小姐？ | 小姐？...小姐？
+dialog_d3_m5_aa	啊嘿！
+dialog_d3_m5_ba	他们回来了！
+dialog_d3_m5_ca	去找船长！
+dialog_d3_m5_da	啊嘿！
+dialog_d3_m5_dm	把船收回来！
+dialog_d3_m5_ea	等等！别开枪！
+dialog_d3_m5_fa	我有宝物！我投降！
+dialog_d3_m5_ga	不要开枪！
+dialog_d4_m0_aa	把这个抬出来，带到下面。
+dialog_d4_m0_ba	这到底是怎么回事？
+dialog_d4_m0_ca	你对这些东西知道多少？
+dialog_d4_m0_da	这个箱子和你死去的朋友又是怎么回事？
+dialog_d4_m0_ea	這是 啥物？佗位來的？ | 这些是什么怪物？它们从哪儿来的？
+dialog_d4_m0_fa	全部 講出來！ | 全都说出来！
+dialog_d4_m0_ga	攏是恁害的啦！ | 都是你们的错！
+dialog_d4_m0_ha	彼个海螺仔殼竟然無顧給好！ | 竟然没保护好那个贝壳！
+dialog_d4_m0_ia	這聲咱穩死的！ | 这下咱们都死定了！
+dialog_d4_m0_ja	他提到一个贝壳。
+dialog_d4_m0_ka	非常危险。
+dialog_d4_m0_la	贝壳？什么贝壳？
+dialog_d4_m1_aa	清理甲板。
+dialog_d4_m1_ba	把小船移到船尾，把尸体扔上去。
+dialog_d4_m1_ca	注意脚下。
+dialog_d4_m1_da	喂。这是什么？
+dialog_d4_m1_ea	把它们交给我，我能让大伙儿吃顿好的，伙计们。
+dialog_d4_m1_fa	小心点，慢慢来！
+dialog_d4_m1_ga	稍等，小伙子们。
+dialog_d4_m1_ha	这有个漂亮的贝壳。
+dialog_d4_m1_ia	让我看下。
+dialog_d4_m1_ja	不！退后！
+dialog_d4_m3_aa	压住这儿。
+dialog_d4_m3_ba	按住他。
+dialog_d4_m3_ca	这是发什么疯？
+dialog_d4_m3_da	你当我服务员的二十年来，我一次也没怀疑过你的理智。
+dialog_d4_m3_ea	解释清楚！
+dialog_d4_m3_fa	那些邪恶的野兽带着诅咒！
+dialog_d4_m3_ga	把它们扔回去，否则我们所有人都会毁灭！
+dialog_d4_m3_ha	把他绑上，和那些…东西一起放到船尾室。
+dialog_d4_m3_ia	他也许还能恢复点理智。
+dialog_d4_m3_ja	来吧。
+dialog_d4_m3_ka	Era dårar! | 你们这些蠢货！
+dialog_d4_m3_la	没问题的，John，我见过比这更糟的情况。
+dialog_d4_m3_ma	他另外半截腿在哪儿？
+dialog_d5_m0_aa	主帆升起来了！
+dialog_d5_m0_ba	固定好帆索，落下顶帆！
+dialog_d5_m0_ca	动作快点，起风了！
+dialog_d5_m1_aa	使劲拉！
+dialog_d5_m1_ba	快跑！
+dialog_d5_m1_bm	这是什么？
+dialog_d5_m1_ca	见鬼了！
+dialog_d5_m1_da	还有一个！
+dialog_d5_m1_ea	在那儿！
+dialog_d5_m2_a5	En dæmon! | 是恶魔！
+dialog_d5_m2_aa	让开！
+dialog_d5_m2_ba	准备战斗！
+dialog_d5_m2_ca	敌人登船了！
+dialog_d5_m2_da	怎么回事？
+dialog_d5_m2_ea	退后！Nick已经死了！
+dialog_d5_m2_fa	来吧，老板！
+dialog_d5_m2_fm	不，趴下！
+dialog_d5_m2_ga	嘿！接住了！
+dialog_d5_m3_aa	我们打不过！
+dialog_d5_m3_ba	快烧了它！
+dialog_d5_m5_aa	我来救你。
+dialog_d5_m5_ba	别动。
+dialog_d5_m5_ca	我会把你放下来的。
+dialog_d5_m5_cm	把那把手炮给我。
+dialog_d5_m6_aa	它们冲船尾室去了！
+dialog_d5_m6_ba	保护货舱！
+dialog_d5_m6_ca	来人朝这东西开枪啊！
+dialog_d5_m7_aa	就这点本事！？
+dialog_d6_m0_aa	让我上去。
+dialog_d6_m0_ba	有能耐杀了我再上船，你这该死的丹麦佬。
+dialog_d6_m0_ca	嗯？什么意思？
+dialog_d6_m0_cm	别闹麻烦了，伙计们。
+dialog_d6_m0_cr	上船吧。
+dialog_d6_m0_da	以为我忘了？你杀了我兄弟。
+dialog_d6_m0_ea	什么？那是事故！是绳子的事！
+dialog_d6_m0_em	不是他的错。我全都看见了。
+dialog_d6_m0_fa	撒谎！
+dialog_d6_m0_ga	我就不该等这么久！
+dialog_d6_m0_gm	不！别！
+dialog_d6_m2_a5	装弹！
+dialog_d6_m2_aa	用力推！
+dialog_d6_m2_ba	水平瞄准！
+dialog_d6_m2_ca	准备！
+dialog_d6_m2_cm	别！
+dialog_d6_m2_da	先别点火！
+dialog_d6_m3_aa	引信！
+dialog_d6_m4_a5	这里怎么回事？
+dialog_d6_m4_aa	长官！火炮松脱！
+dialog_d6_m4_ba	船倾侧了！
+dialog_d6_m4_ca	大家站稳！
+dialog_d6_m5_aa	去主缆柱，快！
+dialog_d6_m5_ba	坚持住！
+dialog_d6_m5_ca	坚持住！
+dialog_d6_m5_da	扔！
+dialog_d6_m5_ea	把火药扔出去！
+dialog_d6_m7_aa	Martin！
+dialog_d6_m7_ba	船长在哪儿？
+dialog_d6_m7_ca	你疯了吗？
+dialog_d6_m7_da	快回里面！
+dialog_d6_m7_ea	我要找我丈夫！
+dialog_d6_m7_fa	他在哪儿？
+dialog_d6_m7_ga	他在甲板下面！
+dialog_d6_m7_ha	过来！
+dialog_d7_m0_aa	这是什么？
+dialog_d7_m0_ba	水银！
+dialog_d7_m0_ca	Herre, min gud! | 我的天啊！
+dialog_d7_m1_aa	把它弄走，你这该死的。
+dialog_d7_m1_ba	这是你的海怪。
+dialog_d7_m1_ca	你把它带过来的。
+dialog_d7_m1_da	把它弄回去！
+dialog_d7_m2_aa	我要杀光你们这些怪物。
+dialog_d7_m2_ba	让海怪撤退！
+dialog_d7_m2_ca	不然我就把你们全杀了！
+dialog_d7_m3_aa	第三个贝壳！
+dialog_d7_m3_am	船长没把它们全扔掉！
+dialog_d7_m3_ba	别管它了。帮我把这个抬起来。
+dialog_d7_m3_ca	停！等等！
+dialog_d7_m3_da	我们是来放你走的！
+dialog_d7_m3_ea	把贝壳给它。
+dialog_d7_m3_fa	嗯？
+dialog_d7_m3_ga	快点！
+dialog_d7_m3_ha	把它吊出来。
+dialog_d7_m3_ia	抬到主甲板。
+dialog_d7_m3_ja	把它扔下去。
+dialog_d7_m3_ka	走的时候把门锁上。
+dialog_d7_m3_la	抬好尾巴，伙计。
+dialog_d7_m3_ma	作为回报...
+dialog_d7_m3_na	...这艘...
+dialog_d7_m3_oa	...奥伯拉丁号...
+dialog_d7_m3_pa	...务必让它返航。
+dialog_d7_m4_aa	你在这儿啊。
+dialog_d7_m4_am	你去收拾东西吧，我们...
+dialog_d7_m4_ba	钥匙在哪儿？
+dialog_d7_m4_ca	开那道门的？不见了。
+dialog_d7_m4_da	该死。
+dialog_d7_m4_ea	没时间了。我们得走了。
+dialog_d7_m4_fa	没错。
+dialog_d7_m4_ga	进去吧。
+dialog_d7_m4_ha	你要干什么？
+dialog_d7_m4_ia	造孽。
+dialog_d8_m0_aa	把我放下！放开我！
+dialog_d8_m0_ba	放松点，你的状态很糟糕。
+dialog_d8_m0_ca	大鱿鱼！我的法国伙计在哪儿？
+dialog_d8_m0_da	鱿鱼走了。你的副手被撕裂了。
+dialog_d8_m0_ea	该死！那个野兽死了？
+dialog_d8_m0_fa	怎么回事？你们怎么杀死它的？
+dialog_d8_m0_ga	我们没杀死它。它随着暴风雨离开了。
+dialog_d8_m0_ha	船长从货舱里走了出来。
+dialog_d8_m0_hm	说他把它赶走了。
+dialog_d8_m0_ja	你得休息一下。
+dialog_d8_m0_ka	那种诅咒...
+dialog_d8_m0_la	...不会无缘无故解除的。
+dialog_d8_m1_aa	最后一艘了。动作快点。
+dialog_d8_m1_ba	喂！别想偷走最后一艘船！
+dialog_d8_m1_ca	Paul，小心！
+dialog_d8_m1_da	住手！
+dialog_d8_m1_dm	放他们走！
+dialog_d8_m1_ea	不！
+dialog_d8_m1_em	该死。
+dialog_d8_m2_aa	放他们走！
+dialog_d8_m3_aa	受够了！不能相信船长。
+dialog_d8_m3_ba	你有计划？
+dialog_d8_m3_ca	是的，我们抢下这艘船，向东航行。
+dialog_d8_m3_da	把那些怪鱼和贝壳换成金子。
+dialog_d8_m3_ea	嗯？谁在那儿？
+dialog_d8_m3_fa	造反啦！造反啦！
+dialog_d8_m3_ga	小王八蛋！
+dialog_d8_m3_ha	别！
+dialog_d8_m4_aa	怎么回事，你这该死的蠢货？
+dialog_d8_m5_aa	哦，不！
+dialog_d8_m5_am	你受伤了！
+dialog_d8_m5_ba	别...离开我。
+dialog_d8_m5_ca	挺住，孩子。我会陪着你的。
+dialog_d8_m5_da	告诉Pete的母亲，我...
+dialog_d8_m5_dh	我尽力了。
+dialog_d8_m5_dr	…尽力把他拉回来...想救他。
+dialog_d8_m5_ea	你亲自去告诉她。
+dialog_d8_m5_fa	Brennan！把医药箱拿过来！
+dialog_d9_m0_aa	船长！
+dialog_d9_m0_ba	把门打开...
+dialog_d9_m0_ca	踹门进去！
+dialog_d9_m0_da	...不然我们就把门砸开...
+dialog_d9_m0_ea	...拿的可就不只是贝壳了。
+dialog_d9_m0_fa	你们这群混蛋好好拿着...
+dialog_d9_m0_ga	...老子给你们的东西。
+dialog_d9_m1_aa	它们在哪儿？
+dialog_d9_m1_ba	肯定在这里的某个地方。
+dialog_d9_m1_ca	它们都沉到...
+dialog_d9_m1_da	...海底了。
+dialog_d9_m1_ea	说谎。
+dialog_d9_m3_aa	Abigail。
+dialog_d9_m3_ba	你的兄弟。
+dialog_d9_m3_ca	我的朋友。
+dialog_d9_m3_da	我开枪把他...
+dialog_d9_m3_ea	...打死了。
+dialog_d9_m3_fa	我很快就会...
+dialog_d9_m3_ga	...来陪你，亲爱的。
+dialog_d9_m3_ha	请原谅我。
+dialog_d9_m3_ia	原谅我的一切。
+dialog_tally_intro_aa	一周后
+dialog_office_intro_aa	一年后
+dialog_office_delivery_package_aa	你相信吗？这种时候竟然有个包裹。
+dialog_office_delivery_package_ba	这东西闻起来真恶心。
+dialog_office_delivery_package_ca	最好别在屋里打开。
+dialog_office_delivery_package_da	我要去睡觉了。
+dialog_office_delivery_package_ea	想喝茶的话，厨房里还有。
+dialog_office_delivery_envelope_aa	你相信吗？这种时候竟然有封信件。
+dialog_office_delivery_envelope_ba	肯定很重要。
+dialog_office_delivery_envelope_ca	我要去睡觉了。
+dialog_office_delivery_envelope_da	茶已经喝光了，你也该上床睡觉了。
+dialog_the_end_aa	完

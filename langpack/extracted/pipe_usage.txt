@@ -1,0 +1,79 @@
+﻿模板 template-zh-s.tsv: 985 键    英文包: 985 键    原中文包: 985 键
+
+【总览】模板里含 `|` 的键 509 / 985
+
+【A】`<原文> | <译文>` 型（可安全去原文）
+----------------------------------------------------------------------
+  共 347 键，按前缀：{'dialog': 347}
+  其中竖线前是**非 ASCII 原文**（外语台词）的 80 键
+  （其中 2 键与英文包的原文**只差空白**（半角/全角），模板与官方中文包一致，不用改）
+      dialog_d4_m0_ea: 模板 這是␣啥物？佗位來的？   /   英文包 這是␣全角␣啥物？佗位來的？
+      dialog_d4_m0_fa: 模板 全部␣講出來！   /   英文包 全部␣全角␣講出來！
+
+【B】`|` 的其它用途（**不能**去原文）
+----------------------------------------------------------------------
+  共 162 键
+  --- crew  (60 键)
+      模板  crew_name_captain  =  [CrewNameCaptain]|[CrewNameCaptainShort]
+      英文  crew_name_captain  =  Robert Witterel | R. Witterel
+      模板  crew_name_mate1  =  [CrewNameMate1]|[CrewNameMate1Short]
+      英文  crew_name_mate1  =  William Hoscut | W. Hoscut
+      模板  crew_name_mate2  =  [CrewNameMate2]|[CrewNameMate2Short]
+      英文  crew_name_mate2  =  Edward Nichols | E. Nichols
+      模板  crew_name_mate3  =  [CrewNameMate3]|[CrewNameMate3Short]
+      英文  crew_name_mate3  =  Martin Perrott | M. Perrott
+      模板  crew_name_mate4  =  [CrewNameMate4]|[CrewNameMate4Short]
+      英文  crew_name_mate4  =  John Davies | J. Davies
+      模板  crew_name_bosun  =  [CrewNameBosun]|[CrewNameBosunShort]
+      英文  crew_name_bosun  =  Alfred Klestil | A. Klestil
+      …另 54 键
+
+  --- fate  (85 键)
+      模板  fate_parts_unknown  =  不详 | $subject | 下落不明。
+      英文  fate_parts_unknown  =  Unknown | $subject | met an unknown fate.
+      模板  fate_parts_gunned-killer  =  被射死/枪 | $subject | 被$killer | 用枪射死。
+      英文  fate_parts_gunned-killer  =  Shot/Gun | $subject | was shot with a gun | by $killer.
+      模板  fate_parts_cannoned-killer  =  被射死/炮 | $subject | 被$killer | 用炮射死。
+      英文  fate_parts_cannoned-killer  =  Shot/Cannon | $subject | was blasted with a cannon | by $killer.
+      模板  fate_parts_knifed-killer  =  被小刀杀死 | $subject | 被$killer | 用小刀杀死。
+      英文  fate_parts_knifed-killer  =  Knifed | $subject | was knifed | by $killer.
+      模板  fate_parts_sworded-killer  =  被剑杀死 | $subject | 被$killer | 用剑杀死。
+      英文  fate_parts_sworded-killer  =  Killed (Sword) | $subject | was killed with a sword | by $killer.
+      模板  fate_parts_clubbed-killer  =  被棍棒打死 | $subject | 被$killer | 用棍棒打死。
+      英文  fate_parts_clubbed-killer  =  Clubbed | $subject | was clubbed | by $killer.
+      …另 79 键
+
+  --- glossary  (17 键)
+      模板  glossary_captain  =  船长 | 指挥船只的顶级官员。负责指挥其他官员，并确保船只航行顺利和安全。
+      英文  glossary_captain  =  Captain | Head officer in command of the ship. Responsible for directing the other officers and ensuring the s
+      模板  glossary_mate  =  船副 | 支持、协助上级的官员或技工。常规船副按照船长的安排，协助船只的运作。技工船副为其上级服务。
+      英文  glossary_mate  =  Mate | Officer or tradesman that supports and assists their superior. General mates help to run the ship and s
+      模板  glossary_bosun  =  水手长 | 负责日常船员管理及航行所需设备的领班。
+      英文  glossary_bosun  =  Bosun | [Alt. Boatswain, Bos'n] Foreman in charge of general crew operations and the equipment required to sai
+      模板  glossary_gunner  =  枪炮长 | 负责船上武器和军事行动的军官。
+      英文  glossary_gunner  =  Gunner | Military officer in charge of weapons and military procedures on the ship.
+      模板  glossary_purser  =  事务长 | 行政官员。负责所有货物估值和贸易结算。管理面向船员的小型杂货店。
+      英文  glossary_purser  =  Purser | Administrative official. Accounts for all cargo value and trade transactions. Manages a small items s
+      模板  glossary_surgeon  =  船医 | 船上的医生，负责船员健康。根据需要可进行常规护理和医学手术。
+      英文  glossary_surgeon  =  Surgeon | The ship's doctor, in charge of crew health. Capable of general care and medical procedures as requi
+      …另 11 键
+
+【C】按前缀统计「含 | 的键」里两类各占多少
+----------------------------------------------------------------------
+  crew           含|  60   可删   0   不可删  60
+  dialog         含| 347   可删 347   不可删   0
+  fate           含|  85   可删   0   不可删  85
+  glossary       含|  17   可删   0   不可删  17
+
+【D】结论
+----------------------------------------------------------------------
+  可去原文的键**全部**是 `dialog_` 前缀 → 规则「只处理 dialog_*」安全 ✓
+  `dialog_` 里含 `|` 的 347 键，**全部**符合「原文 | 译文」✓
+
+  去原文后的抽样（各类各一）：
+    dialog_intro_ba
+      前: Company man woke me up. | 公司的人把我叫了起来。
+      后: 公司的人把我叫了起来。
+    （外语原文用例）dialog_ship_end_notify_ca
+      前: Storm’s comin! | 暴风雨要来了！
+      后: 暴风雨要来了！

@@ -1,0 +1,66 @@
+# 人名精修候选
+
+keys=60  英文有真 Short 的=59  A(中文Short==全名)=59  B(dev≠官方)=0
+
+## B：dev 与官方 zh-s 不一致（官方译名可作参照）
+
+## A：中文 Short 与全名相同（英文那边是缩写）
+  crew_name_captain
+  crew_name_mate1
+  crew_name_mate2
+  crew_name_mate3
+  crew_name_mate4
+  crew_name_bosun
+  crew_name_bosunmate
+  crew_name_surgeon
+  crew_name_surgeonmate
+  crew_name_carp
+  crew_name_carpmate
+  crew_name_cook
+  crew_name_butcher
+  crew_name_gunner
+  crew_name_gunnermate
+  crew_name_purser
+  crew_name_sea9
+  crew_name_pass5
+  crew_name_pass1
+  crew_name_pass2
+  crew_name_pass3
+  crew_name_pass6
+  crew_name_pass7
+  crew_name_pass8
+  crew_name_pass9
+  crew_name_stewship
+  crew_name_stewcap
+  crew_name_stewm1
+  crew_name_stewm2
+  crew_name_stewm3
+  crew_name_stewm4
+  crew_name_mid1
+  crew_name_mid2
+  crew_name_mid3
+  crew_name_top5
+  crew_name_top6
+  crew_name_top1
+  crew_name_top4
+  crew_name_top7
+  crew_name_top8
+  crew_name_top9
+  crew_name_top3
+  crew_name_topa
+  crew_name_top2
+  crew_name_sea1
+  crew_name_sea5
+  crew_name_sea2
+  crew_name_sea3
+  crew_name_sea6
+  crew_name_sea4
+  crew_name_sea7
+  crew_name_sea8
+  crew_name_seac
+  crew_name_seaa
+  crew_name_seab
+  crew_name_sead
+  crew_name_seae
+  crew_name_seaf
+  crew_name_seag

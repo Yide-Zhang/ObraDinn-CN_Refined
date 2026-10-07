@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人名对照表编辑器 · CN_Refined</title>
+<style>
+:root{
+  --bg:#f6f5f2; --paper:#fffefb; --ink:#26241f; --dim:#8a857c; --line:#e2ded4;
+  --accent:#7a2f2f; --ok:#2f6b3a; --warn:#8a6a1f; --derived:#fbf7ec;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+header{background:var(--paper);border-bottom:1px solid var(--line);padding:10px 14px}
+h1{margin:0;font-size:16px;font-weight:600}
+h1 small{color:var(--dim);font-weight:400;margin-left:8px;font-size:12px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+button{font:inherit;padding:4px 10px;border:1px solid var(--line);background:#fff;
+  border-radius:4px;cursor:pointer}
+button:hover:not(:disabled){background:#f2efe8}
+button.pri{background:var(--accent);color:#fff;border-color:var(--accent)}
+button:disabled{opacity:.45;cursor:default}
+label{color:var(--dim);display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+input[type=search],select{font:inherit;padding:3px 6px;border:1px solid var(--line);
+  border-radius:4px;background:#fff;color:var(--ink)}
+#status{color:var(--dim);font-size:12px}
+#status.dirty{color:var(--warn);font-weight:600}
+main{padding-bottom:48px}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px}
+thead th{position:sticky;top:0;background:#f0ece3;border-bottom:1px solid var(--line);
+  text-align:left;padding:6px 8px;font-weight:600;white-space:nowrap;z-index:4}
+thead th.d{background:#efe7d5}
+thead th.e{background:#eef3ec}
+thead th small{font-weight:400;color:var(--dim);font-size:10px}
+tbody td{border-bottom:1px solid var(--line);padding:2px 6px}
+tbody tr:hover{background:#faf8f3}
+.k{font-family:ui-monospace,Consolas,monospace;font-size:12px;white-space:nowrap}
+.t{font-size:11px;color:var(--dim);white-space:nowrap}
+.en{color:var(--dim);font-size:12px;white-space:nowrap}
+.w{color:var(--dim);font-size:11px;max-width:300px}
+td input{width:100%;min-width:96px;font:inherit;padding:3px 5px;border:1px solid transparent;
+  border-radius:3px;background:#fff}
+td.d input{background:var(--derived)}
+td input:focus{outline:none;border-color:var(--accent);background:#fff}
+tr.hide{display:none}
+tr.done{background:#f3f8f3}
+tr.done:hover{background:#eef5ee}
+#counts{color:var(--dim);font-size:12px;margin-left:auto}
+#counts b{color:var(--ok)}
+#shown{color:var(--dim);font-size:12px}
+body.dragging{outline:3px dashed var(--accent);outline-offset:-8px}
+code{font-family:ui-monospace,Consolas,monospace}
+#banner{font-size:12px;color:var(--dim)}
+</style>
+</head>
+<body>
+<header>
+  <h1>人名对照表编辑器 <small>CN_Refined · 精修工作表</small></h1>
+  <div class="bar">
+    <button id="btnReload">重新载入</button>
+    <button id="btnSave" class="pri">保存</button>
+    <button id="btnDownload">下载 TSV</button>
+    <button id="btnSeed">以当前版为底（只填空着的 v4/v5）</button>
+    <span id="status">未载入</span>
+  </div>
+  <div class="bar">
+    <label>类型
+      <select id="ftype">
+        <option value="">全部</option>
+        <option value="全名">全名</option>
+        <option value="Short">Short</option>
+        <option value="Dia">Dia</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="fempty"> 只看没填齐的</label>
+    <label><input type="checkbox" id="fdirty"> 只看改过的</label>
+    <label>搜索 <input id="fsearch" type="search" placeholder="[]键 / 英文 / 任一种文字"></label>
+    <span id="shown"></span>
+    <span id="counts"></span>
+  </div>
+  <div id="banner"></div>
+  <input type="file" id="pick" accept=".tsv,text/plain" hidden>
+</header>
+
+<main>
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th>[]键</th><th>类型</th><th>en（不改动）</th>
+        <th>v1 当前版</th><th>v2 当前版+Short</th><th>v3 英文名字版</th>
+        <th class="e">v4 精修中文名<br><small>Short 行也填（=该人精修全名）</small></th>
+        <th class="e">v5 精修+Short<br><small>全名行填 v4；Short 行填缩写</small></th>
+        <th>出现处</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</main>
+
+<script>
+'use strict';
+const COLS = ['v1 当前版','v2 当前版+Short','v3 英文名字版','v4 精修中文名','v5 精修+Short'];
+const USE_API = (location.protocol === 'http:' || location.protocol === 'https:')
+                 && !!location.hostname;
+
+let lines = [];     // 原文件按行（含注释/空行）—— 保存时其余行原样写回
+let rows  = [];     // 数据行
+let eol   = '\n';  // 原文件的行尾符（保住 CRLF，免得一存就整份变样）
+let tail  = true;   // 原文件末尾有没有换行
+let fileName = 'crew_name_variants.tsv';
+let dirty = false;
+
+/** 从 TSV 文本解析出行；注释行与空行只留在 lines 里，不动。 */
+function parse(text){
+  eol  = text.includes('\r\n') ? '\r\n' : '\n';
+  tail = /\n$/.test(text);
+  lines = text.replace(/\r\n?/g, '\n').split('\n');
+  if (lines.length && lines[lines.length - 1] === '') lines.pop();
+  rows = [];
+  lines.forEach((ln, i) => {
+    if (!ln.trim() || ln.startsWith('#')) return;
+    const f = ln.split('\t');
+    if (f.length < 7) return;
+    if (f[0].trim() === '[]键') return;        // 表头行（正式文件本来带 #，这是保险）
+    const key = f[0];
+    const kind = /Short\]$/.test(key) ? 'Short' : (/Dia\]$/.test(key) ? 'Dia' : '全名');
+    rows.push({
+      i, kind, key, en: f[1],
+      v: [f[2], f[3], f[4], f[5], f[6]],
+      orig: [f[2], f[3], f[4], f[5], f[6]],
+      where: f[7] || '', ncol: f.length
+    });
+  });
+}
+
+/** 每一行真正需要人填的是哪几列（v4=索引 3，v5=索引 4）。
+ *  全名行只要 v4（精修中文名）；Short 行只要 v5（精修+Short）；
+ *  Dia 行两个都有意义（原文怎么称呼就填哪种），但 v4 是底。 */
+const NEEDS = { '全名': [3], 'Short': [4], 'Dia': [3, 4] };
+function isDone(r){ return NEEDS[r.kind].every(k => r.v[k].trim()); }
+
+/** 拼回整份 TSV：只重写数据行，注释/空行原样，行尾符照旧。 */
+function build(){
+  const out = lines.slice();
+  for (const r of rows){
+    const f = [r.key, r.en, r.v[0], r.v[1], r.v[2], r.v[3], r.v[4]];
+    if (r.ncol > 7) f.push(r.where);
+    out[r.i] = f.join('\t');
+  }
+  return out.join('\n').replace(/\n/g, eol) + (tail ? eol : '');
+}
+
+function setStatus(msg, isDirty){
+  const el = document.querySelector('#status');
+  el.textContent = msg;
+  el.classList.toggle('dirty', !!isDirty);
+}
+function markDirty(){
+  dirty = rows.some(r => r.v.some((x, k) => x !== r.orig[k]));
+  setStatus(dirty ? '有未保存的改动' : '已同步', dirty);
+  stats();
+}
+function stats(){
+  const n = rows.length;
+  const done = rows.filter(isDone).length;
+  const f4 = rows.filter(r => r.v[3].trim()).length;
+  const f5 = rows.filter(r => r.v[4].trim()).length;
+  const ch = rows.filter(r => r.v.some((x, k) => x !== r.orig[k])).length;
+  document.querySelector('#counts').innerHTML =
+    n + ' 行 · 填齐 <b>' + done + '</b> · v4 ' + f4 + ' · v5 ' + f5 + ' · 改过 ' + ch;
+}
+function applyFilter(){
+  const t = document.querySelector('#ftype').value;
+  const onlyEmpty = document.querySelector('#fempty').checked;
+  const onlyDirty = document.querySelector('#fdirty').checked;
+  const q = document.querySelector('#fsearch').value.trim().toLowerCase();
+  let shown = 0;
+  document.querySelectorAll('#tbl tbody tr').forEach(tr => {
+    const r = rows[+tr.dataset.idx];
+    let ok = true;
+    if (t && r.kind !== t) ok = false;
+    if (ok && onlyEmpty && isDone(r)) ok = false;
+    if (ok && onlyDirty && !r.v.some((x, k) => x !== r.orig[k])) ok = false;
+    if (ok && q){
+      const blob = (r.key + '\t' + r.en + '\t' + r.v.join('\t') + '\t' + r.where).toLowerCase();
+      if (!blob.includes(q)) ok = false;
+    }
+    tr.classList.toggle('hide', !ok);
+    if (ok) shown++;
+  });
+  document.querySelector('#shown').textContent = '显示 ' + shown + ' / ' + rows.length + ' 行';
+}
+
+function render(){
+  const tb = document.querySelector('#tbl tbody');
+  tb.textContent = '';
+  const frag = document.createDocumentFragment();
+  rows.forEach((r, idx) => {
+    const tr = document.createElement('tr');
+    tr.dataset.idx = idx;
+
+    const tdK = document.createElement('td');
+    tdK.className = 'k'; tdK.textContent = r.key; tr.appendChild(tdK);
+
+    const tdT = document.createElement('td');
+    tdT.className = 't'; tdT.textContent = r.kind; tr.appendChild(tdT);
+
+    const tdE = document.createElement('td');
+    tdE.className = 'en'; tdE.textContent = r.en; tr.appendChild(tdE);
+
+    r.v.forEach((val, k) => {
+      const td = document.createElement('td');
+      td.className = (k < 3) ? 'd' : 'e';     // v1~v3 是数据推出来的，v4/v5 是要填的
+      const inp = document.createElement('input');
+      inp.type = 'text';
+      inp.value = val;
+      inp.title = r.key + ' · ' + COLS[k];
+      inp.addEventListener('input', () => {
+        r.v[k] = inp.value;
+        tr.classList.toggle('done', isDone(r));
+        markDirty();
+      });
+      td.appendChild(inp);
+      tr.appendChild(td);
+    });
+
+    const tdW = document.createElement('td');
+    tdW.className = 'w'; tdW.textContent = r.where; tr.appendChild(tdW);
+
+    if (isDone(r)) tr.classList.add('done');
+    frag.appendChild(tr);
+  });
+  tb.appendChild(frag);
+  stats();
+  applyFilter();
+}
+
+function init(text){
+  parse(text);
+  render();
+  dirty = false;
+  setStatus('已载入 ' + rows.length + ' 行', false);
+}
+
+async function loadFromServer(){
+  try{
+    const res = await fetch('/api/load', {cache: 'no-store'});
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    init(await res.text());
+    $('#btnSave').disabled = false;
+    return true;
+  }catch (e){
+    setStatus('连不上本地服务（' + (e.message || e.name) + '）', true);
+    return false;
+  }
+}
+
+function download(text){
+  const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = fileName.endsWith('.tsv') ? fileName : (fileName + '.tsv');
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+/* ---------------- 文件句柄（File System Access API）：双击打开也能直接覆盖 ---------------- */
+const HAS_FSA = typeof window.showOpenFilePicker === 'function';
+let fh = null;                          // 当前绑定的文件句柄（有它就原地覆盖）
+let mode = USE_API ? 'server' : 'file'; // 服务连不上会自动降级成 'file'
+
+const IDB_DB = 'cn_refined_editor', IDB_STORE = 'fs', IDB_KEY = 'tsv';
+function idbOpen(){
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(IDB_DB, 1);
+    r.onupgradeneeded = () => { r.result.createObjectStore(IDB_STORE); };
+    r.onsuccess = () => res(r.result);
+    r.onerror   = () => rej(r.error);
+  });
+}
+async function idbPut(handle){
+  try{
+    const db = await idbOpen();
+    await new Promise((res, rej) => {
+      const tx = db.transaction(IDB_STORE, 'readwrite');
+      tx.objectStore(IDB_STORE).put(handle, IDB_KEY);
+      tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error);
+    });
+  }catch (e){ /* 记不住就算了，不影响打开与保存 */ }
+}
+async function idbGet(){
+  try{
+    const db = await idbOpen();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction(IDB_STORE, 'readonly');
+      const q  = tx.objectStore(IDB_STORE).get(IDB_KEY);
+      q.onsuccess = () => res(q.result || null);
+      q.onerror   = () => rej(q.error);
+    });
+  }catch (e){ return null; }
+}
+async function permState(handle, mode){
+  if (!handle || !handle.queryPermission) return 'denied';
+  try{ return await handle.queryPermission({mode}); }catch (e){ return 'denied'; }
+}
+async function readFromHandle(handle){
+  const file = await handle.getFile();
+  fileName = file.name;
+  init(await file.text());
+  $('#btnSave').disabled = false;
+  setStatus('已载入 ' + fileName, false);
+}
+async function openViaPicker(){
+  if (!HAS_FSA){ $('#pick').click(); return; }
+  let handle;
+  try{
+    [handle] = await window.showOpenFilePicker({
+      multiple: false,
+      types: [{description: 'TSV 表', accept: {'text/tab-separated-values': ['.tsv', '.txt']}}]
+    });
+  }catch (e){
+    if (!e || e.name !== 'AbortError') setStatus('打开失败: ' + (e && e.message), true);
+    return;
+  }
+  await adoptFile(await handle.getFile(), handle);
+}
+async function ensureWritable(){
+  if (!fh) return false;
+  let p = await permState(fh, 'readwrite');
+  if (p !== 'granted' && fh.requestPermission){
+    try{ p = await fh.requestPermission({mode: 'readwrite'}); }catch (e){ p = 'denied'; }
+  }
+  return p === 'granted';
+}
+async function writeToHandle(handle, text){
+  const w = await handle.createWritable();          // 默认截断重写，不是追加
+  await w.write(new Blob([text], {type: 'text/plain;charset=utf-8'}));
+  await w.close();
+}
+function afterSaved(verb){
+  rows.forEach(r => { r.orig = r.v.slice(); });
+  dirty = false;
+  setStatus((verb || '已覆盖') + ' ' + fileName + ' · ' + new Date().toLocaleTimeString(), false);
+  stats();
+  applyFilter();
+}
+
+/** 另存为：优先用系统保存对话框；不支持就退回下载。 */
+async function saveAs(text){
+  const data = (text !== undefined) ? text : build();
+  if (HAS_FSA && typeof window.showSaveFilePicker === 'function'){
+    try{
+      const handle = await window.showSaveFilePicker({
+        suggestedName: fileName,
+        types: [{description: 'TSV 表', accept: {'text/tab-separated-values': ['.tsv']}}]
+      });
+      await writeToHandle(handle, data);
+      fh = handle; await idbPut(handle); fileName = handle.name;
+      afterSaved('已另存为');
+      return;
+    }catch (e){
+      if (e && e.name === 'AbortError') return;
+      /* 落到下载 */
+    }
+  }
+  download(data);
+  setStatus('已下载（这个浏览器不给直接写盘）', true);
+}
+
+async function save(){
+  if (!rows.length){ setStatus('还没载入表', true); return; }
+  const text = build();
+
+  // 1) 服务模式：POST 回去，服务端原子覆盖
+  if (mode === 'server'){
+    try{
+      const res = await fetch('/api/save', {method: 'POST', body: text});
+      if (!res.ok){ setStatus('保存失败 HTTP ' + res.status, true); return; }
+      afterSaved('已保存');
+    }catch (e){ setStatus('保存出错: ' + e.message, true); }
+    return;
+  }
+
+  // 2) 双击打开：拿文件句柄直接覆盖原文件
+  if (HAS_FSA && fh && await ensureWritable()){
+    try{ await writeToHandle(fh, text); afterSaved('已覆盖'); }
+    catch (e){ setStatus('覆盖失败（' + e.name + '）: ' + e.message, true); }
+    return;
+  }
+
+  // 3) 兜底
+  await saveAs(text);
+}
+
+const $ = s => document.querySelector(s);
+
+/* ---------------- 事件 ---------------- */
+$('#btnReload').addEventListener('click', async () => {
+  if (dirty && !confirm('有未保存的改动，确实要重新载入吗？')) return;
+  if (mode === 'server'){
+    if (await loadFromServer()) return;
+    if (await bootFileMode('连不上本地服务 —— 已切到「选文件 + 直接覆盖」模式')) return;
+  }
+  await openViaPicker();
+});
+$('#btnSave').addEventListener('click', save);
+$('#btnDownload').addEventListener('click', () => saveAs());
+$('#btnSeed').addEventListener('click', () => {
+  let n = 0;
+  for (const r of rows){
+    if (!r.v[3].trim()){ r.v[3] = r.v[0]; n++; }
+    if (!r.v[4].trim()){ r.v[4] = r.v[1]; n++; }
+  }
+  render(); markDirty();
+  setStatus('已用当前版填了 ' + n + ' 个空格', true);
+});
+$('#pick').addEventListener('change', async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  fileName = f.name;
+  init(await f.text());
+  fh = null;              // input 给的文件没有句柄，只能「另存为」
+  $('#btnSave').disabled = false;
+});
+['#ftype', '#fempty', '#fdirty'].forEach(s =>
+  $(s).addEventListener('change', applyFilter));
+$('#fsearch').addEventListener('input', applyFilter);
+window.addEventListener('beforeunload', e => {
+  if (dirty){ e.preventDefault(); e.returnValue = ''; }
+});
+
+/** 句柄模式：双击打开，或服务连不上时的兜底。返回 true 表示已经自动载入一个文件。 */
+async function bootFileMode(note){
+  mode = 'file';
+  $('#btnReload').textContent = '打开 TSV…';
+  $('#btnDownload').textContent = HAS_FSA ? '另存为…' : '下载 TSV';
+
+  if (!HAS_FSA){
+    $('#banner').textContent = '这个浏览器不支持直接写盘（建议 Chrome/Edge）：选文件后靠「下载 TSV」导出';
+    return false;
+  }
+  $('#banner').textContent = note ||
+    '双击模式（可直接覆盖）：点「打开 TSV」选一次，之后保存就直接写回该文件；也能把 .tsv 拖进来';
+
+  const h = await idbGet();
+  if (!h) return false;
+  if (await permState(h, 'readwrite') === 'granted'){      // 上次授权还在 → 自动读取
+    fh = h;
+    try{ await readFromHandle(h); setStatus('已自动载入 ' + fileName, false); return true; }
+    catch (e){ /* 文件被移走/改名了，走手动 */ }
+  }
+  $('#banner').innerHTML =
+    '上次打开的是 <code>' + (h.name || '?') + '</code> —— 点「打开 TSV」重新选中它即可直接覆盖，或 '
+    + '<button id="btnResume" style="font:inherit;padding:2px 8px;cursor:pointer">恢复上次文件</button>';
+  $('#btnResume').addEventListener('click', async () => {
+    let p = 'denied';
+    try{ p = await h.requestPermission({mode: 'readwrite'}); }catch (e){ /* ignore */ }
+    if (p !== 'granted'){ setStatus('没拿到写权限', true); return; }
+    fh = h;
+    try{ await readFromHandle(h); }catch (e){ setStatus('读取失败: ' + e.message, true); }
+  });
+  return false;
+}
+
+/** 把一个文件（或句柄）装进编辑器。 */
+async function adoptFile(file, handle){
+  fh = (handle && handle.kind === 'file') ? handle : null;
+  if (fh) await idbPut(fh);
+  fileName = file.name;
+  init(await file.text());
+  $('#btnSave').disabled = false;
+  setStatus('已载入 ' + fileName + (fh ? '（保存将直接覆盖）' : '（保存会另存为）'), false);
+}
+
+/** 拖 .tsv 进来也能载入（Chrome 下还能拿到句柄，照样原地覆盖）。 */
+function bindDrop(){
+  const off = e => { e.preventDefault(); e.stopPropagation(); };
+  document.addEventListener('dragover', e => {
+    off(e);
+    if (e.dataTransfer) e.dataTransfer.dropEffect = 'copy';
+    document.body.classList.add('dragging');
+  });
+  document.addEventListener('dragleave', e => {
+    off(e);
+    if (!e.relatedTarget) document.body.classList.remove('dragging');
+  });
+  document.addEventListener('drop', async e => {
+    off(e);
+    document.body.classList.remove('dragging');
+    const dt    = e.dataTransfer;
+    const items = dt ? [...dt.items] : [];
+    const item  = items.find(i => i.kind === 'file');
+    const file  = item ? item.getAsFile() : (dt && dt.files ? dt.files[0] : null);
+    if (!file) return;
+    if (dirty && !confirm('有未保存的改动，确实要换文件吗？')) return;
+    let handle = null;
+    if (item && item.getAsFileSystemHandle){
+      try{ handle = await item.getAsFileSystemHandle(); }catch (err){ handle = null; }
+    }
+    try{ await adoptFile(file, handle); }
+    catch (err){ setStatus('读不了这个文件: ' + (err.message || err.name), true); }
+  });
+}
+
+/* 启动：服务模式自动载入（连不上就切句柄模式）；双击模式自动恢复上次的文件句柄 */
+(async function boot(){
+  $('#btnSave').disabled = true;
+  bindDrop();
+  if (USE_API){
+    $('#banner').textContent = '服务模式：打开即自动载入，保存直接覆盖原文件';
+    if (await loadFromServer()) return;
+  }
+  await bootFileMode(USE_API ? '连不上本地服务（' + location.host + '）—— 已切到「选文件 + 直接覆盖」模式：点「打开 TSV」，或把 .tsv 拖进来' : '');
+})();
+</script>
+</body>
+</html>

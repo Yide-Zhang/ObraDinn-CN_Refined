@@ -1,0 +1,30 @@
+{
+ "note": "各文件已知 sha256。official_* = 原版；shs/langpack = 我们的历史产物（状态判定用）",
+ "official": {
+  "sharedassets0.assets": "a5c50cf805ccf19f5362b0e49da02fead62c40688e5f86d400856c85b364e643",
+  "sharedassets2.assets": "7b4f2a12b914338bebd3f1bb467255271c6e68a9b31990c5f744736917b90055",
+  "sharedassets6.assets": "ed81b9acfd19367278dc5b62058d3ba3043904986955f2de08b3b8977a02a3f1"
+ },
+ "shs": {
+  "sharedassets0.assets": [
+   "7dee0499a47b71e482556d603446baf28fb18b3649249e44d7fb845ab6c23819",
+   "fb88754b21018180efa154af1cf7c6a75c27846f44830d0c44091c18599eac45"
+  ],
+  "sharedassets2.assets": [
+   "1116a209dd3019ca35e61933bf7e7573504514e7e424fd33ccb1a7429ea0a89c",
+   "fb09b71b6fdb1b633edbda5c984b407fd69935dd51637dca264e81efa4798799",
+   "e4e6762157659d169b121d52e8785e24f304e6028d6916741ee9bade94326691"
+  ],
+  "sharedassets6.assets": [
+   "48212f42c9cba5fd4d0f342b8d43c30f89a6e834223ac5721b405a4d58cba577"
+  ]
+ },
+ "shs_alt": {},
+ "langpack": {
+  "885eefdd718214554fc53bbf951349c50fce9cfc338a6b9d1725d68e0f705077": "我们的产物（215911 备份）",
+  "a19e6af27a64162a9cb6309f99842988176110f576636ec0a8c6652ed4efd776": "我们的产物（224009 备份）",
+  "41ce61ce1dc7e0462e84ac2fe582cbe657e3da340c9a3719b4e67e47f60ede87": "我们的产物（本机自测）"
+ },
+ "official_dll": "66ea1565da878ec3a06101458316d9aa3527ee3a010ab02864d5f92e0cdb5556",
+ "official_lang": "c5a363733e201698b35ff611092cd313f3d71e488b2c1a2cc8482cf123f89d0e"
+}

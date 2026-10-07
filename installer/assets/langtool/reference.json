@@ -1,0 +1,38 @@
+{
+  "note": "langtool 跨平台等价参考值 —— 由某一平台的 langtool 实测录得；另一个平台跑同样命令必须得到相同的 sha（见 tools/selftest_langtool.py）",
+  "recorded_by": {
+    "platform": "Windows",
+    "machine": "AMD64",
+    "langtool": "langtool.exe",
+    "langtool_sha": "BA8438B4ABE90F88F0F9EDBB6264CC7FCD17B7ECE1E1B5BD11E06F2EA4EDB06C"
+  },
+  "inputs": {
+    "dll": {
+      "path": "originalDLLWin/Assembly-CSharp.dll",
+      "sha": "66EA1565DA878EC3A06101458316D9AA3527EE3A010AB02864D5F92E0CDB5556",
+      "size": 1035264
+    },
+    "bundle": {
+      "path": "CN_Refined/installer/assets/lang-zh-s-official",
+      "sha": "C5A363733E201698B35FF611092CD313F3D71E488B2C1A2CC8482CF123F89D0E",
+      "size": 400891
+    },
+    "tsv": {
+      "path": "CN_Refined/installer/assets/packs/zh-s-v5-unharm-mono.tsv",
+      "sha": "FA0DE16D352E817891685C3B1E91ADA30A59A3779B7E81C0C9ADC854B8B61D68",
+      "size": 49899
+    }
+  },
+  "expect": {
+    "patchwrap": {
+      "exit": 0,
+      "sha": "0C98F52A931C6348C1D385E9A9B434848C3A7799E672419C3B6897E62459F3A5",
+      "size": 999936
+    },
+    "set": {
+      "exit": 0,
+      "sha": "36E1A2083D567348AF14A48CB76562E592BF30E0F3DF3F43215ADA98E71C6D50",
+      "size": 405534
+    }
+  }
+}
