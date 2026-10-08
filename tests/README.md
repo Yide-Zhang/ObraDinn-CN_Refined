@@ -13,7 +13,8 @@ langtool 二进制。
 |---|---|
 | `probe/` | C# 探针。先产出一份**探针副本**（只把依赖 `Lang.get_loadedLanguage` 换成读注入字段，`CanBreakAfter` 逐字节原样），再 `Assembly.Load(字节)` 真跑语料 |
 | `diff_wrap.py` | 比对两份探针结果：越界 / 少断 / 多断 / 异常 / 无法解释 分类统计，并要求「多断必须为 0、无法解释必须为 0」 |
-| `ildiff.py` | 全量 IL 比对：证明一次补丁**只动了允许动的类型** |
+| `ildiff.py` | 全量 IL 比对：证明一次补丁**只动了允许动的类型**（允许前缀可以给多个，如 `"Player::" "MouseLook::"`） |
+| `ilhead.py` | 证明「只在方法头插指令」的补丁**没动到原体**：去掉 IL_xxxx 标签后，原指令序列必须仍是新序列的**连续尾部**（ildiff 只会说「这个方法变了」，看不出原体动没动） |
 | `matrix.py` | 三个补丁（`patchwrap` / `patchdll` / `revealhook`）九种叠加顺序的兼容性矩阵 |
 
 ## 依赖
@@ -40,12 +41,24 @@ dotnet CN_Refined\tests\probe\bin\Release\net8.0\WrapProbe.dll <dll> <结果.txt
 # 2) 两份结果比对（exit 0 = 逐位一致）
 python CN_Refined\tests\diff_wrap.py <A.txt> <B.txt> <A标签> <B标签> <详细.txt>
 
-# 3) 全量 IL 比对（exit 0 = 改动没越界）
+# 3) 全量 IL 比对（exit 0 = 改动没越界；允许前缀可给多个）
 python CN_Refined\tests\ildiff.py <a.il> <b.il> <详细.txt> "TextWrap::"
+
+# 3b) 头部插入式补丁：证明原体逐条未变（exit 0 = 改动只在方法头）
+python CN_Refined\tests\ilhead.py <a.il> <b.il> <详细.txt> "Player::Update" "MouseLook::Look"
 
 # 4) 兼容性矩阵（exit 0 = 九种顺序全绿）
 python CN_Refined\tests\matrix.py
 ```
+
+两份 IL 的口径（踩过的坑，别再踩）：
+
+* 忽略 `// Method begins at RVA` / `// Code size` —— 它们随全局布局漂移，比进来会假报上千个方法。
+* **只认带 `IL_xxxx:` 标签的行是指令**：跨行方法签名、`.maxstack`、`.locals init (` 的续行
+  `[0] …` / `)`、`// loop start (head: IL_xxxx)` 都不带标签。用「行首排除」或「跳过
+  `cil managed`」去滤都会漏（分别漏跨行签名、`.locals` 续行），把没动过的原体误判成
+  「改动不只发生在头部」。
+* 指令内偏移是方法局部的：头部插一条，全体平移 —— 比较前要把偏移与分支目标归一化。
 
 IL 转储这样生成（`ilspycmd` 的 `-t` 过滤对 `-il` 不生效，整份 dump 正好用来做全量比对）：
 

@@ -35,7 +35,11 @@ def parse(path: Path) -> dict[str, list[str]]:
 
 
 def main() -> int:
-    a_path, b_path, detail, allow = sys.argv[1:5]
+    a_path, b_path, detail = sys.argv[1:4]
+    allows = sys.argv[4:]
+    if not allows:
+        print("用法: ildiff.py <a.il> <b.il> <详细输出> <允许前缀> [更多允许前缀...]")
+        return 2
     A = parse(Path(a_path))
     B = parse(Path(b_path))
 
@@ -43,14 +47,19 @@ def main() -> int:
     removed = [k for k in A if k not in B]
     changed = [k for k in A if k in B and A[k] != B[k]]
 
-    outside = [k for k in (added + removed + changed) if not k.startswith(allow)]
+    # ★ 多个前缀：补丁可能同时动两个类型（如旁观者模式动 Player + MouseLook）
+    def ok(k: str) -> bool:
+        return any(k.startswith(p) for p in allows)
+
+    outside = [k for k in (added + removed + changed) if not ok(k)]
+    tag_allow = "/".join(allows)
 
     print("methods A=%d B=%d" % (len(A), len(B)))
     print("added=%d removed=%d changed=%d" % (len(added), len(removed), len(changed)))
-    print("outside(%s)=%d   <- 必须为 0" % (allow, len(outside)))
+    print("outside(%s)=%d   <- 必须为 0" % (tag_allow, len(outside)))
     for k in (added + removed + changed):
         tag = "added" if k in added else ("removed" if k in removed else "changed")
-        mark = "  !! 越界" if not k.startswith(allow) else ""
+        mark = "  !! 越界" if not ok(k) else ""
         print("  %-7s %s%s" % (tag, k, mark))
 
     lines = ["# %s  vs  %s" % (a_path, b_path), ""]
