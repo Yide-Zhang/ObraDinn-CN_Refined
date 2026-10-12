@@ -63,7 +63,11 @@ python CN_Refined\tests\matrix.py
 IL 转储这样生成（`ilspycmd` 的 `-t` 过滤对 `-il` 不生效，整份 dump 正好用来做全量比对）：
 
 ```powershell
-ilspycmd -il <dll> | Out-File -Encoding utf8 <a.il>
+# ★ 必须这样转储：ilspycmd 会按**控制台码页**转码自己写出去的文本 —— 码页不是 UTF-8 时，
+#   不可表示的字符直接变 `?`，而且**两次 dump 毁得还不一样** → 含非 ASCII 串的方法
+#   （Lang::.cctor / TextWrap::.cctor / RtlHelper / BookContent::RefreshPage 等）会假报「越界」。
+#   实测：PowerShell 管道和裸 cmd 重定向都会毁，`chcp 65001` 才真。
+cmd /c "chcp 65001 >nul & ilspycmd -il <dll> > <a.il>"
 ```
 
 ## 为什么探针要绕 `Lang`

@@ -148,8 +148,10 @@ def main() -> int:
             say(f"      {k}  规则值={gen[:36]!r} → 保留={old[:36]!r}")
     if FORCE and prev:
         say("  （--force：已按规则重写，手改未保留）")
+    n_keep = sum(1 for _, bi, _ in untouched if "|" in bi)
     say(f"dialog_* 键 {len(changed) + len(untouched)} 个："
-        f"含竖线**已去原文** {len(changed)} 个，不含竖线**原样保留** {len(untouched)} 个")
+        f"已去原文 {len(changed)} 个，**按规则保留原文** {n_keep} 个"
+        f"（官方带竖线或 KEEP_EXTRA 申报），本就无原文 {len(untouched) - n_keep} 个")
     say(f"其余 {len(order) - len(changed) - len(untouched)} 键一个字符都没动")
     say("")
 
@@ -183,7 +185,9 @@ def main() -> int:
         say("")
 
     say("【3】含竖线但**未**改动的 dialog 行 = 无（应为 0）"
-        if not untouched else f"【3】**未改动**的 dialog 行 {len(untouched)} 个（本就没有原文）")
+        if not untouched else f"【3】**未改动**的 dialog 行 {len(untouched)} 个"
+        f"（其中 {n_keep} 个是「按规则保留原文」：单语必须与双语逐字相同；"
+        f"另 {len(untouched) - n_keep} 个本就没有原文）")
     say("-" * 74)
     for k, bi, mo in untouched:
         e = enr.get(k, "<无>")

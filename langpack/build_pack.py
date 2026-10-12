@@ -36,6 +36,16 @@ TPL = HERE / "extracted" / "template-zh-s.tsv"
 MONO_TPL = HERE / "extracted" / "template-zh-s-mono.tsv"
 # ★ 官方 zh-s：用来判定「单语下这一行的原文能不能删」
 OFFICIAL = HERE / "extracted" / "original-zh-s.tsv"
+# ★★ 单语下**必须保留原文**、但「官方带竖线」这条规则**盖不住**的行（额外申报）。
+#    这里是**唯一真源**：`mono_value()` 用它算单语值，`check_dialog_mode.py` / `_mono_rule_check.py`
+#    都 import 它来核对 —— 这样 `make_mono_review.py --force` 也不会再把它们抹掉。
+#    典型：外来词线索嵌在**英文句子中间**（不是整句外语），删了原文就丢了推理依据。
+KEEP_EXTRA = {
+    # 意大利语 Signor：官方 zh-s 也写成「尼柯斯先生（Signor）」，是判断其身份的线索
+    "dialog_d2_m0_fa": "Signor（意大利语）是身份线索",
+    # 德语 Verdammt：说明说话人是德国人（官方保留成「该死（Verdammt）！」）
+    "dialog_d8_m0_ea": "Verdammt（德语）是国籍线索",
+}
 TBL = HERE / "extracted" / "crew_name_variants.tsv"
 DEFAULT_OUTDIR = HERE.parent / "out" / "packs"
 
@@ -68,11 +78,16 @@ def mono_value(key: str, bi_val: str, official_val: str) -> str:
     """单语模式下这一行该是什么。
 
     ★★ 规则（用户 2026-10-06 定）：**官方 zh-s 自己那一行带 `|` 的，单语也保留原文**。
-       那些原文是线索（外语台词如 `Signor`、闽南语原句如 `慢且！伊無做毋著代誌！`），
+       那些原文是线索（外语台词如 `慢且！伊無做毋著代誌！`、天城文/西里尔文原句），
        删了就丢了推理依据；官方那一行没带 `|` 的，才按「删竖线前缀」处理。
-       （实测：347 个含竖线的 dialog 行里有 **29** 行属于这类。）
+       （实测：347 个含竖线的 dialog 行里有 **29** 行属于这类 ✓）
+    ★ 再加上 `KEEP_EXTRA`：原文里嵌着外来词（`Signor` / `Verdammt`）的那几行。
+       官方把它们译进中文里（「尼柯斯先生（Signor）」），我们走「保留原文」这条路。
+       ⇒ 单语须保留原文共 **31** 行（29 + 2），预期改动数 = 347 - 31 = **316**。
     """
     if not key.startswith("dialog_"):
+        return bi_val
+    if key in KEEP_EXTRA:
         return bi_val
     if "|" in (official_val or ""):
         return bi_val

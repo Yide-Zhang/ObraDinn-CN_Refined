@@ -6,7 +6,8 @@
   2. **非** dialog_ 行逐字节相同（`|` 的其它用途一处都没被碰）
   3. dialog_ 行：含 `|` 的 = 双语包第一条 `|` 之后（去首部空白）；
      不含 `|` 的 = 原样
-  4. 改动行数 == 模板里 dialog_ 含 `|` 的行数（应 347）
+  4. 改动行数 == 模板里含 `|` 的行数 − 单语须保留原文的行数
+     （保留原文 = 官方带竖线 29 行 + `build_pack.KEEP_EXTRA` 申报的 2 行 ⇒ 预期 316）
   5. 单语包里 dialog_ 行不再残留原文（不含 `|`，且不以英文包原文开头）
 
 用法: python CN_Refined\\langpack\\check_dialog_mode.py
@@ -14,9 +15,12 @@
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import build_pack as B  # noqa: E402  —— KEEP_EXTRA 的唯一真源（那边也用它算单语值）
 EX = HERE / "extracted"
 PACKS = HERE.parent / "out" / "packs"
 TPL = EX / "template-zh-s.tsv"
@@ -49,11 +53,11 @@ def strip_orig(val: str) -> str:
 
 # ★ 单语模式下必须**保留原文**的行，两个来源：
 #   ①（主要，现算）**官方 zh-s 自己那一行带 `|`** —— 原文是外语/闽南语线索，不能删；
-#   ②（额外申报）官方没带竖线但也不能删的，例如 `dialog_d2_m0_fa` 的 `Signor`
-#      （意大利语，是确定该人籍贯的线索；官方写成「尼柯斯先生（Signor）」，也不删）。
-KEEP_EXTRA = {
-    "dialog_d2_m0_fa": "Signor（意大利语）是籍贯线索，不能删",
-}
+#   ②（额外申报）官方没带竖线但也不能删的：外来词线索嵌在英文句子中间
+#      （`dialog_d2_m0_fa` 的 `Signor`、`dialog_d8_m0_ea` 的 `Verdammt`）。
+#   ⚠ 申报表在 `build_pack.KEEP_EXTRA`（**唯一真源**，那边用它算单语值）；这里只 import 来核对，
+#     所以改申报只需改一处，`make_mono_review.py --force` 也不会把它抹掉。
+KEEP_EXTRA = B.KEEP_EXTRA
 
 
 def main() -> int:

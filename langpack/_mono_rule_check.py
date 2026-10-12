@@ -15,7 +15,10 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-EX = Path(__file__).resolve().parent / "extracted"
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import build_pack as B  # noqa: E402  —— KEEP_EXTRA 的唯一真源
+EX = HERE / "extracted"
 OUT = Path(__file__).resolve().parent / "out" / "mono_rule.txt"
 
 
@@ -37,7 +40,7 @@ def main() -> int:
     dlg_pipe = [k for k, v in tpl.items() if k.startswith("dialog_") and "|" in v]
     for k in dlg_pipe:
         o = off.get(k, "")
-        rows.append((k, "|" in o))
+        rows.append((k, "|" in o or k in B.KEEP_EXTRA))
     keep = [k for k, has in rows if has]
     strip = [k for k, has in rows if not has]
     src = OUT.parent
@@ -46,8 +49,8 @@ def main() -> int:
     rep.append("单语「保留原文」规则核查")
     rep.append("=" * 78)
     rep.append("模板里 dialog_ 含竖线的行 = %d" % len(dlg_pipe))
-    rep.append("  官方 zh-s 也含竖线（单语应保留原文）= %d" % len(keep))
-    rep.append("  官方 zh-s 无竖线（单语删原文）    = %d" % len(strip))
+    rep.append("  官方 zh-s 也含竖线 / 额外申报（单语应保留原文）= %d" % len(keep))
+    rep.append("  其余（单语删原文）                          = %d" % len(strip))
     rep.append("")
     rep.append("【应保留原文的行】")
     for k in keep:
@@ -60,8 +63,8 @@ def main() -> int:
     OUT.write_text("\n".join(rep) + "\n", encoding="utf-8-sig")
     # 控制台只打 ASCII
     print("dialog rows with pipe      : %d" % len(dlg_pipe))
-    print("  official also has pipe   : %d   <- mono must keep original" % len(keep))
-    print("  official has no pipe     : %d   <- mono strips" % len(strip))
+    print("  official pipe / KEEP_EXTRA : %d   <- mono must keep original" % len(keep))
+    print("  others                     : %d   <- mono strips" % len(strip))
     print("keys to keep: %s" % ", ".join(keep[:40]))
     print("report -> %s" % OUT)
     return 0

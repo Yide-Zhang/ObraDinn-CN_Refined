@@ -425,9 +425,9 @@ tally_estate_unknown_fined	继承人不详。开支报销：$amount
 tally_estate_forfeit	资产被皇室没收。
 tally_parting_watch	怀表仍然归你所有。
 tally_parting_book	根据请求，这本书将物归原主：摩洛哥的[CrewNameSurgeon]。
-office_letter_win	首席调查官，\n\n\t\t这封信是为了告知您[CrewNameSurgeonDia]医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t他对您的来信感到非常高兴，并要求将这本书连同完成全部内容的方法交还给您，以此表达他的感激之情。\n\t\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中不堪回首的可怕篇章。\n\t\t请勿回信。\n\n此致，\n\t\t[CrewNamePass4Dia]
-office_letter_mid	首席调查官，\n\n\t\t这封信是为了告知您[CrewNameSurgeonDia]医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t虽然这本书并未全部解开，但他仍然对您付出的努力表示感谢。他理解这个任务有多么艰难，也明白完成本书的愿望是多么难以实现。\n\t\t从奥伯拉丁号的浩劫中幸存的我们四人，现在只剩三个。\n\t\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t\t[CrewNamePass4Dia]
-office_letter_fail	首席调查官，\n\n\t\t这封信是为了告知你[CrewNameSurgeonDia]医生去世的不幸消息。收到你的包裹后不久，他就因病去世了。\n\t\t他的健康状况本就不佳，收到如此残缺的奥伯拉丁之书使他心如死灰，再也无法康复。\n\t\t临终之时，他深深悔恨竟将这一重任托付于你。\n\t\t我们认为你应该知道。\n\n此致，\n\t\t[CrewNamePass4Dia]
+office_letter_win	首席调查官，\n\n\t\t这封信是为了告知您[CrewNameSurgeonDia]医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t他对您的来信感到非常高兴，并要求将这本书连同完成它的方法交还给您，以此表达他的感激之情。\n\t\t至于我们尚存于世的三人，奥伯拉丁号已成为遥远的回忆，亦是我们生命中惟愿忘却的可怕篇章。\n\t\t请勿回信。\n\n此致，\n\t\t[CrewNamePass4Dia]
+office_letter_mid	首席调查官，\n\n\t\t这封信是为了告知您[CrewNameSurgeonDia]医生去世的不幸消息。收到您的包裹后不久，他就因病去世了。\n\t\t虽然这本书并未全部解开，但他仍然托我对您付出的努力表示感谢。他理解这个任务有多么艰难，也明白完成本书这一最后的愿望是多么难以实现。\n\t\t从奥伯拉丁号的浩劫中幸存的我们四人，现在只剩三个。\n\t\t我们对摩洛哥的生活感到满意，请勿回信。\n\n此致，\n\t\t[CrewNamePass4Dia]
+office_letter_fail	首席调查官，\n\n\t\t这封信是为了告诉你[CrewNameSurgeonDia]医生去世的不幸消息。收到你的包裹后不久，他就因病去世了。\n\t\t他的健康状况本就不佳，收到如此残缺的奥伯拉丁之书使他心如死灰，再也无法康复。\n\t\t临终之时，他深深悔恨竟将这一重任托付于你。\n\t\t我们认为你应该知道。\n\n此致，\n\t\t[CrewNamePass4Dia]
 store_tagline	极简色彩保险解谜游戏
 store_description_long	1802年，商船奥伯拉丁号满载200多吨贸易货物，从伦敦出发驶往东方。六个月后，奥伯拉丁号没有抵达位于好望角的汇合点，宣布在海上失踪。\n\n1807年10月14日早上，奥伯拉丁号拖着残破的船帆漂流至法尔茅斯港口，船员不见踪影。一名保险调查员立即被东印度公司伦敦办事处派往法尔茅斯，设法登船并评估损失。\n\nReturn of the Obra Dinn（奥伯拉丁的归来）是一款充满神秘色彩的第一人称解谜游戏，游戏的进行方式基于探索与逻辑推理。
 store_description_short	商船奥伯拉丁号 ~ 于1803年在海上失踪。
@@ -634,22 +634,22 @@ dialog_intro_ca	Said you'd need ferry to the Obra Dinn. | 说你需要坐船到�
 dialog_intro_da	Not many eager for that job. | 基本没人想揽这个活。
 dialog_intro_ea	Seems a bit late if you ask. | 你要是问我的话，我觉得你后悔也来不及了。
 dialog_intro_fa	I didn't. | 没人问你。
-dialog_intro_ga	What's in the box? | 箱子里有什么？
+dialog_intro_ga	What's in the box? | 这箱子里面是什么？
 dialog_intro_ha	I don't know. | 我不知道。
 dialog_intro_ia	Hoist it up in a few minutes. | 过一会把它吊起来。
 dialog_intro_ja	Eh? How? | 嗯？怎么吊？
 dialog_intro_ka	Carefully. | 小心点吊。
 dialog_demo_end_aa	- 演示结束 -
 dialog_demo_end_ba	感谢你体验本游戏！
-dialog_watch_too_heavy_1_aa	Hoy! | 嚯！
+dialog_watch_too_heavy_1_aa	Hoy! | 哎！
 dialog_watch_too_heavy_1_ba	It's too heavy! | 这太沉了！
 dialog_watch_too_heavy_2_aa	It's too heavy! | 这太沉了！
-dialog_watch_too_heavy_2_ba	Lift it yourself! | 你自己来抬！
+dialog_watch_too_heavy_2_ba	Lift it yourself! | 你自己来搬吧！
 dialog_watch_too_heavy_3_aa	It's too heavy. | 这太沉了。
-dialog_watch_too_heavy_3_ba	Take it yourself or open it here. | 要么你自己拿着，要么在这里打开它。
+dialog_watch_too_heavy_3_ba	Take it yourself or open it here. | 你自己带着吧，不然就在这儿打开。
 dialog_pickup_watch_aa	- Memento Mortem -
 dialog_pickup_watch_ba	铭记死亡
-dialog_ship_end_notify_aa	Hoy! | 嚯！
+dialog_ship_end_notify_aa	Hoy! | 哎！
 dialog_ship_end_notify_ba	You in there somewhere? | 你还在船上吗？
 dialog_ship_end_notify_ca	Storm’s comin! | 暴风雨要来了！
 dialog_ship_end_notify_da	Finish your business and climb down here! | 干完活后赶紧爬下来！
@@ -665,7 +665,7 @@ dialog_ship_end_done_aa	Finally. | 终于。
 dialog_ship_end_done_ca	Sit down so you don’t fall out. | 坐好，可别掉出去了。
 dialog_moment_unknown_aa	不详
 dialog_d0_m0_ah	Make way, coming through. | 让开，借过。
-dialog_d0_m0_ar	Orlop stern, ‘neath the tiller. | 放到下层船尾，舵柄下面。
+dialog_d0_m0_ar	Orlop stern, ‘neath the tiller. | 放到下层甲板尾部，舵柄下面。
 dialog_d0_m0_ba	Lower away! | 降下来！
 dialog_d0_m0_bh	Oy! | 喂！
 dialog_d0_m0_bk	Wait! Wait! | 等等！等等！
@@ -673,25 +673,25 @@ dialog_d0_m0_bo	No! | 不！
 dialog_d0_m0_bs	Down Below! | 下面小心！
 dialog_d0_m1_aa	Hoist away! | 吊起来！
 dialog_d0_m1_ba	Lower away! | 降下来！
-dialog_d1_m0_am	Эй, мухлевать то завязывай! | 别作弊！
-dialog_d1_m0_ar	На себя погляди, дубина.| 少管闲事。
+dialog_d1_m0_am	Эй, мухлевать то завязывай! | 喂，别出老千了！
+dialog_d1_m0_ar	На себя погляди, дубина.| 你先看看你自己吧，蠢货。
 dialog_d1_m0_aa	सय्यद | [CrewNameSeaCDia]！
 dialog_d1_m0_ba	सय्यद, उठो। | [CrewNameSeaCDia]，起来！
-dialog_d1_m0_ca	कुछ पी लो | 喝点东西！
+dialog_d1_m0_ca	कुछ पी लो | 喝点什么吧！
 dialog_d1_m1_aa	Well? | 怎么样？
 dialog_d1_m1_ba	Same as the other fellow. | 和另一个人一样。
 dialog_d1_m1_ca	Some lung disease. | 某种肺病。
-dialog_d1_m1_da	Not consumption. | 但不是肺痨。
+dialog_d1_m1_da	Not consumption. | 但不是肺结核。
 dialog_d1_m1_ea	Made worse by the cold. | 感冒加重了病情。
 dialog_d1_m1_fa	Will it spread? | 这病会传染吗？
-dialog_d1_m1_ga	If so, we’d all have it. | 如果会传染的话，我们应该全都患病了。
+dialog_d1_m1_ga	If so, we’d all have it. | 如果会传染的话，我们早该全都患病了。
 dialog_d1_m1_ha	They must’ve picked it up at the lascar house. | 他们肯定是在印度水手舱里染病的。
 dialog_d1_m1_ia	I checked all hands just now, | 我刚检查过所有水手，
 dialog_d1_m1_ja	and everyone is healthy. | 每个人都是健康的。
 dialog_d1_m1_ka	And him? | 那他呢？
-dialog_d1_m1_la	What are his chances? | 他还能活下来吗？
+dialog_d1_m1_la	What are his chances? | 他还有多大希望？
 dialog_d1_m1_ma	I gave him some laudanum. | 我给他服了一些鸦片酊。
-dialog_d1_m1_na	We’ll see. | 听天由命吧。
+dialog_d1_m1_na	We’ll see. | 看情况吧。
 dialog_d1_m2_aa	Take him to the carpenter’s. | 把他带到木匠那。
 dialog_d1_m2_ba	Get him wrapped and see to the last rites. | 给他裹好，然后做临终祷告。
 dialog_d1_m2_ca	Hit 'er here. | 敲它这儿。
@@ -709,8 +709,8 @@ dialog_d2_m0_ba	Who is there? | 谁在那儿？
 dialog_d2_m0_ca	Who is that? | 那边是谁？
 dialog_d2_m0_da	Is someone hurt? | 有人受伤了吗？
 dialog_d2_m0_ea	Eh? | 嗯？
-dialog_d2_m0_fa	Signor Nichols, is that you? | [CrewNameMate2Dia]先生，是你吗？
-dialog_d2_m0_ga	What are you doing down here? | 你在这儿干什么？
+dialog_d2_m0_fa	Signor Nichols, is that you? | [CrewNameMate2Dia]先生，是您吗？
+dialog_d2_m0_ga	What are you doing down here? | 您在下面这儿干什么？
 dialog_d2_m0_ha	Hello, yes! | 你好，是我！
 dialog_d2_m0_ia	All fine here. | 这里一切都好。
 dialog_d2_m0_ja	Just, ah, sorting some things. | 只是在，啊，整理一些东西。
@@ -723,11 +723,11 @@ dialog_d2_m1_da	慢且！伊無做毋著代誌！ | 慢着！他什么也没做�
 dialog_d2_m1_ea	小姐，袂赴啊。 | [CrewNamePass6Dia]小姐。来不及了。
 dialog_d2_m1_fa	Quiet! | 肃静！
 dialog_d2_m1_ga	As captain of this ship... | 作为这艘船的船长...
-dialog_d2_m1_ha	...and by the authority of the East India Company... | ...根据东印度公司...
-dialog_d2_m1_ia	...and thus the Crown of England... | ...以至英格兰皇室的授权...
-dialog_d2_m1_ja	...I sentence you to death by firing line. | ...我判处将你枪毙。
+dialog_d2_m1_ha	...and by the authority of the East India Company... | ...并依东印度公司授予的权限...
+dialog_d2_m1_ia	...and thus the Crown of England... | ...进而代表英格兰王室...
+dialog_d2_m1_ja	...I sentence you to death by firing line. | ...我判处你死刑，由行刑队枪决。
 dialog_d2_m1_ka	Mr Wolff. When you are ready. | [CrewNameGunnerDia]先生。请你准备。
-dialog_d2_m1_la	Right sir. | 好的，长官。
+dialog_d2_m1_la	Right sir. | 是，长官。
 dialog_d2_m1_ma	Ready men. | 兄弟们，预备。
 dialog_d2_m1_na	Aim. | 瞄准。
 dialog_d2_m1_oa	Fire! | 开火！
@@ -735,7 +735,7 @@ dialog_d2_m2_ba	On your toes, boys. | 保持警觉，小伙子们。
 dialog_d2_m2_ca	恁哪會使按呢！ | 你们怎么可以这样！
 dialog_d2_m2_cm	Load ‘er up! We best push off! | 把她放上去！我们赶紧出发！
 dialog_d2_m2_da	共我放開！ | 放开我！
-dialog_d2_m2_ea	Give ‘er here will ya. | 把她带到这边。
+dialog_d2_m2_ea	Give ‘er here will ya. | 帮下忙，把她带到这边。
 dialog_d2_m2_fa	Captain! | 船长！
 dialog_d2_m2_ga	Slack the lifts, and lower the boats! | 松开吊索，把小船放下去！
 dialog_d2_m2_ha	The whole crew will be on us! | 所有船员都会来追杀我们的！
@@ -749,7 +749,7 @@ dialog_d3_m0_fa	If the wind picks up we've no chance against the Obra Dinn. | �
 dialog_d3_m0_ga	小姐，妳有按怎無？ | [CrewNamePass6Dia]小姐，你没事吧？
 dialog_d3_m0_ha	嗯，我無問題。 | 嗯，我没事。
 dialog_d3_m0_ia	但是彼个箱仔，絕對袂使落入去水底！ | 但那个箱子，绝对不能掉到海里！
-dialog_d3_m0_ja	若是遐的怪物出現，妳絕對莫起來！ | 如果怪物来了，你一定别起来！
+dialog_d3_m0_ja	若是遐的怪物出現，妳絕對莫起來！ | 如果怪物来了，你一定不要起来！
 dialog_d3_m0_ka	Aye, shut it up! | 唉，闭嘴！
 dialog_d3_m0_la	They say strange things! | 他们在说奇怪的事情！
 dialog_d3_m0_lm	About monsters! | 与怪物有关！
@@ -793,8 +793,8 @@ dialog_d4_m0_la	Shell? What shell? | 贝壳？什么贝壳？
 dialog_d4_m1_aa	Clear the deck. | 清理甲板。
 dialog_d4_m1_ba	Move the boats astern and throw the bodies over. | 把小船移到船尾，把尸体扔上去。
 dialog_d4_m1_ca	Watch your footing. | 注意脚下。
-dialog_d4_m1_da	Hey there. What’s this? | 喂。这是什么？
-dialog_d4_m1_ea	Give em’ to me and I can fry us a solid meal, boys. | 把它们交给我，我能让大伙儿吃顿好的，伙计们。
+dialog_d4_m1_da	Hey there. What’s this? | 嘿。这是什么？
+dialog_d4_m1_ea	Give em’ to me and I can fry us a solid meal, boys. | 把它们交给我，我能给你们做顿大餐，伙计们。
 dialog_d4_m1_fa	Careful now, take it slow! | 小心点，慢慢来！
 dialog_d4_m1_ga	One tick, gentlemen. | 稍等，小伙子们。
 dialog_d4_m1_ha	There’s a pretty shell here. | 这有个漂亮的贝壳。
@@ -833,9 +833,9 @@ dialog_d5_m2_fm	No, get down! | 不，趴下！
 dialog_d5_m2_ga	Hey! Catch! | 嘿！接住了！
 dialog_d5_m3_aa	We’re no use! | 我们打不过！
 dialog_d5_m3_ba	Burn it quick! | 快烧了它！
-dialog_d5_m5_aa	I’ve got you. | 我来救你。
+dialog_d5_m5_aa	I’ve got you. | 我扶着你呢。
 dialog_d5_m5_ba	Don't move. | 别动。
-dialog_d5_m5_ca	I’ll get you down. | 我会把你放下来的。
+dialog_d5_m5_ca	I’ll get you down. | 我来把你放下来。
 dialog_d5_m5_cm	Give me that gun. | 把那把手炮给我。
 dialog_d5_m6_aa	They make for the lazarette! | 它们冲船尾室去了！
 dialog_d5_m6_ba	Secure the hold! | 保护货舱！
@@ -882,7 +882,7 @@ dialog_d7_m0_ca	Herre, min gud! | 我的天啊！
 dialog_d7_m1_aa	Call it off damn you. | 把它弄走，你这该死的。
 dialog_d7_m1_ba	This is your kraken. | 这是你的海怪。
 dialog_d7_m1_ca	You brought it here. | 你把它带过来的。
-dialog_d7_m1_da	Send it back! | 把它弄回去！
+dialog_d7_m1_da	Send it back! | 让它滚回去！
 dialog_d7_m2_aa	I’ll kill every last one of you monsters. | 我要杀光你们这些怪物。
 dialog_d7_m2_ba	Withdraw the kraken! | 让海怪撤退！
 dialog_d7_m2_ca	Or I will kill you all! | 不然我就把你们全杀了！
@@ -922,7 +922,7 @@ dialog_d8_m0_fa	How? How did you kill it? | 怎么回事？你们怎么杀死它
 dialog_d8_m0_ga	We didn’t. It left with the storm. | 我们没杀死它。它随着暴风雨离开了。
 dialog_d8_m0_ha	Captain came up from the hold. | 船长从货舱里走了出来。
 dialog_d8_m0_hm	Said he chased it off. | 说他把它赶走了。
-dialog_d8_m0_ja	You should rest. | 你得休息一下。
+dialog_d8_m0_ja	You should rest. | 你得静养一会。
 dialog_d8_m0_ka	A curse like that... | 那种诅咒...
 dialog_d8_m0_la	...does not lift for nothing. | ...不会无缘无故解除的。
 dialog_d8_m1_aa	Last one. Move quick. | 最后一艘了。动作快点。
@@ -935,8 +935,8 @@ dialog_d8_m1_em	Damn. | 该死。
 dialog_d8_m2_aa	Let them go! | 放他们走！
 dialog_d8_m3_aa	Enough! Captain cannot be trusted. | 受够了！不能相信船长。
 dialog_d8_m3_ba	You have a plan? | 你有计划？
-dialog_d8_m3_ca	Yes, we take ship and sail east. | 是的，我们抢下这艘船，向东航行。
-dialog_d8_m3_da	Trade wretched fish and shells for gold. | 把那些怪鱼和贝壳换成金子。
+dialog_d8_m3_ca	Yes, we take ship and sail east. | 是的，我们抢下船，向东航行。
+dialog_d8_m3_da	Trade wretched fish and shells for gold. | 把怪鱼和贝壳换成金子。
 dialog_d8_m3_ea	Huh? Who’s there? | 嗯？谁在那儿？
 dialog_d8_m3_fa	Mutiny! Mutiny! | 造反啦！造反啦！
 dialog_d8_m3_ga	Fresh bastard! | 小王八蛋！
@@ -948,13 +948,13 @@ dialog_d8_m5_ba	Don’t... leave me. | 别...离开我。
 dialog_d8_m5_ca	Bear up, son. I’ll stay with you. | 挺住，孩子。我会陪着你的。
 dialog_d8_m5_da	Tell Pete's mother, I... | 告诉[CrewNameMid1Dia]的母亲，我...
 dialog_d8_m5_dh	I tried my best. | 我尽力了。
-dialog_d8_m5_dr	..to pull him back... to save him. | …尽力把他拉回来...想救他。
-dialog_d8_m5_ea	You tell her yourself. | 你亲自去告诉她。
+dialog_d8_m5_dr	..to pull him back... to save him. | …把他拉回来...想救他。
+dialog_d8_m5_ea	You tell her yourself. | 你要亲自去告诉她。
 dialog_d8_m5_fa	Brennan! Bring the surgeon's kit! | [CrewNameSeaBDia]！把医药箱拿过来！
 dialog_d9_m0_aa	Captain! | 船长！
 dialog_d9_m0_ba	Open the door... | 把门打开...
 dialog_d9_m0_ca	Kick it in! | 踹门进去！
-dialog_d9_m0_da	...lest we break it down... | ...不然我们就把门砸开...
+dialog_d9_m0_da	...lest we break it down... | ...不然我们就把门劈开...
 dialog_d9_m0_ea	...and take more than those shells. | ...拿的可就不只是贝壳了。
 dialog_d9_m0_fa	You bastards may take... | 你们这群混蛋好好拿着...
 dialog_d9_m0_ga	...exactly what I give you. | ...老子给你们的东西。
