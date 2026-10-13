@@ -36,11 +36,30 @@ HERE = Path(__file__).resolve().parent        # installer/tools
 PKG = HERE.parent                             # installer
 CR = PKG.parent                               # CN_Refined
 FONTS = PKG / "assets" / "fonts"
+DJ = PKG / "data" / "difficulty.json"
 DEFAULT_SRC = CR / "out" / "packs"
 OLD_SRC = PKG / "assets" / "packs"
 
 CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 CJK_PUNCT = re.compile(r"[\u3000-\u303f\uff00-\uffef]")
+
+
+def engine_chars() -> set:
+    """引擎安装时会**写进游戏**、却不在语言包里的文本。
+
+    目前只有一处：难度补丁按玩家档位改写的 4 个键里的中文数字
+    （`data/difficulty.json` 的 `num_chars` 与 `levels[].zh`，例：五十八、二十九）。
+    ★ 这一来源曾经漏在字体子集之外（`make_subset_fonts.collect_chars()` 已同步补上），
+      所以本闸门也一并检查 —— 否则闸门自己也会有这个盲区。
+    """
+    s: set = set()
+    if DJ.exists():
+        import json
+        d = json.loads(DJ.read_text(encoding="utf-8"))
+        s |= set(d.get("num_chars", ""))
+        for lv in d.get("levels", []):
+            s |= set(str(lv.get("zh", "")))
+    return s
 
 
 def chars_of(d: Path) -> set:
@@ -81,8 +100,11 @@ def main() -> int:
         return 2
 
     chars = chars_of(src)
+    eng = engine_chars()
+    chars |= eng
     print("语言包 %s" % src)
-    print("  用到 %d 个字符" % len(chars))
+    print("  用到 %d 个字符（其中 %d 个来自「引擎写入游戏的文本」：%s）"
+          % (len(chars), len(eng), "".join(sorted(eng))))
     hard, soft = {}, {}
     for f in fonts:
         cmap = set(TTFont(str(f), lazy=True).getBestCmap().keys())
