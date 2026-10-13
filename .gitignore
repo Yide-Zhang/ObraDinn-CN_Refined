@@ -30,8 +30,12 @@ installer/assets/langtool/langtool-macos-x64
 /olddevassets/
 /weirdFonts/
 /"weirdFonts/
-/assets/
-!/assets/*.py
+# ⚠ 想「只忽略 assets/ 里的大文件、放行 .py」必须这么写：
+#   目录级的 `/assets/` 会把后面的 `!` 全部废掉（git 不会进那个目录）——
+#   2026-10-13 才发现：字体工具链（inject_fonts / make_subset_fonts / …）因此一直没进库。
+#   正确写法：先 `/assets/**`，再 `!/assets/**/` 放行目录，最后放行 .py。
+/assets/**
+!/assets/**/
 !/assets/**/*.py
 /langpack/dev/
 /langpack/original/
@@ -45,6 +49,9 @@ installer/assets/fonts/A-*.otf
 *.bak
 installer/out/
 installer/assets/*.tmp
+
+# ---- 会话里的临时脚本（人还在用，但不入库）----
+**/_scratch_*
 
 # ---- 编辑器 / 系统 ----
 .vscode/
