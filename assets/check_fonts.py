@@ -91,7 +91,8 @@ def main() -> int:
         # 2) 必测集合 = **字体源画得出墨迹**的字符
         #    ⚠ 基准必须是**实际用的字体源**（`inject_fonts.JOBS`）：
         #      正文用 font_src 的 SC 版（不是抠出来的游戏原字体 —— 字形不同）；
-        #      手写体用项目根 `851tegakizatsu.otf`（不是游戏内嵌那份 —— 21 个字不同）
+        #      手写体用根目录 `851tegakizatsu-Regular.otf`（2026-10-17 起换成用户翻新的那支；
+        #      也不是游戏内嵌那份 —— 21 个字不同）
         #    ⚠ 不能用「cmap 里有没有」—— 851tegaki 的 cmap 声称有阿拉伯文/天城文/谚文，
         #    但画出来是空白（不是它能渲染的东西），用 cmap 判会误报。
         orig = INJ.SOURCE_BY_FONT.get(fname)

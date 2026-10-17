@@ -47,15 +47,14 @@ JOBS = {
         "SourceHanSerif-SemiBold": ROOT / "font_src" / "SOURCEHANSERIFSC-SEMIBOLD.OTF",
     },
     "sharedassets2.assets": {
-        # ★ 用户 2026-10-06 决定：手写体用**项目根那份** `851tegakizatsu.otf`
-        #   （= 你 dev 用的那支，与 patcher/instructor 的观感一致）
-        #   ⚠️ 它与**游戏内嵌**那份不是同一份字体，21 个字的形状不同：
-        #      海船博将所迪詹达直毒敷屠航溺画舵窦角底睹包
-        #      （轮廓数变了，如 船 6→7、海 7→8；面积差最大 20%，肉眼可见）
-        #   → 即这 21 个字的手写体与**未改动版游戏**不一样，这是知情选择。
-        #   想回到与游戏完全一致，把下面这行换成
-        #   HERE / "out" / "fonts" / "orig-851tegaki_zatsu_normal_0883.ttf" 即可。
-        "851tegaki_zatsu_normal_0883": ROOT / "851tegakizatsu.otf",
+        # ★ 用户 2026-10-17 决定：手写体改用他**翻新过的那支** `851tegakizatsu-Regular.otf`
+        #   （此前用的是项目根 `851tegakizatsu.otf`，80.32 MB / 60876 字形；
+        #     新支 31.48 MB / 60874 字形，同为 CFF 轮廓，家族名依旧是 '851tegakizatsu'）
+        #   ⚠️ 两支都与**游戏内嵌**那份（out/fonts/orig-851tegaki_zatsu_normal_0883.ttf）
+        #      不是同一份：有 21 个字的形状不同（海船博将所迪詹达直毒敷屠航溺画舵窦角底睹包）。
+        #      想回到与未改动版游戏完全一致，把这行换成
+        #      HERE / "out" / "fonts" / "orig-851tegaki_zatsu_normal_0883.ttf" 即可。
+        "851tegaki_zatsu_normal_0883": ROOT / "851tegakizatsu-Regular.otf",
     },
 }
 
